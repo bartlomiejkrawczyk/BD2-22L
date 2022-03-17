@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="952F4AAB-B24E-32C2-E4E6-6C1C0AA44547" name="Courses">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:37:52 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="course code" id="9086C164-3FBC-6442-8F64-0BBF8A85609A">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:53:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="67C8A7CF-E1EB-D613-9F53-A3D8016DDDA4">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:53:52 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="degree" id="566AED40-B199-C572-73C8-783808CC1DD2">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:54:00 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DDD5AC7C-ACA2-A535-9F11-2C6BB9F87C49" name="Courses PK">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 22:04:10 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9086C164-3FBC-6442-8F64-0BBF8A85609A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
