@@ -1,12 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_5" directorySegmentName="seg_0" id="E1EC2A77-7143-A3E4-6018-5CCE5B45EBA1">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="OFFER PREFERENCE" directorySegmentName="seg_0" id="3360BA9B-6D88-E08B-85CF-04915306233E">
 <createdBy>bartek</createdBy>
-<createdTime>2022-03-17 21:45:19 UTC</createdTime>
+<createdTime>2022-03-20 20:26:22 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
 </engineerTo>
-<identifying>false</identifying>
+<targetTransferable>false</targetTransferable>
+<sourcePk>29599A21-E971-4C53-4495-CD110FA5C144</sourcePk>
+<identifying>true</identifying>
+<nameOnSource> </nameOnSource>
+<nameOnTarget>APPLICATION FOR</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

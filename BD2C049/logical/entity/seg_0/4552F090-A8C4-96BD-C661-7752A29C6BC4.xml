@@ -1,7 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4552F090-A8C4-96BD-C661-7752A29C6BC4" name="Preferences">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4552F090-A8C4-96BD-C661-7752A29C6BC4" name="PREFERENCE">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:37:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Stores candidate's preferences.
+Every candidate can apply for up to 3 distinct courses every registration.
+Candidate can order his preferences from best to worst (from the chosen set).]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -14,52 +17,10 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<preferredAbbreviation>PREFERENCES</preferredAbbreviation>
+<shortName>PREF</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="registration code" id="957F3CF2-E135-C644-3AB4-446DDF83D2D2">
-<createdBy>bartek</createdBy>
-<createdTime>2022-03-17 22:03:40 UTC</createdTime>
-<generatorID>CDB04F3E-FB5F-E03D-D965-B7104487BB72</generatorID>
-<ownerDesignName>BD2C049</ownerDesignName>
-<engineerTo>
-<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
-</engineerTo>
-<referedAttribute>D3BE7EAA-F022-C4A3-C129-F402CA796ADD</referedAttribute>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="order" id="665EB502-CD88-C642-C0B6-686F385C0E4B">
-<createdBy>bartek</createdBy>
-<createdTime>2022-03-17 21:52:09 UTC</createdTime>
-<ownerDesignName>BD2C049</ownerDesignName>
-<engineerTo>
-<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
-</engineerTo>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="points" id="B3606477-89B7-63A0-2A85-684F999F2B7D">
-<createdBy>bartek</createdBy>
-<createdTime>2022-03-17 21:52:14 UTC</createdTime>
-<ownerDesignName>BD2C049</ownerDesignName>
-<engineerTo>
-<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="result" id="D9EFEDA3-AF0C-B83B-26CE-4DB60561DD76">
-<createdBy>bartek</createdBy>
-<createdTime>2022-03-17 21:52:28 UTC</createdTime>
-<ownerDesignName>BD2C049</ownerDesignName>
-<engineerTo>
-<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="candidate_id" id="0B8EAB31-21A8-A965-5698-80C332BA201E">
+<Attribute name="CANDIDATE ID" id="0B8EAB31-21A8-A965-5698-80C332BA201E">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 22:05:34 UTC</createdTime>
 <generatorID>DF42A8E5-4D8A-02B9-67A9-88000E5B9ECA</generatorID>
@@ -68,12 +29,95 @@
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
 </engineerTo>
 <referedAttribute>462871D7-6EC6-82ED-DA15-240F2237245B</referedAttribute>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REGISTRATION CODE" id="03A9B623-6B9B-7D5F-0E8D-25DBDB16DA6A">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-20 20:26:22 UTC</createdTime>
+<generatorID>3360BA9B-6D88-E08B-85CF-04915306233E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<referedAttribute>29F1BA07-8AFF-CC91-E39C-CFC160DFC78C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="COURSE CODE" id="8EDC098F-A097-7F05-68FA-BD5630CB0A6E">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-20 20:26:22 UTC</createdTime>
+<generatorID>3360BA9B-6D88-E08B-85CF-04915306233E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<referedAttribute>C343036D-3E38-13D8-B88E-1B472D652586</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 CHAR</dataTypeSize>
+<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SEQUENTIAL NUMBER" id="665EB502-CD88-C642-C0B6-686F385C0E4B">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:52:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Number representing order of candidate's preferences.
+The selections with the lowest value are considered first.]]></commentInRDBMS>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="POINTS" id="B3606477-89B7-63A0-2A85-684F999F2B7D">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:52:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[The number of points scored by candidate for a given course.]]></commentInRDBMS>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RESULT" id="D9EFEDA3-AF0C-B83B-26CE-4DB60561DD76">
+<createdBy>bartek</createdBy>
+<createdTime>2022-03-17 21:52:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Result of registration on that course.
+NULL - no results available yet
+Y - candidate got in
+R - candidate is on the reserve list
+N - candidate didn't get in]]></commentInRDBMS>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="C0CA0110-EE72-915F-6B6B-CF90DEC54268" name="Preferences PK">
+<identifier id="C0CA0110-EE72-915F-6B6B-CF90DEC54268" name="PREFERENCE PK">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 22:03:37 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>
@@ -81,9 +125,25 @@
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>DF42A8E5-4D8A-02B9-67A9-88000E5B9ECA,3360BA9B-6D88-E08B-85CF-04915306233E</newElementsIDs>
 <usedAttributes>
-<attributeRef>957F3CF2-E135-C644-3AB4-446DDF83D2D2</attributeRef>
 <attributeRef>0B8EAB31-21A8-A965-5698-80C332BA201E</attributeRef>
+<attributeRef>03A9B623-6B9B-7D5F-0E8D-25DBDB16DA6A</attributeRef>
+<attributeRef>8EDC098F-A097-7F05-68FA-BD5630CB0A6E</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="5152ACA4-9967-284B-04B3-15DD8BBF48DC" name="ORDER NUMBER UK">
+<createdBy>bartek</createdBy>
+<createdTime>2022-04-06 15:05:29 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<newElementsIDs>665EB502-CD88-C642-C0B6-686F385C0E4B,0B8EAB31-21A8-A965-5698-80C332BA201E,03A9B623-6B9B-7D5F-0E8D-25DBDB16DA6A</newElementsIDs>
+<usedAttributes>
+<attributeRef>665EB502-CD88-C642-C0B6-686F385C0E4B</attributeRef>
+<attributeRef>0B8EAB31-21A8-A965-5698-80C332BA201E</attributeRef>
+<attributeRef>03A9B623-6B9B-7D5F-0E8D-25DBDB16DA6A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

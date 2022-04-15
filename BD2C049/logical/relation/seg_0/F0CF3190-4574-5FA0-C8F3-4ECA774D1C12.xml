@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="F0CF3190-4574-5FA0-C8F3-4ECA774D1C12">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="COURSE OFFER" directorySegmentName="seg_0" id="F0CF3190-4574-5FA0-C8F3-4ECA774D1C12">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:44:59 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>
@@ -9,6 +9,8 @@
 <targetTransferable>false</targetTransferable>
 <sourcePk>DDD5AC7C-ACA2-A535-9F11-2C6BB9F87C49</sourcePk>
 <identifying>true</identifying>
+<nameOnSource>REALIZATION</nameOnSource>
+<nameOnTarget>REFERS TO</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
