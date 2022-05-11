@@ -2,7 +2,9 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B284532B-0B0D-A5AD-4D2E-317A3B64F6F1" name="REGISTRATION">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:37:50 UTC</createdTime>
-<commentInRDBMS><![CDATA[Serves as a dictionary of available registrations.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Serves as a dictionary of available registrations.
+There can be multiple registrations a year.
+The interval between start and end indicates when the registration is open and when the candidates can apply for offers.]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -30,8 +32,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>5 CHAR</dataTypeSize>
-<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="START" id="19452625-6C97-0CAD-A111-E2517B460D98">
 <createdBy>bartek</createdBy>

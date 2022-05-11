@@ -2,7 +2,8 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="952F4AAB-B24E-32C2-E4E6-6C1C0AA44547" name="COURSE">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:37:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[Serves as a dictionary of available courses.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Serves as a dictionary of available courses.
+Stores basic information about the course for candidates wondering which course to choose.]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -30,8 +31,8 @@ CS - short name for Computer Science ]]></commentInRDBMS>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>6 CHAR</dataTypeSize>
-<ownDataTypeParameters>6 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NAME" id="67C8A7CF-E1EB-D613-9F53-A3D8016DDDA4">
 <createdBy>bartek</createdBy>
@@ -43,25 +44,31 @@ CS - short name for Computer Science ]]></commentInRDBMS>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 BYTE</dataTypeSize>
-<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DEGREE" id="566AED40-B199-C572-73C8-783808CC1DD2">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:54:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Academic degree achieved after passing the course:
+B - Bachelor's degree
+E - Engineer's degree
+M - Master's degree
+D - Doctoral degree]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="DESCRIPTION" id="80E8507B-A1E1-DB26-C86E-3902D392FFA4">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-24 20:34:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of what students can expect from selected course.]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -86,6 +93,18 @@ CS - short name for Computer Science ]]></commentInRDBMS>
 <newElementsIDs>9086C164-3FBC-6442-8F64-0BBF8A85609A</newElementsIDs>
 <usedAttributes>
 <attributeRef>9086C164-3FBC-6442-8F64-0BBF8A85609A</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="EFE2F546-E4A3-EDE1-F74B-06398CE265A3" name="NAME UK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-04-22 08:21:43 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<engineerTo>
+<item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
+</engineerTo>
+<newElementsIDs>67C8A7CF-E1EB-D613-9F53-A3D8016DDDA4</newElementsIDs>
+<usedAttributes>
+<attributeRef>67C8A7CF-E1EB-D613-9F53-A3D8016DDDA4</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

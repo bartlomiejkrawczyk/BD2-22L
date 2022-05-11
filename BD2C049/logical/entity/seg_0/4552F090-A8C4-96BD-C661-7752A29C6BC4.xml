@@ -4,7 +4,14 @@
 <createdTime>2022-03-17 21:37:44 UTC</createdTime>
 <commentInRDBMS><![CDATA[Stores candidate's preferences.
 Every candidate can apply for up to 3 distinct courses every registration.
-Candidate can order his preferences from best to worst (from the chosen set).]]></commentInRDBMS>
+Candidate can order his preferences from best to worst (from the chosen set).
+
+To change the choosen offer candidate must delete unwanted choice and replace it with another one.
+
+When registration starts candidates can start applying for courses available during registration.
+After registration ends preferences for offers included in the registration cannot be changed by the candidate.
+Based on the final implementation results will be generated autmoatically or by administration.
+After registration ends only the administration should be able to update the preferences.]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -68,8 +75,9 @@ Candidate can order his preferences from best to worst (from the chosen set).]]>
 <Attribute name="SEQUENTIAL NUMBER" id="665EB502-CD88-C642-C0B6-686F385C0E4B">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:52:09 UTC</createdTime>
-<commentInRDBMS><![CDATA[Number representing order of candidate's preferences.
-The selections with the lowest value are considered first.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Number representing sequence of candidate's preferences.
+The selections with the lowest value are considered first.
+Sequential number must be an integer from range [1;3].]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -100,7 +108,7 @@ The selections with the lowest value are considered first.]]></commentInRDBMS>
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:52:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[Result of registration on that course.
-NULL - no results available yet
+NULL- no results available yet
 Y - candidate got in
 R - candidate is on the reserve list
 N - candidate didn't get in]]></commentInRDBMS>
@@ -132,7 +140,7 @@ N - candidate didn't get in]]></commentInRDBMS>
 <attributeRef>8EDC098F-A097-7F05-68FA-BD5630CB0A6E</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="5152ACA4-9967-284B-04B3-15DD8BBF48DC" name="ORDER NUMBER UK">
+<identifier id="5152ACA4-9967-284B-04B3-15DD8BBF48DC" name="SEQUENCE UK">
 <createdBy>bartek</createdBy>
 <createdTime>2022-04-06 15:05:29 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>

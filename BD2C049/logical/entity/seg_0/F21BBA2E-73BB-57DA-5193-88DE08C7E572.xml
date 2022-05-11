@@ -2,7 +2,8 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F21BBA2E-73BB-57DA-5193-88DE08C7E572" name="CANDIDATE">
 <createdBy>bartek</createdBy>
 <createdTime>2022-03-17 21:34:15 UTC</createdTime>
-<commentInRDBMS><![CDATA[Contains registered candidates, who apply for university courses.]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Contains registered candidates, who can apply for up to three university courses every registration.
+Stores personal information about candidates.]]></commentInRDBMS>
 <ownerDesignName>BD2C049</ownerDesignName>
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
@@ -41,8 +42,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 BYTE</dataTypeSize>
-<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="SECOND NAME" id="E407A867-D2E2-C5FE-8BE1-C86346B7DBD9">
 <createdBy>bartek</createdBy>
@@ -55,8 +56,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 BYTE</dataTypeSize>
-<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="FAMILY NAME" id="324E8D95-8ADD-96B4-F355-536CC65CA5BE">
 <createdBy>bartek</createdBy>
@@ -68,8 +69,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20 CHAR</dataTypeSize>
-<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="PESEL" id="8A6B28C1-BD8E-49B5-555F-BDCA4229EC88">
 <createdBy>bartek</createdBy>
@@ -82,8 +83,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>11 CHAR</dataTypeSize>
-<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="BIRTH DATE" id="42C7B04B-CD6E-3978-38CC-ACB69AC4AE18">
 <createdBy>bartek</createdBy>
@@ -147,8 +148,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>7 BYTE</dataTypeSize>
-<ownDataTypeParameters>7 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="STREET" id="1E3CD9AB-AD25-FC40-F34F-DBD544D068D6">
 <createdBy>bartek</createdBy>
@@ -161,8 +162,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 BYTE</dataTypeSize>
-<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="HOME NUMBER" id="16488003-9542-CC22-C9D7-242C5AB07402">
 <createdBy>bartek</createdBy>
@@ -174,8 +175,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>5 BYTE</dataTypeSize>
-<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="APARTMENT NUMBER" id="58AC902A-4F0A-BC73-034C-EC7741AFB70C">
 <createdBy>bartek</createdBy>
@@ -187,9 +188,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="EMAIL" id="11F96D1A-2BE4-AEA5-69E6-0DC925115CC2">
 <createdBy>bartek</createdBy>
@@ -198,7 +199,6 @@
 <engineerTo>
 <item key="FD7BAED0-43A3-0F2D-4FF9-0F8B7ED296F1" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -216,8 +216,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

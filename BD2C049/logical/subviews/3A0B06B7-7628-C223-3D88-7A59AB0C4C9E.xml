@@ -59,7 +59,7 @@ bartlomiej.krawczyk2.stud@pw.edu.pl</comment>
 </sourceLabel>
 <targetLabel class="oracle.dbtools.crest.model.design.Label">
 <site>2</site>
-<labelBounds x="210" y="645" width="102" height="36"/>
+<labelBounds x="210" y="645" width="103" height="39"/>
 <noBackgroundColor>true</noBackgroundColor>
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
