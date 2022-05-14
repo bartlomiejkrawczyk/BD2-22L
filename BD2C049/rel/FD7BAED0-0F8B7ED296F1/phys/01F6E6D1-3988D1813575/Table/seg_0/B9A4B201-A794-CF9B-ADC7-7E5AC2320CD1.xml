@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="COURSES" directorySegmentName="seg_0" id="B9A4B201-A794-CF9B-ADC7-7E5AC2320CD1">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="COURSE_CODE" id="6E70DD5C-5B9E-CC05-A2C2-E67628B972F9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEGREE" id="876F9800-D2B6-A31F-5DA1-11986408D313">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="B70C813C-E5A9-2A30-E173-5655A03B9892">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPTION" id="F3F96ACE-1325-6FEB-727A-123761B65C6B">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CRS_PK" id="C15E0CB1-1B17-F415-9670-8E9B4081E267">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="CRS_NAME_UK" id="196FC177-FFC3-3EC5-2449-2CCB6A581603">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

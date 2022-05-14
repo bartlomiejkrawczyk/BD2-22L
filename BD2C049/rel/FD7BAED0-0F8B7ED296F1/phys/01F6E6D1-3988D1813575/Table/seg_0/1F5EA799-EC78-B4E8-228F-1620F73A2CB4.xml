@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="OFFERS" directorySegmentName="seg_0" id="1F5EA799-EC78-B4E8-228F-1620F73A2CB4">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="COURSE_CODE" id="A1A366CE-95FA-4381-64CD-4FF32410E566">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGISTRATION_CODE" id="B436949E-86DD-6933-8AA5-F9BFDDA7EB3A">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AVAILABLE_SLOTS" id="D16B8CC6-455B-1C75-A0DA-9F6B62E5CBCE">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="OFR_CRS_IDX" id="6D2657B1-5881-6815-C553-D54293F0335A">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="OFR_CRS_FK" id="C09B5E07-1B15-A158-1F37-D585DE28C6F5">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="OFR_REG_FK" id="C6815D72-8884-A487-3CC5-7BB149289715">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<deferrable>YES</deferrable>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OFR_PK" id="E0E97303-662D-48FA-D874-7085D6043DC2">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

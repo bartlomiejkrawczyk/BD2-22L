@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CANDIDATES" directorySegmentName="seg_0" id="9ED40965-CA3E-47D8-B466-9AB66D8932DE">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<storeAs>CLOB</storeAs>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FIRST_NAME" id="08328E90-BA5F-B036-B658-25D74FE8E895">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE_NUMBER" id="1665AD12-27D0-7F6D-0388-53FBA579CDDC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY" id="182B7B71-CCB9-9286-D144-B4F0F0C631AA">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PESEL" id="1F1B4A91-3B35-C147-BDB2-E33E4E54FFFC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="APARTMENT_NUMBER" id="1FEC7A1B-8745-179E-1211-9AEC431BB01C">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STREET" id="3C8D98BA-D611-A226-385F-D1D365379921">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CANDIDATE_ID" id="4BE388D0-585F-674C-91FF-731F1EE57FA9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VOIVODESHIP" id="4CFE9FC2-5498-8A26-C8F0-03DA8262D92B">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="POSTAL_CODE" id="595F0143-F956-9BE0-3001-7754A914D5DF">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HOME_NUMBER" id="7D3E4471-A9F4-5288-95FF-516DBEE0E1FB">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FAMILY_NAME" id="7DF8DF90-F7C7-68D1-1CE4-68AE0BDADE78">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECOND_NAME" id="96BA38F4-0A3A-DCD9-F1E1-1306363CFAFD">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BIRTH_DATE" id="D0DCD2C3-DC2E-4E7A-38D6-80CFE2F95EB8">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CITY" id="DE268A52-F291-4ECB-FA60-D788407DE15D">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="E04337C9-A81F-A7E1-5E50-42FD519D8BEB">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAND_PK" id="7FE9791B-43DC-DB08-92D8-2BABEBD14479">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="CAND_PESEL_UK" id="58C7034D-C283-86DA-94AB-213286B1D221">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="CAND_EMAIL_UK" id="9F1E0CA5-2BA0-7A26-61E9-814E3B16645D">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:23:49 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

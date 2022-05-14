@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="BD2C049_APP" directorySegmentName="seg_0" id="096D171F-D336-CCC4-E6D3-6314CECDC4EF">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:25:45 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<identifier>056577AA5B1E1D8B6DBBF8CCF8B2D8543E</identifier>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="3FF5257A-2A56-C3CC-C2AE-06CBA8A9CB75">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:34:32 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>9ED40965-CA3E-47D8-B466-9AB66D8932DE</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="82138326-01A1-09B3-F8C8-350B115CF9AE">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:35:19 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>B9A4B201-A794-CF9B-ADC7-7E5AC2320CD1</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="6382F7FF-E4F4-39A3-6557-74183B6FC124">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:35:39 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>64116F9A-D9BA-B4DD-769D-EBACFDB2975A</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="8A0DBC26-B734-2021-898B-2BF236D0A061">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:36:25 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>1F5EA799-EC78-B4E8-228F-1620F73A2CB4</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions7" id="3CDC397A-AD5E-F76F-E405-A372348E3D83">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 16:36:25 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
+<table>2319E7A6-9941-3117-7F5A-9391AA768A26</table>
+</Permission>
+</permissions>
+</UserOraclev10g>
