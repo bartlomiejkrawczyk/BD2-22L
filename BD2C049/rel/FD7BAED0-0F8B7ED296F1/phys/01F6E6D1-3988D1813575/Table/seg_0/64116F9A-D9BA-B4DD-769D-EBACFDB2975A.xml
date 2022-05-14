@@ -41,6 +41,17 @@
 <ownerDesignName>BD2C049</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="PREFERENCES" id="302FBFFE-8F14-CB04-EE8C-344B6D93E4E9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 20:02:17 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<objectName>PREFERENCES</objectName>
+<objectUser>11F7A75B-0C8A-B8B2-3621-4AE9904A07AF</objectUser>
+<user>096D171F-D336-CCC4-E6D3-6314CECDC4EF</user>
+<referredObjectID>64116F9A-D9BA-B4DD-769D-EBACFDB2975A</referredObjectID>
+</Synonym>
+</synonyms>
 <foreignKeys>
 <ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="PREF_CAND_FK" id="1A80354D-DEC0-BA79-2B0B-A45591694CF1">
 <createdBy>Bartłomiej Krawczyk</createdBy>

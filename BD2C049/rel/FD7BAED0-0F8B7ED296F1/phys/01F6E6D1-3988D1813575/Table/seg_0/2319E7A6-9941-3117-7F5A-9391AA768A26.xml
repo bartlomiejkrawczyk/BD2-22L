@@ -26,6 +26,17 @@
 <ownerDesignName>BD2C049</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="REGISTRATIONS" id="6E1D1639-29B6-E511-7D13-003A0CD1EC1E">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 20:01:12 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<objectName>REGISTRATIONS</objectName>
+<objectUser>11F7A75B-0C8A-B8B2-3621-4AE9904A07AF</objectUser>
+<user>096D171F-D336-CCC4-E6D3-6314CECDC4EF</user>
+<referredObjectID>2319E7A6-9941-3117-7F5A-9391AA768A26</referredObjectID>
+</Synonym>
+</synonyms>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="REG_PK" id="CCF0386A-E43C-54FD-53A9-43CAF187EDF4">
 <createdBy>Bartłomiej Krawczyk</createdBy>

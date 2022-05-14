@@ -86,6 +86,17 @@
 <ownerDesignName>BD2C049</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="CANDIDATES" id="21DC6653-86B9-11AB-8FAF-D517A4931616">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 20:00:35 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<objectName>CANDIDATES</objectName>
+<objectUser>11F7A75B-0C8A-B8B2-3621-4AE9904A07AF</objectUser>
+<user>096D171F-D336-CCC4-E6D3-6314CECDC4EF</user>
+<referredObjectID>9ED40965-CA3E-47D8-B466-9AB66D8932DE</referredObjectID>
+</Synonym>
+</synonyms>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAND_PK" id="7FE9791B-43DC-DB08-92D8-2BABEBD14479">
 <createdBy>Bartłomiej Krawczyk</createdBy>

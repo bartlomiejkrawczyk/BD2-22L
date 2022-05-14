@@ -31,6 +31,17 @@
 <ownerDesignName>BD2C049</ownerDesignName>
 </ColumnProxy>
 </columnProxies>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="COURSES" id="A7D7B1FB-ADD9-F76F-4FAE-33C555515008">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 20:01:31 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<objectName>COURSES</objectName>
+<objectUser>11F7A75B-0C8A-B8B2-3621-4AE9904A07AF</objectUser>
+<user>096D171F-D336-CCC4-E6D3-6314CECDC4EF</user>
+<referredObjectID>B9A4B201-A794-CF9B-ADC7-7E5AC2320CD1</referredObjectID>
+</Synonym>
+</synonyms>
 <primaryKeys>
 <PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CRS_PK" id="C15E0CB1-1B17-F415-9670-8E9B4081E267">
 <createdBy>Bartłomiej Krawczyk</createdBy>

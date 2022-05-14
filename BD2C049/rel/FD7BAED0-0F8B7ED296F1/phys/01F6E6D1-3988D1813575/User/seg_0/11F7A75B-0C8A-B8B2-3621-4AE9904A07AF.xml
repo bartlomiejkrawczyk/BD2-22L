@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="BD2C049" directorySegmentName="seg_0" id="11F7A75B-0C8A-B8B2-3621-4AE9904A07AF">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-14 19:58:48 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<identifier>05BEEF777D57DB41A97C60F0CD660233EA</identifier>
+</UserOraclev10g>
