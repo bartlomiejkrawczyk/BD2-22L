@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1F5EA799-EC78-B4E8-228F-1620F73A2CB4" name="OFFERS">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Links courses with registration.
+It allows to determine the availability of the selected course in a given registration.
+Furthermore it specifies the number of available slots for a given course.]]></commentInRDBMS>
+<generatorID>B70F5486-7C2E-EB8A-9F57-7BDDA114DA9D</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<abbreviation>OFR</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGISTRATION_CODE" id="B436949E-86DD-6933-8AA5-F9BFDDA7EB3A">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>29F1BA07-8AFF-CC91-E39C-CFC160DFC78C</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01F9452F-CE7E-C678-3C5D-A8F052DF6726" referredColumn="5EC3E812-2522-D616-598E-263ED0BE2DBC"/>
+</associations>
+</Column>
+<Column name="COURSE_CODE" id="A1A366CE-95FA-4381-64CD-4FF32410E566">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>C343036D-3E38-13D8-B88E-1B472D652586</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDA502C8-B6A2-835F-F184-AD6A8A5B6F62" referredColumn="6E70DD5C-5B9E-CC05-A2C2-E67628B972F9"/>
+</associations>
+</Column>
+<Column name="AVAILABLE_SLOTS" id="D16B8CC6-455B-1C75-A0DA-9F6B62E5CBCE">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[The maximum number of people university can register on the course.]]></commentInRDBMS>
+<generatorID>26E1B6D8-4217-F856-C841-FD30B7A5B11D</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>OFR_CHK_AVAILABLE_SLOTS</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="AVAILABLE_SLOTS &gt;= 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0E97303-662D-48FA-D874-7085D6043DC2" name="OFR_PK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>29599A21-E971-4C53-4495-CD110FA5C144</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B436949E-86DD-6933-8AA5-F9BFDDA7EB3A"/>
+<colUsage columnID="A1A366CE-95FA-4381-64CD-4FF32410E566"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D2657B1-5881-6815-C553-D54293F0335A" name="OFR_CRS_IDX">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:48:31 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1A366CE-95FA-4381-64CD-4FF32410E566"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C09B5E07-1B15-A158-1F37-D585DE28C6F5" name="OFR_CRS_FK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>F0CF3190-4574-5FA0-C8F3-4ECA774D1C12</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1A366CE-95FA-4381-64CD-4FF32410E566"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6815D72-8884-A487-3CC5-7BB149289715" name="OFR_REG_FK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>3652E5AB-C888-5C4F-936B-4AAA787C5CEA</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B436949E-86DD-6933-8AA5-F9BFDDA7EB3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

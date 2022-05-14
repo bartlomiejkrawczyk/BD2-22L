@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="64116F9A-D9BA-B4DD-769D-EBACFDB2975A" name="PREFERENCES">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Stores candidate's preferences.
+Every candidate can apply for up to 3 distinct courses every registration.
+Candidate can order his preferences from best to worst (from the chosen set).
+
+To change the choosen offer candidate must delete unwanted choice and replace it with another one.
+
+When registration starts candidates can start applying for courses available during registration.
+After registration ends preferences for offers included in the registration cannot be changed by the candidate.
+Based on the final implementation results will be generated autmoatically or by administration.
+After registration ends only the administration should be able to update the preferences.]]></commentInRDBMS>
+<generatorID>4552F090-A8C4-96BD-C661-7752A29C6BC4</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<abbreviation>PREF</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGISTRATION_CODE" id="2E93389D-EE0E-1FCE-2009-54F6A7EAA498">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>03A9B623-6B9B-7D5F-0E8D-25DBDB16DA6A</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96EAAFD7-54D6-DEA8-0695-C5C52D9B04DB" referredColumn="B436949E-86DD-6933-8AA5-F9BFDDA7EB3A"/>
+</associations>
+</Column>
+<Column name="COURSE_CODE" id="F2970200-D6C7-52C2-F7B9-151404842FFD">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>8EDC098F-A097-7F05-68FA-BD5630CB0A6E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96EAAFD7-54D6-DEA8-0695-C5C52D9B04DB" referredColumn="A1A366CE-95FA-4381-64CD-4FF32410E566"/>
+</associations>
+</Column>
+<Column name="CANDIDATE_ID" id="844BAD9E-36AB-9B18-159C-517B1B1A2361">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>0B8EAB31-21A8-A965-5698-80C332BA201E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4092A109-4780-1E72-D05B-D0A2F598BD4A" referredColumn="4BE388D0-585F-674C-91FF-731F1EE57FA9"/>
+</associations>
+</Column>
+<Column name="SEQUENTIAL_NUMBER" id="0002635F-ABB7-D2FF-7EAE-0C4BA6009386">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Number representing sequence of candidate's preferences.
+The selections with the lowest value are considered first.
+Sequential number must be an integer from range [1;3].]]></commentInRDBMS>
+<generatorID>665EB502-CD88-C642-C0B6-686F385C0E4B</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>PREF_CHK_SEQUENTIAL_NUMBER</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="SEQUENTIAL_NUMBER BETWEEN 1 AND 3"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>3</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="RESULT" id="1DFFDDCD-F214-3550-E30D-35F36566A39C">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Result of registration on that course.
+NULL- no results available yet
+Y - candidate got in
+R - candidate is on the reserve list
+N - candidate didn't get in]]></commentInRDBMS>
+<generatorID>D9EFEDA3-AF0C-B83B-26CE-4DB60561DD76</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>PREF_CHK_RESULT</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="RESULT IN (&apos;Y&apos;, &apos;N&apos;, &apos;R&apos;) OR RESULT IS NULL"/>
+</checkConstraint>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POINTS" id="843A7ED0-D9E7-9441-0DA1-98EAFB0165BB">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[The number of points scored by candidate for a given course.]]></commentInRDBMS>
+<generatorID>B3606477-89B7-63A0-2A85-684F999F2B7D</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DADEA4F8-1AED-60DF-693C-84DF0AF37337" name="PREF_PK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>C0CA0110-EE72-915F-6B6B-CF90DEC54268</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E93389D-EE0E-1FCE-2009-54F6A7EAA498"/>
+<colUsage columnID="F2970200-D6C7-52C2-F7B9-151404842FFD"/>
+<colUsage columnID="844BAD9E-36AB-9B18-159C-517B1B1A2361"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="582D96DA-91EE-3DB6-8F38-AA468B5611C6" name="PREF_SEQUENTIAL_NUMBER_UK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>5152ACA4-9967-284B-04B3-15DD8BBF48DC</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="844BAD9E-36AB-9B18-159C-517B1B1A2361"/>
+<colUsage columnID="2E93389D-EE0E-1FCE-2009-54F6A7EAA498"/>
+<colUsage columnID="0002635F-ABB7-D2FF-7EAE-0C4BA6009386"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A80354D-DEC0-BA79-2B0B-A45591694CF1" name="PREF_CAND_FK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>DF42A8E5-4D8A-02B9-67A9-88000E5B9ECA</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="844BAD9E-36AB-9B18-159C-517B1B1A2361"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4943F545-EE8F-0938-0BB7-3B6BDAB70745" name="PREF_OFR_FK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>3360BA9B-6D88-E08B-85CF-04915306233E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E93389D-EE0E-1FCE-2009-54F6A7EAA498"/>
+<colUsage columnID="F2970200-D6C7-52C2-F7B9-151404842FFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

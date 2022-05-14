@@ -308,3 +308,90 @@ Już tak nie jest, nowa ustawa na to nie pozwala. Więc można przyjąć unikaln
 # Model Logiczny
 
 ![](models/Logical.png)
+
+# Model Relacyjny
+
+# Zalecenia Projektowe
+
+- Nie powinien istnieć indeks, którego klucz jest początkową częścią klucza innego indeksu.
+
+- W systemach OLTP powinny istnieć indeksy umożliwiające szybkie wyszukiwanie i sortowanie wg wszystkich kluczy głównych i obcych.
+    - indeksy unikalne na klucze główne i unikalne (w bazach Oracle są generowane automatycznie)
+    - indeksy nieunikalne na klucze obce (o ile klucz obcy nie jest początkowym fragmentem głównego/unikalnego)
+    - nie projektujemy indeksów „na wszelki wypadek”
+
+- Ograniczenia integralności realizowane przez DBMS są bezwzględnie konieczne w systemach OLTP.
+    - nie dopuszczają do zapisu danych na pewno niepoprawnych
+    - odpowiadają regułom obowiązującym w świecie
+    - np.
+        - unikalność kluczy głównych
+        - zgodność wartości kluczy obcych z odpowiednimi kluczami głównymi
+
+- Reguły integralności, które można wymusić deklaratywnie, należy właśnie tak realizować.
+    - typowe ograniczenia definiowane w sposób deklaratywny (bez programowania)
+        - realizowane w sposób zoptymalizowany
+    - zwykle statyczne - dotyczą wszystkich wierszy w tabeli
+    - np.
+        - klucz główny
+        - klucze unikalne
+        - klucze obce
+        - więzy kontrolne (check constraints)
+        - obowiązkowość kolumny (not null)
+        - asercje
+
+---
+
+- Projekt działający na wielu różnych DBMS warto wykonywać tylko, gdy jest do tego silna motywacja biznesowa; nie ma ku temu dobrych wskazań technicznych.
+
+- W tabeli podrzędnej klucz obcy na początku klucza głównego – nie wymaga dodatkowego indeksu
+- Klasyfikacja sztywna zrealizowana więzami check
+- Zmieniona kolejność kolumn: obowiązkowe i o stałej długości najpierw. 
+    - PK (obowiązkowe) 
+    - obowiązkowe UK
+    - obowiązkowe FK
+    - obowiązkowe o stałej długości
+    - obowiązkowe o zmiennej długości
+    - nieobowiązkowe UK
+    - nieobowiązkowe FK
+    - nieobowiązkowe o stałej długości
+    - nieobowiązkowe o zmiennej długości
+- Klucz obcy który nie jest na początku głównego ma indeks nieunikalny (każdy osobny)
+
+
+- klucze obce od słowników/metadanych z reguły nie mają kaskady kasowania
+
+- W zadaniach na projekcie BD2 nie ma problemów wymagających związków 1-1 i łuku, tej reprezentacji podtypów nie należy zatem używać
+
+---
+
+- Interfejsy pomiędzy (pod)systemami należy ustanawiać w oparciu o perspektywy, a nie tabele
+
+- Dane projektowanego (pod)systemu należy umieścić w wydzielonym, chronionym schemacie, a dla zapewnienia użytkownikom bezpiecznego i przezroczystego dostępu do tych danych należy użyć synonimów i perspektyw.
+
+# Od modelu danych do projektu struktur
+
+## Porządkowanie nazw
+
+- Należy dopracować nazwy tabel, kolumn i ograniczeń
+- Trzeba usunąć z nazw spacje, znaki narodowe itp.
+- Trzeba zmienić nazwy niektórych kolumn, np. kluczy rekurencyjnych
+- Warto uporządkować i skrócić nazwy ograniczeń
+- [Można zmienić nazwy tabel i kolumn na wielkie litery]
+
+## Dopracowanie/uzupełnienie projektu
+
+- Projekt trzeba dopracować i uzupełnić
+- Warto uporządkować kolejność kolumn, np. klucze główne na początek, kolumny opcjonalne na koniec
+- Trzeba poprawić kolejność składników w PK i ew. w UK – klucze obce na początek
+- Trzeba dodać potrzebne indeksy na FK
+- Należy dodać/zweryfikować ON DELETE CASCADE
+
+# TODO
+
+Popraw trigger na nietransferowalnych kluczach obcych
+
+Czy dodawać ograniczenie na Wielkość Liter Nazwiska i Imion
+
+Dodaj ograniczenie proceduralne na dodawanie / modyfikację preferencji w zależności od otwarcia rejestracji
+
+Dodaj wyzwalacz, aby różne rejestracje nie nakładały się na siebie

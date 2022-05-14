@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B9A4B201-A794-CF9B-ADC7-7E5AC2320CD1" name="COURSES">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Serves as a dictionary of available courses.
+Stores basic information about the course for candidates wondering which course to choose.]]></commentInRDBMS>
+<generatorID>952F4AAB-B24E-32C2-E4E6-6C1C0AA44547</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<abbreviation>CRS</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COURSE_CODE" id="6E70DD5C-5B9E-CC05-A2C2-E67628B972F9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Code that can distinguish a given course e.g.
+CS - short name for Computer Science 
+
+Course code must be in uppercase.]]></commentInRDBMS>
+<generatorID>9086C164-3FBC-6442-8F64-0BBF8A85609A</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>CRS_CHK_CODE_UPPER</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="COURSE_CODE = UPPER(COURSE_CODE)"/>
+</checkConstraint>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="B70C813C-E5A9-2A30-E173-5655A03B9892">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>67C8A7CF-E1EB-D613-9F53-A3D8016DDDA4</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEGREE" id="876F9800-D2B6-A31F-5DA1-11986408D313">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Academic degree achieved after passing the course:
+B - Bachelor's degree
+E - Engineer's degree
+M - Master's degree
+D - Doctoral degree]]></commentInRDBMS>
+<generatorID>566AED40-B199-C572-73C8-783808CC1DD2</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>CRS_CHK_DEGREE</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="DEGREE IN (&apos;B&apos;, &apos;E&apos;, &apos;M&apos;, &apos;D&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPTION" id="F3F96ACE-1325-6FEB-727A-123761B65C6B">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Description of what students can expect from selected course.]]></commentInRDBMS>
+<generatorID>80E8507B-A1E1-DB26-C86E-3902D392FFA4</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<ownDataTypeParameters>4000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C15E0CB1-1B17-F415-9670-8E9B4081E267" name="CRS_PK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>DDD5AC7C-ACA2-A535-9F11-2C6BB9F87C49</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E70DD5C-5B9E-CC05-A2C2-E67628B972F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="196FC177-FFC3-3EC5-2449-2CCB6A581603" name="CRS_NAME_UK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>EFE2F546-E4A3-EDE1-F74B-06398CE265A3</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B70C813C-E5A9-2A30-E173-5655A03B9892"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

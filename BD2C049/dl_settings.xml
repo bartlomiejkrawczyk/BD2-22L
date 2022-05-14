@@ -103,7 +103,7 @@
 			<font_object fo_type="Comments" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Logical View" background="-25750" foreground="-13421569" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Logical View" background="-25750" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
 			<font_object fo_type="Title" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
 			<font_object fo_type="Attribute" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
@@ -111,9 +111,9 @@
 			<font_object fo_type="Comments" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Table" background="-76" foreground="-13421569" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Table" background="16777215" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
-			<font_object fo_type="Title" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="Title" font_color="-16777216" font_name="Dialog" font_size="14" font_style="1" id="1"/>
 			<font_object fo_type="Column" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="2"/>
 			<font_object fo_type="Datatype" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
 			<font_object fo_type="PK Element" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
@@ -124,7 +124,7 @@
 			<font_object fo_type="Comments" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Relational View" background="-6881386" foreground="-13421569" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Relational View" background="-6881386" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
 			<font_object fo_type="Title" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
 			<font_object fo_type="Column" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="2"/>
@@ -203,7 +203,7 @@
 			<font_object fo_type="Process Number" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="22"/>
 		</fonts>
 		</fc_object>
-		<fc_object classname="Note" background="-4144960" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fc_object classname="Note" background="16777215" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
 		<fonts>
 			<font_object fo_type="Title" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="1"/>
 		</fonts>

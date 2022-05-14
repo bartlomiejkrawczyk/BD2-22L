@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2319E7A6-9941-3117-7F5A-9391AA768A26" name="REGISTRATIONS">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Serves as a dictionary of available registrations.
+There can be multiple registrations a year.
+The interval between start and end indicates when the registration is open and when the candidates can apply for offers.]]></commentInRDBMS>
+<generatorID>B284532B-0B0D-A5AD-4D2E-317A3B64F6F1</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<abbreviation>REG</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGISTRATION_CODE" id="5EC3E812-2522-D616-598E-263ED0BE2DBC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Code that can distinguish a given registration e.g. 
+22S - last two digits of the year (2022) + first letter of the season (Summer)
+
+Registration Code must be in uppercase.]]></commentInRDBMS>
+<generatorID>D3BE7EAA-F022-C4A3-C129-F402CA796ADD</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<constraintName>REG_CHECK_CODE_UPPER</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGISTRATION_CODE = UPPER(REGISTRATION_CODE)"/>
+</checkConstraint>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_DATE" id="A09EC677-2DE4-3DCC-1D9D-168FA8DD88CA">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date when registration opens.]]></commentInRDBMS>
+<generatorID>19452625-6C97-0CAD-A111-E2517B460D98</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_DATE" id="37E9B13F-32D7-EFE4-2CB1-6305AD8845B9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date when registration closes.]]></commentInRDBMS>
+<generatorID>457D9635-C04B-5445-78B9-25E7C8CADAEE</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CCF0386A-E43C-54FD-53A9-43CAF187EDF4" name="REG_PK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>7BA7CB0F-CC5F-3068-5EE7-DB304011975E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EC3E812-2522-D616-598E-263ED0BE2DBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="REG_CHK_START_BEFORE_END" directorySegmentName="seg_0" id="163738AC-0EDC-FD39-C59E-9741A6E3B0AC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:53:13 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<rule><![CDATA[START_DATE < END_DATE]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

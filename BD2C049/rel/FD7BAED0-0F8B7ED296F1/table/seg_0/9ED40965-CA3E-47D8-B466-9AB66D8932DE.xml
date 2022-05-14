@@ -1,0 +1,241 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9ED40965-CA3E-47D8-B466-9AB66D8932DE" name="CANDIDATES">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contains registered candidates, who can apply for up to three university courses every registration.
+Stores personal information about candidates.]]></commentInRDBMS>
+<generatorID>F21BBA2E-73BB-57DA-5193-88DE08C7E572</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<abbreviation>CAND</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CANDIDATE_ID" id="4BE388D0-585F-674C-91FF-731F1EE57FA9">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>462871D7-6EC6-82ED-DA15-240F2237245B</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementStartWith>10000</autoIncrementStartWith>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+<autoIncrementSequenceName>CAND_ID_SEQ</autoIncrementSequenceName>
+<autoIncrementTriggerName>CAND_ID_SEQ_TRG</autoIncrementTriggerName>
+</Column>
+<Column name="EMAIL" id="E04337C9-A81F-A7E1-5E50-42FD519D8BEB">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>11F96D1A-2BE4-AEA5-69E6-0DC925115CC2</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTH_DATE" id="D0DCD2C3-DC2E-4E7A-38D6-80CFE2F95EB8">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>42C7B04B-CD6E-3978-38CC-ACB69AC4AE18</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="08328E90-BA5F-B036-B658-25D74FE8E895">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>2296E254-8E75-8A53-CBAA-D02551F6A4D7</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FAMILY_NAME" id="7DF8DF90-F7C7-68D1-1CE4-68AE0BDADE78">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>324E8D95-8ADD-96B4-F355-536CC65CA5BE</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY" id="182B7B71-CCB9-9286-D144-B4F0F0C631AA">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>1BC0B094-CA18-2070-2382-D88E2A3B42BF</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="DE268A52-F291-4ECB-FA60-D788407DE15D">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>B2F3BBC0-41F9-2EDD-4B1B-7E74B13C8106</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POSTAL_CODE" id="595F0143-F956-9BE0-3001-7754A914D5DF">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>8D17DA02-A014-65D4-43CD-896DEC2A175E</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOME_NUMBER" id="7D3E4471-A9F4-5288-95FF-516DBEE0E1FB">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>16488003-9542-CC22-C9D7-242C5AB07402</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PESEL" id="1F1B4A91-3B35-C147-BDB2-E33E4E54FFFC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>8A6B28C1-BD8E-49B5-555F-BDCA4229EC88</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE_NUMBER" id="1665AD12-27D0-7F6D-0388-53FBA579CDDC">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>B215F9D4-216F-2387-357F-B37A22CE4376</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13 BYTE</dataTypeSize>
+<ownDataTypeParameters>13 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SECOND_NAME" id="96BA38F4-0A3A-DCD9-F1E1-1306363CFAFD">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>E407A867-D2E2-C5FE-8BE1-C86346B7DBD9</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VOIVODESHIP" id="4CFE9FC2-5498-8A26-C8F0-03DA8262D92B">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>D7D2FDA5-0F12-07F3-34DF-BD7A163D9E8D</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREET" id="3C8D98BA-D611-A226-385F-D1D365379921">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>1E3CD9AB-AD25-FC40-F34F-DBD544D068D6</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>80 BYTE</dataTypeSize>
+<ownDataTypeParameters>80 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APARTMENT_NUMBER" id="1FEC7A1B-8745-179E-1211-9AEC431BB01C">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>58AC902A-4F0A-BC73-034C-EC7741AFB70C</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FE9791B-43DC-DB08-92D8-2BABEBD14479" name="CAND_PK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>27669E51-FE1C-EA2E-DA51-B359F1690F32</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4BE388D0-585F-674C-91FF-731F1EE57FA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F1E0CA5-2BA0-7A26-61E9-814E3B16645D" name="CAND_EMAIL_UK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>BFF39624-7479-AAD6-83CB-1615963BD793</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E04337C9-A81F-A7E1-5E50-42FD519D8BEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58C7034D-C283-86DA-94AB-213286B1D221" name="CAND_PESEL_UK">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-11 21:11:27 UTC</createdTime>
+<generatorID>53BD2C75-EDA1-7675-262E-4EF82E56C890</generatorID>
+<ownerDesignName>BD2C049</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F1B4A91-3B35-C147-BDB2-E33E4E54FFFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
