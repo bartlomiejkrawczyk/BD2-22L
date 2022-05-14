@@ -125,7 +125,7 @@ preferencje - rekrutacje
 
 ```
 kandydaci   - - - ----<     preferencje
-rekrutacje  - - - ----<     preferencje
+rekrutacje  - - - ----<     preferencje -> (rekrutacje -< oferty -< preferencje)
 oferty      - - - ----<     preferencje
 kierunki    - - - ----<     oferty
 rekrutacje  - - - ----<     oferty
@@ -193,15 +193,34 @@ Kierunki:
 
 ## 4. Dodajemy opcjonalne pomocnicze opisy
 
+Jak w `reports/Logical.html`
+
 # ERD - atrybuty
 
 ![](models/Attributes.png)
 
+# Konwersacja z Wykładowcą przed oddaniem Etapu I
+
+> Oferta kierunków może się zmieniać w czasie, więc uznałem, że dla każdej
+> rejestracji będzie ustalana nowa oferta.
+
+Słusznie.
+
+> Ustaliłem, że w tej sytuacji związek preferencji do rejestracji będzie wynikał
+> pośrednio poprzez związek preferencji z ofertą.
+
+Też słusznie. "Naukowo" to można określić tak, że oferta jest rozwiązaniem
+związku n-m i następuje "przepięcie" związku z Courses na Offers.
+
+> Zastanawiam się jeszcze, w jaki sposób powinniśmy przechowywać dane takie jak
+> login i hasło.
+
+Nic takiego nie ma w zadaniu. W żaden sposób też nie wynika z niego, że kandydat
+sam rejestruje swoje dane.
+
 # Model koncepcyjny
 
 ![](models/Conceptual.png)
-
-# Model logiczny - unikalne identyfikatory
 
 # Unikalne identyfikatory
 
@@ -210,6 +229,81 @@ Jak w `reports/Logical.html`
 # Atrybuty - typy danych
 
 Jak w `reports/Logical.html`
+
+# Konwersacja z Wykładowcą przed oddaniem Etapu II
+
+> Zastanawiam się, czy teraz po usunięciu pola "preference id", same związki
+> identyfikujące mogą stanowić unikalny identyfikator? ("candidate id",
+> "registration code", "course code") Dany kandydat w danej rejestracji może
+> zarejestrować się tylko raz na dany kierunek.
+
+Ma to sens.
+
+> W celu zapewnienia unikalności liczby pozycyjnej w rejestracji kandydata do
+> encji "Preference" dodałem unikalny identyfikator na atrybut "order number"
+> oraz atrybuty wynikające ze związków identyfikujących: "candidate id" oraz
+> "registration code".
+
+Intencja chyba jest dobra, ale to co Pan napisał jest błędne. To nie jest model
+relacyjny i tu żadnych kluczy obcych nie ma, więc nie mogą wchodzić do PUID.
+
+Nazwa "order number" jest niefortunna, bo oznacza zwykle numer zamówienia.
+Raczej "sequential number" albo "preference number".
+
+> Czy powinienem  ten atrybut (`order number`) ograniczyć do 3 wartości, aby móc sprawdzać czy liczba jest z
+> przedziału np. [1;3]?
+
+Tak właśnie należy zrobić.
+
+> Czy nazwa "available slots" lepiej oddaje nazwę atrybutu, który wcześniej
+> występował pod nazwą "positions number"? Sygnalizuje on maksymalną ilość
+> miejsc dostępnych w czasie rejestracji na dany kierunek.
+
+Na pewno lepiej.
+
+---
+
+> 1. Czy 100 bajtów jest odpowiednią wielkością aby zapisać nazwę kierunku?
+
+Powinno wystarczyć.
+
+> 2. Zastanawiam, czy stopień studiów - "degree" w encji "course"
+> może być liczbą czy lepiej dać CHAR(1).
+
+Obie wersje są OK.
+
+> Mogę także dodać dodatkowy atrybut poza stopniem, który będzie decydował
+> o rodzaju (problem tutaj występuje z rozróżnieniem inżynierki od licencjatu).
+
+Przy reprezentacji liczbowej może się przydać.
+
+> 3. Czy dodawać wtórne unikalne identyfikatory na atrybuty "start" oraz "end"
+> encji "registration"?
+
+UID nic nie pomoże, bo chodzi o zapobieżenie zakładkom, a tego się UID-em nie zrobi.
+
+> 4. Wiem, że numer domu powinien być trzymany jako wartość
+> tekstowa np. "28F". Czy w przypadku numeru mieszkania także mam tak postąpić?
+
+Tak, literki zdarzają się i tu. Wiele tzw. numerów to są tak naprawdę ciągi
+znaków, niekoniecznie cyfr.
+
+---
+
+> Czy mogę wymagać od kandydatów posiadania numeru telefonu i adresu mailowego?
+
+Adresu e-mail tak, telefonu niekoniecznie.
+
+> Czy mogę założyć, że te atrybuty będą unikalne dla każdego kandydata?
+
+E-mail tak, telefon zdecydowanie nie. Są jeszcze ludzie używający telefonów
+stacjonarnych - domowych. Wiem to na pewno, bo sam do nich należę.
+
+> Zastanawiam się czy nazwę kierunku mogę uznać jako wartość unikalną?
+> Wydaje mi się to rozsądne, jednak na PW w przeszłości wystąpiło kilka kierunków
+> o nazwie Informatyka.
+
+Już tak nie jest, nowa ustawa na to nie pozwala. Więc można przyjąć unikalność.
 
 # Model Logiczny
 
