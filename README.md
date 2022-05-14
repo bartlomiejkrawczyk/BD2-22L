@@ -77,7 +77,7 @@ Wyższa uczelnia prowadzi nabór kandydatów na studia. `Każdy` kandydat `rejes
 - wybrane kierunki ... z ... (kierunki - oferty)
 - ... kolejność decyduje o ... (oferty - preferencje)
 - ... a ... zmienia się z czasem (oferty - rekrutacje)
-- który nie dostał się ... może startować w kolejnych (preferencje - rekrutacje)
+- który nie dostał się ... może startować w kolejnych (preferencje - rekrutacje) - (po dłuższym zastanowieniu ten związek wynika ze związku `oferty - preferencje`)
 
 preferencje - rekrutacje
 
@@ -97,9 +97,13 @@ preferencje - rekrutacje
 - W jednej rekrutacje jest dostępnych wiele ofert, dana oferta jest dostępna tylko w jednej rekrutacji
     - związek 1 - n
     - rekrutacje - oferty
+
+**UWAGA:** ten związek wynika ze związku `oferty - preferencje` - można go pominąć:
 - W danej rekrutacji wielu kandydatów może złożyć do 3 swoich preferencji, dana preferencja może zostać złożona tylko w jednej rekrutacji
     - związek 1 - n
     - rekrutacje - preferencje
+
+
 
 ### Opcjonalność związków:
 - Preferencja musi dotyczyć kandydata
@@ -189,8 +193,6 @@ Kierunki:
 
 ## 4. Dodajemy opcjonalne pomocnicze opisy
 
-Brak?
-
 # ERD - atrybuty
 
 ![](models/Attributes.png)
@@ -203,4 +205,12 @@ Brak?
 
 # Unikalne identyfikatory
 
+Jak w `reports/Logical.html`
+
 # Atrybuty - typy danych
+
+Jak w `reports/Logical.html`
+
+# Model Logiczny
+
+![](models/Logical.png)
