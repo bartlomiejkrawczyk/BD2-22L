@@ -106,7 +106,8 @@ class Candidate:
         self.street = 'NULL' if choice((True, False)) \
             else f"'{choice(STREETS)}'"
 
-        self.apartment_number = f"'{randint(1, 999)}{chr(ord('A') + randint(0, 23))}'"
+        self.apartment_number = 'NULL' if choice((True, False)) \
+            else f"'{randint(1, 999)}{chr(ord('A') + randint(0, 23))}'"
 
     def __str__(self) -> str:
         return f'INSERT INTO candidates VALUES ({self.candidate_id}, {self.email}, {self.birth_date},'\

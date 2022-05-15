@@ -1,0 +1,607 @@
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- Every candidate registers giving their personal information.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> -- Number of all the candidates accross every registration
+SQL> 
+SQL> SELECT  COUNT(*) NUMBER_OF_CANDIDATES
+  2  FROM    candidates;
+
+NUMBER_OF_CANDIDATES
+--------------------
+                1137
+
+SQL> 
+SQL> -- Personal Information
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   first_name
+  3      ,   second_name
+  4      ,   family_name
+  5      ,   birth_date
+  6      ,   pesel
+  7  FROM    candidates
+  8  FETCH FIRST 20 ROWS ONLY;
+
+CANDIDATE_ID FIRST_NAME           SECOND_NAME          FAMILY_NAME               BIRTH_DA PESEL      
+------------ -------------------- -------------------- ------------------------- -------- -----------
+        1108 Mariko                                    Fannin                    47/02/04 40118554171
+        1109 Stefania                                  Sor                       74/09/07            
+        1110 Reeva                                     Anthony                   43/12/14 35825262305
+        1111 Paden                                     Matte                     93/06/02            
+        1112 Judge                Mollie               Bader                     95/04/16            
+        1113 Tommy                                     Wexell                    47/01/28 29390064479
+        1114 Crystal              Carrieann            Dokuchitz                 79/06/10 45890705143
+        1115 Dayra                                     Dumes                     64/09/06            
+        1116 Crissy               Lynessa              Shappell                  83/04/20 17277274900
+        1117 Taree                Manish               Meech                     03/07/07            
+        1118 Margurite                                 Straton                   62/08/10 58168419180
+        1119 Amand                Aubrei               Bearfield                 57/08/09 78492626300
+        1120 Alexia               Usher                Hoskey                    87/02/22            
+        1121 Shalandria                                Kirk                      25/06/26 18907493966
+        1122 Taquisha                                  Hiester                   79/08/25 37218196819
+        1123 Ambera                                    Bark                      53/08/24 61384265560
+        1124 Anatasia                                  Darmody                   29/02/09 15177197235
+        1125 Kera                 Rahul                Schilder                  79/02/02 70345536907
+        1126 Timaree              Tino                 Whisenant                 98/07/12 11299007649
+        1127 Colton               Chans                Pineault                  43/11/15 41051653190
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Contact Information
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   phone_number
+  3      ,   email
+  4  FROM    candidates
+  5  FETCH FIRST 20 ROWS ONLY;
+
+CANDIDATE_ID PHONE_NUMBER  EMAIL                                                                                               
+------------ ------------- ----------------------------------------------------------------------------------------------------
+        1108               Mariko.Fannin.1653@gmail.com                                                                        
+        1109 +82952655891  Stefania.Sor.598@gmail.com                                                                          
+        1110 +39311843766  Reeva.Anthony.639@example.com                                                                       
+        1111 +51517757521  Paden.Matte.973@pw.edu.pl                                                                           
+        1112               Judge.Bader.1590@pw.edu.pl                                                                          
+        1113 +21578965958  Tommy.Wexell.1256@pw.edu.pl                                                                         
+        1114 +86807435608  Crystal.Dokuchitz.102@o2.pl                                                                         
+        1115 +96105618483  Dayra.Dumes.1723@youtube.com                                                                        
+        1116               Crissy.Shappell.248@youtube.com                                                                     
+        1117               Taree.Meech.452@youtube.com                                                                         
+        1118 +98687139455  Margurite.Straton.1359@pw.edu.pl                                                                    
+        1119               Amand.Bearfield.550@wp.pl                                                                           
+        1120               Alexia.Hoskey.1876@example.com                                                                      
+        1121               Shalandria.Kirk.264@youtube.com                                                                     
+        1122 +1888996119   Taquisha.Hiester.9@o2.pl                                                                            
+        1123 +35744617670  Ambera.Bark.1509@example.com                                                                        
+        1124 +43194778105  Anatasia.Darmody.197@wp.pl                                                                          
+        1125               Kera.Schilder.2003@youtube.com                                                                      
+        1126               Timaree.Whisenant.713@youtube.com                                                                   
+        1127 +96299256225  Colton.Pineault.739@pw.edu.pl                                                                       
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Registered Address
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   country
+  3      ,   voivodeship
+  4      ,   city
+  5      ,   postal_code
+  6      ,   street
+  7      ,   home_number
+  8      ,   apartment_number
+  9  FROM    candidates
+ 10  FETCH FIRST 20 ROWS ONLY;
+
+CANDIDATE_ID COUNTRY                                            VOIVODESHIP                                        CITY                                               POSTAL_COD STREET                                                                           HOME_N APART
+------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ---------- -------------------------------------------------------------------------------- ------ -----
+        1108 Bangladesh                                                                                            Bunkie                                             78-203     P Street                                                                         945A        
+        1109 Oman                                               Mazowieckie                                        PrincetonMeadows                                   163-825    Eraser Road                                                                      78T         
+        1110 Gabon                                              Kujawsko-Pomorskie                                 Choteau                                            276-916                                                                                     971F   126P 
+        1111 Afghanistan                                        Dolnoslaskie                                       Morada                                             272-471                                                                                     258D        
+        1112 Burkina                                                                                               Chapin                                             511-509                                                                                     436G        
+        1113 Greece                                                                                                Biloxi                                             54-252                                                                                      680G        
+        1114 Nauru                                              Lodzkie                                            Sawgrass                                           2-894      Shelby Way                                                                       341R   636W 
+        1115 Kosovo                                             Malopolskie                                        Needles                                            446-581    Crabtree Way                                                                     260M        
+        1116 Vatican City                                       Podkarpackie                                       Greenacres                                         818-912    Allura Court                                                                     814I   109N 
+        1117 Grenada                                            Pomorskie                                          Olivia                                             345-39     Green Brook Drive                                                                124D        
+        1118 Namibia                                                                                               EastAlton                                          466-564                                                                                     244K   716J 
+        1119 Tajikistan                                                                                            Woonsocket                                         744-133    Stonemason Drive                                                                 442D   719C 
+        1120 Qatar                                                                                                 HelenaValleyNortheast                              333-142    Mack Avenue NE                                                                   29Q         
+        1121 Dominican Republic                                 Dolnoslaskie                                       Monon                                              764-71                                                                                      229H   459A 
+        1122 Portugal                                                                                              Louisville                                         9-213                                                                                       218J        
+        1123 Sudan                                              Podlaskie                                          Glenarden                                          182-496                                                                                     911S   374J 
+        1124 Samoa                                              Lodzkie                                            WindLake                                           374-633                                                                                     554T   755S 
+        1125 Bosnia Herzegovina                                                                                    Temperance                                         847-642                                                                                     87X    921H 
+        1126 Israel                                                                                                Booneville                                         919-264    Lynn Circle                                                                      678C   176O 
+        1127 Romania                                                                                               UniversityHeights                                  607-266                                                                                     814O        
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Optional Information Given
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   pesel
+  3      ,   phone_number
+  4      ,   second_name
+  5      ,   voivodeship
+  6      ,   street
+  7      ,   apartment_number
+  8  FROM    candidates
+  9  WHERE   pesel IS NOT NULL
+ 10      AND phone_number IS NOT NULL
+ 11      AND second_name IS NOT NULL
+ 12      AND voivodeship IS NOT NULL
+ 13      AND street IS NOT NULL
+ 14      AND apartment_number IS NOT NULL
+ 15  ;
+
+CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP                                        STREET                                                                           APART
+------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
+        1114 45890705143 +86807435608  Carrieann            Lodzkie                                            Shelby Way                                                                       636W 
+        1174 73333315259 +80646464268  Natosha              Podkarpackie                                       Shire Mill Road                                                                  555Q 
+        1208 33842201307 +48428792224  Jansen               Lubuskie                                           Oak Terrace                                                                      879O 
+        1210 33673037468 +9928507686   Jamise               Kujawsko-Pomorskie                                 Harford Place                                                                    265I 
+         972 50696998928 +56560582452  Yamil                Warminsko-Mazurskie                                Pear Shape Lane                                                                  748G 
+         868 35525986819 +30666322887  Teneisha             Dolnoslaskie                                       Upper Gulph Road                                                                 875C 
+         892 86325388762 +84526260640  Omar                 Opolskie                                           Normandy Street                                                                  327U 
+         187 55450190407 +10794632786  Devonna              Zachodniopomorskie                                 Etching Overlook                                                                 170I 
+         281 44532658132 +1990827609   Sander               Swietokrzyskie                                     Ellison Avenue South                                                             779G 
+         308 49986385722 +18122576951  Reginaldo            Swietokrzyskie                                     Weightman Street                                                                 209V 
+         341 66155077187 +39899006727  Matisha              Dolnoslaskie                                       Esmond Street                                                                    397D 
+         578 94955695851 +38318153765  Lakara               Podlaskie                                          Boggs Lane                                                                       975U 
+         579 40212854252 +53852579363  Jemma                Kujawsko-Pomorskie                                 Tennessee Avenue North                                                           672M 
+         595 20330291058 +48571517690  Bryden               Lodzkie                                            Mill Creek Road                                                                  38B  
+         604 70743706636 +99390566632  Kami                 Opolskie                                           Dulcimer Lane                                                                    36V  
+         690 64842390857 +47432540235  Kijuana              Warminsko-Mazurskie                                Syracuse Court South                                                             776H 
+
+16 rows selected. 
+
+SQL> 
+SQL> -- Optional Information NOT Given
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   pesel
+  3      ,   phone_number
+  4      ,   second_name
+  5      ,   voivodeship
+  6      ,   street
+  7      ,   apartment_number
+  8  FROM    candidates
+  9  WHERE   pesel IS NULL
+ 10      AND phone_number IS NULL
+ 11      AND second_name IS NULL
+ 12      AND voivodeship IS NULL
+ 13      AND street IS NULL
+ 14      AND apartment_number IS NULL
+ 15  ;
+
+CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP                                        STREET                                                                           APART
+------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
+        1142                                                                                                                                                                                         
+        1157                                                                                                                                                                                         
+        1190                                                                                                                                                                                         
+        1032                                                                                                                                                                                         
+         196                                                                                                                                                                                         
+         262                                                                                                                                                                                         
+         343                                                                                                                                                                                         
+         349                                                                                                                                                                                         
+         442                                                                                                                                                                                         
+         443                                                                                                                                                                                         
+         568                                                                                                                                                                                         
+         584                                                                                                                                                                                         
+         620                                                                                                                                                                                         
+         772                                                                                                                                                                                         
+         776                                                                                                                                                                                         
+
+15 rows selected. 
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- Every candidate registers specifying up to 3 choosen courses of study from 
+SQL> -- university offer.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> -- Number of placed preferences in a given registration
+SQL> 
+SQL> SELECT  first_name
+  2      ,   second_name
+  3      ,   family_name
+  4      ,   registration_code
+  5      ,   COUNT(*) PREFERENCES_IN_REGISTRATION
+  6  FROM    candidates
+  7  JOIN    preferences 
+  8      USING (candidate_id)
+  9  GROUP BY candidate_id
+ 10      ,   registration_code
+ 11      ,   first_name
+ 12      ,   second_name
+ 13      ,   family_name
+ 14  ORDER BY candidate_id ASC
+ 15      ,   registration_code DESC
+ 16  FETCH FIRST 20 ROWS ONLY;
+
+FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS PREFERENCES_IN_REGISTRATION
+-------------------- -------------------- ------------------------- ----- ---------------------------
+Serina                                    Larick                    19W                             3
+Maribel                                   Filary                    15S                             1
+Maribel                                   Filary                    14S                             3
+Raelynn              Mikenna              Nobriga                   16W                             1
+Raelynn              Mikenna              Nobriga                   14S                             3
+Teia                 Deirdre              Brigges                   22W                             3
+Teia                 Deirdre              Brigges                   22S                             2
+Teia                 Deirdre              Brigges                   18S                             2
+Neghan               Legrande             Romas                     20W                             1
+Neghan               Legrande             Romas                     20S                             2
+Tyffani                                   Curi                      21S                             3
+Asael                                     Krzyminski                21S                             2
+Silver               Elly                 Lafleche                  21S                             1
+Silver               Elly                 Lafleche                  19S                             2
+Silver               Elly                 Lafleche                  17W                             3
+Sahira                                    Meehan                    14W                             2
+Sahira                                    Meehan                    10S                             2
+Jeana                Crystel              Larcade                   20W                             3
+Jeana                Crystel              Larcade                   13S                             3
+Risha                                     Suchocki                  17S                             1
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Check if number of chosen courses does not exceed 3 courses per registration
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   registration_code
+  3      ,   COUNT(*) PREFERENCES_IN_REGISTRATION
+  4  FROM    preferences
+  5  GROUP BY candidate_id
+  6      ,   registration_code
+  7  HAVING  COUNT(*) > 3;
+no rows selected
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- The order determines the preferences.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> SELECT  cand.first_name
+  2      ,   cand.second_name
+  3      ,   cand.family_name
+  4      ,   registration_code
+  5      ,   course_code
+  6      ,   crs.name
+  7      ,   pref.sequential_number
+  8  FROM    candidates cand
+  9  JOIN    preferences pref
+ 10      USING(candidate_id)
+ 11  JOIN    courses crs
+ 12      USING(course_code)
+ 13  WHERE   candidate_id = 101
+ 14  ORDER BY registration_code
+ 15      ,   pref.sequential_number
+ 16  ;
+
+FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS COURSE NAME                                                                                                 SEQUENTIAL_NUMBER
+-------------------- -------------------- ------------------------- ----- ------ ---------------------------------------------------------------------------------------------------- -----------------
+Maribel                                   Filary                    14S   PS107  Public Service                                                                                                       1
+Maribel                                   Filary                    14S   AP5    Applied Finance                                                                                                      2
+Maribel                                   Filary                    14S   SO120  Science in Clinical Epidemiology                                                                                     3
+Maribel                                   Filary                    15S   MO82   Mass Communication and Journalism                                                                                    1
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- Recruitment takes place twice a year.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> -- All the registrations
+SQL> 
+SQL> SELECT  registration_code
+  2      ,   start_date
+  3      ,   end_date
+  4  FROM    registrations;
+
+REGIS START_DA END_DATE
+----- -------- --------
+10W   10/07/01 10/07/28
+10S   10/02/01 10/02/28
+11W   11/07/01 11/07/28
+11S   11/02/01 11/02/28
+12W   12/07/01 12/07/28
+12S   12/02/01 12/02/28
+13W   13/07/01 13/07/28
+13S   13/02/01 13/02/28
+14W   14/07/01 14/07/28
+14S   14/02/01 14/02/28
+15W   15/07/01 15/07/28
+15S   15/02/01 15/02/28
+16W   16/07/01 16/07/28
+16S   16/02/01 16/02/28
+17W   17/07/01 17/07/28
+17S   17/02/01 17/02/28
+18W   18/07/01 18/07/28
+18S   18/02/01 18/02/28
+19W   19/07/01 19/07/28
+19S   19/02/01 19/02/28
+20W   20/07/01 20/07/28
+20S   20/02/01 20/02/28
+21W   21/07/01 21/07/28
+21S   21/02/01 21/02/28
+22W   22/07/01 22/07/28
+22S   22/02/01 22/02/28
+
+26 rows selected. 
+
+SQL> 
+SQL> -- Registrations from year 2022
+SQL> 
+SQL> SELECT  registration_code
+  2      ,   start_date
+  3      ,   end_date
+  4  FROM    registrations
+  5  WHERE   EXTRACT(YEAR FROM start_date) = 2022;
+
+REGIS START_DA END_DATE
+----- -------- --------
+22W   22/07/01 22/07/28
+22S   22/02/01 22/02/28
+
+SQL> 
+SQL> -- Count all the registrations per year
+SQL> 
+SQL> SELECT  EXTRACT(YEAR FROM start_date) YEAR
+  2      ,   COUNT(*) REGISTRATIONS_IN_A_YEAR
+  3  FROM    registrations
+  4  GROUP BY EXTRACT(YEAR FROM start_date)
+  5  ORDER BY YEAR;
+
+      YEAR REGISTRATIONS_IN_A_YEAR
+---------- -----------------------
+      2010                       2
+      2011                       2
+      2012                       2
+      2013                       2
+      2014                       2
+      2015                       2
+      2016                       2
+      2017                       2
+      2018                       2
+      2019                       2
+      2020                       2
+      2021                       2
+      2022                       2
+
+13 rows selected. 
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- The university course offer changes with time.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> -- List of 20 courses
+SQL> SELECT  course_code
+  2      ,   name
+  3      ,   degree
+  4      ,   CAST(
+  5              CASE WHEN description IS NOT NULL THEN
+  6                  SUBSTR(description, 0, 100) || '...'
+  7              ELSE 
+  8                  NULL
+  9              END 
+ 10              AS VARCHAR2(103)
+ 11          ) DESCRIPTION
+ 12  FROM courses
+ 13  FETCH FIRST 20 ROWS ONLY;
+
+COURSE NAME                                                                                                 D DESCRIPTION                                                                                            
+------ ---------------------------------------------------------------------------------------------------- - -------------------------------------------------------------------------------------------------------
+RI111  Religious Education                                                                                  E Voluptatem velit adipisci magnam. Etincidunt quisquam sit quisquam consectetur voluptatem dolore est...
+RH112  Research                                                                                             B Quaerat porro numquam porro velit tempora. Est ipsum etincidunt non. Voluptatem quaerat labore quisq...
+SS113  Sacred Music                                                                                         B                                                                                                        
+SO114  Sacred Theology                                                                                      D                                                                                                        
+SS115  Science                                                                                              E Dolor quaerat quiquia est quiquia aliquam. Ipsum numquam quaerat tempora consectetur dolorem sit. Do...
+SC116  Science in Applied Cognition and Neuroscience                                                        D                                                                                                        
+SI117  Science in Athletic Training                                                                         E Quaerat quisquam modi voluptatem. Quaerat non magnam ipsum quiquia magnam numquam. Ut sit quiquia ei...
+SO118  Science in Bioinformatics                                                                            E Ipsum consectetur non tempora eius. Dolor numquam non numquam ipsum dolor. Tempora etincidunt modi n...
+SC119  Science in Business Analytics                                                                        B Adipisci sit dolor sed. Voluptatem etincidunt sed quisquam tempora porro. Sit non aliquam aliquam do...
+SO120  Science in Clinical Epidemiology                                                                     D Quisquam eius dolore consectetur ipsum adipisci voluptatem. Magnam adipisci porro ipsum numquam numq...
+ST121  Science in Computing Research                                                                        B Sit magnam quisquam dolore adipisci quisquam. Aliquam porro tempora ipsum porro. Quaerat quisquam co...
+SI122  Science in Cyber Security                                                                            E Modi numquam modi sed quiquia aliquam. Eius modi dolorem sed etincidunt. Dolore dolor voluptatem ame...
+SE123  Science in Education                                                                                 E                                                                                                        
+SE124  Science in Engineering                                                                               E                                                                                                        
+SD125  Science in Development Administration                                                                D                                                                                                        
+SI126  Science in Finance                                                                                   B Aliquam neque sed amet dolorem consectetur porro. Labore velit est numquam amet numquam voluptatem. ...
+SN127  Science in Governance and Organizational Sciences                                                    E Amet quaerat tempora dolorem porro quisquam. Dolorem labore etincidunt quiquia modi etincidunt. Veli...
+SE128  Science in Government Contracts                                                                      E Porro ipsum voluptatem etincidunt. Neque adipisci ut est velit voluptatem. Labore etincidunt sed sed...
+SE129  Science in Health Informatics                                                                        E Quisquam aliquam quisquam quiquia aliquam consectetur. Dolorem dolore modi porro consectetur consect...
+SI130  Science in Human Resource Development                                                                B Neque consectetur tempora quiquia. Labore non neque numquam aliquam. Porro non modi labore etincidun...
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Courses and their number of occurences in all the registrations
+SQL> 
+SQL> SELECT  course_code
+  2      ,   crs.name
+  3      ,   COUNT(*) OCCURRENCES
+  4  FROM    courses crs
+  5  JOIN    offers ofr
+  6      USING(course_code)
+  7  GROUP BY course_code, crs.name
+  8  FETCH FIRST 20 ROWS ONLY;
+
+COURSE NAME                                                                                                 OCCURRENCES
+------ ---------------------------------------------------------------------------------------------------- -----------
+MA81   Management of Innovation                                                                                      12
+MA84   Mathematics                                                                                                   11
+MC38   Master in Creative Technologies                                                                               14
+NC91   Network and Communications Management                                                                         10
+SC116  Science in Applied Cognition and Neuroscience                                                                 15
+SE129  Science in Health Informatics                                                                                 12
+AI16   Arts in Teaching                                                                                              11
+DV40   Development Economics                                                                                         14
+ET44   Educational Technology                                                                                        13
+FE51   Financial Engineering                                                                                         13
+IF61   International Affairs                                                                                         13
+SS113  Sacred Music                                                                                                  11
+SS115  Science                                                                                                       13
+SS147  Strategic Studies                                                                                             16
+TE152  Theology                                                                                                      16
+UA153  Urban Planning                                                                                                17
+BE25   Business Engineering                                                                                          13
+CI27   Chemistry                                                                                                     11
+MH86   Mathematics and Philosophy                                                                                     9
+MM83   Mathematical Finance                                                                                          11
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Occurrence of a course throughout all the registrations
+SQL> 
+SQL> SELECT  crs.course_code
+  2      ,   crs.name
+  3      ,   reg.registration_code
+  4      ,   start_date
+  5      ,   end_date
+  6  FROM    registrations reg
+  7  LEFT JOIN offers ofr
+  8      ON  reg.registration_code = ofr.registration_code 
+  9      AND ofr.course_code = (
+ 10          SELECT  course_code 
+ 11          FROM    courses 
+ 12          ORDER BY course_code DESC 
+ 13          FETCH FIRST 1 ROW ONLY
+ 14      )
+ 15  LEFT JOIN courses crs
+ 16      ON ofr.course_code = crs.course_code
+ 17  ORDER BY start_date;
+
+COURSE NAME                                                                                                 REGIS START_DA END_DATE
+------ ---------------------------------------------------------------------------------------------------- ----- -------- --------
+VE154  Veterinary Science                                                                                   10S   10/02/01 10/02/28
+                                                                                                            10W   10/07/01 10/07/28
+VE154  Veterinary Science                                                                                   11S   11/02/01 11/02/28
+VE154  Veterinary Science                                                                                   11W   11/07/01 11/07/28
+VE154  Veterinary Science                                                                                   12S   12/02/01 12/02/28
+VE154  Veterinary Science                                                                                   12W   12/07/01 12/07/28
+VE154  Veterinary Science                                                                                   13S   13/02/01 13/02/28
+                                                                                                            13W   13/07/01 13/07/28
+                                                                                                            14S   14/02/01 14/02/28
+VE154  Veterinary Science                                                                                   14W   14/07/01 14/07/28
+VE154  Veterinary Science                                                                                   15S   15/02/01 15/02/28
+                                                                                                            15W   15/07/01 15/07/28
+                                                                                                            16S   16/02/01 16/02/28
+                                                                                                            16W   16/07/01 16/07/28
+VE154  Veterinary Science                                                                                   17S   17/02/01 17/02/28
+VE154  Veterinary Science                                                                                   17W   17/07/01 17/07/28
+                                                                                                            18S   18/02/01 18/02/28
+VE154  Veterinary Science                                                                                   18W   18/07/01 18/07/28
+VE154  Veterinary Science                                                                                   19S   19/02/01 19/02/28
+                                                                                                            19W   19/07/01 19/07/28
+                                                                                                            20S   20/02/01 20/02/28
+                                                                                                            20W   20/07/01 20/07/28
+VE154  Veterinary Science                                                                                   21S   21/02/01 21/02/28
+                                                                                                            21W   21/07/01 21/07/28
+                                                                                                            22S   22/02/01 22/02/28
+VE154  Veterinary Science                                                                                   22W   22/07/01 22/07/28
+
+26 rows selected. 
+
+SQL> 
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> -- Candidate who has not been admitted to study in a registration may start
+SQL> -- in the next registrations.
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> -- Candidates and their number of tries in registrations
+SQL> 
+SQL> SELECT  first_name
+  2      ,   second_name
+  3      ,   family_name
+  4      ,   COUNT(DISTINCT registration_code) ATTENDED_REGISTRATIONS
+  5  FROM    candidates
+  6  JOIN    preferences 
+  7      USING (candidate_id)
+  8  GROUP BY candidate_id
+  9      ,   first_name
+ 10      ,   second_name
+ 11      ,   family_name
+ 12  ORDER BY candidate_id ASC
+ 13  FETCH FIRST 20 ROWS ONLY;
+
+FIRST_NAME           SECOND_NAME          FAMILY_NAME               ATTENDED_REGISTRATIONS
+-------------------- -------------------- ------------------------- ----------------------
+Serina                                    Larick                                         1
+Maribel                                   Filary                                         2
+Raelynn              Mikenna              Nobriga                                        2
+Teia                 Deirdre              Brigges                                        3
+Neghan               Legrande             Romas                                          2
+Tyffani                                   Curi                                           1
+Asael                                     Krzyminski                                     1
+Silver               Elly                 Lafleche                                       3
+Sahira                                    Meehan                                         2
+Jeana                Crystel              Larcade                                        2
+Risha                                     Suchocki                                       2
+Ayme                                      Klukas                                         1
+Devlin                                    Mabary                                         3
+Nichols              Steele               Arslanian                                      3
+Glenn                                     Legaspi                                        1
+Amaryllis                                 Zubia                                          3
+Clementine           Ladana               Olesky                                         1
+Leotis                                    Colindres                                      2
+Savvas                                    Olquin                                         1
+Marni                Romney               Katnik                                         1
+
+20 rows selected. 
+
+SQL> 
+SQL> -- Candidates and registrations they attended
+SQL> 
+SQL> SELECT  first_name
+  2      ,   second_name
+  3      ,   family_name
+  4      ,   registration_code
+  5  FROM    candidates
+  6  JOIN    preferences 
+  7      USING (candidate_id)
+  8  GROUP BY candidate_id
+  9      ,   registration_code
+ 10      ,   first_name
+ 11      ,   second_name
+ 12      ,   family_name
+ 13  ORDER BY candidate_id ASC
+ 14      ,   registration_code
+ 15  FETCH FIRST 20 ROWS ONLY;
+
+FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS
+-------------------- -------------------- ------------------------- -----
+Serina                                    Larick                    19W  
+Maribel                                   Filary                    14S  
+Maribel                                   Filary                    15S  
+Raelynn              Mikenna              Nobriga                   14S  
+Raelynn              Mikenna              Nobriga                   16W  
+Teia                 Deirdre              Brigges                   18S  
+Teia                 Deirdre              Brigges                   22S  
+Teia                 Deirdre              Brigges                   22W  
+Neghan               Legrande             Romas                     20S  
+Neghan               Legrande             Romas                     20W  
+Tyffani                                   Curi                      21S  
+Asael                                     Krzyminski                21S  
+Silver               Elly                 Lafleche                  17W  
+Silver               Elly                 Lafleche                  19S  
+Silver               Elly                 Lafleche                  21S  
+Sahira                                    Meehan                    10S  
+Sahira                                    Meehan                    14W  
+Jeana                Crystel              Larcade                   13S  
+Jeana                Crystel              Larcade                   20W  
+Risha                                     Suchocki                  11W  
+
+20 rows selected. 
+
+SQL> 
+SQL> 
+SQL> 
+SQL> spool off
