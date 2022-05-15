@@ -1,8 +1,10 @@
 from itertools import product
-from random import choice, randint, sample
+from random import choice, randint, sample, seed
 from typing import List, Callable
 
 import lorem
+
+seed(1)
 
 NAMES = []
 
@@ -213,9 +215,13 @@ for r, c in product(REGISTRATIONS, COURSES):
 PREFERENCES = []
 
 for c in CANDIDATES:
-    registration_code = choice(REGISTRATIONS).registration_code
-    for i, o in enumerate(sample(OFR[registration_code], k=randint(1, 3)), start=1):
-        PREFERENCES.append(Preference(o, c.candidate_id, i))
+    registration_codes = [
+        r.registration_code
+        for r in sample(REGISTRATIONS, k=randint(1, 3))
+    ]
+    for registration_code in registration_codes:
+        for i, o in enumerate(sample(OFR[registration_code], k=randint(1, 3)), start=1):
+            PREFERENCES.append(Preference(o, c.candidate_id, i))
 
 FUNCTIONS: List[Callable[[], List[str]]] = [
     lambda: [str(val) for val in CANDIDATES],

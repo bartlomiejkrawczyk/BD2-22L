@@ -388,10 +388,8 @@ Już tak nie jest, nowa ustawa na to nie pozwala. Więc można przyjąć unikaln
 
 # TODO
 
-Popraw trigger na nietransferowalnych kluczach obcych
-
-Czy dodawać ograniczenie na Wielkość Liter Nazwiska i Imion
-
 Dodaj ograniczenie proceduralne na dodawanie / modyfikację preferencji w zależności od otwarcia rejestracji
 
 Dodaj wyzwalacz, aby różne rejestracje nie nakładały się na siebie
+
+Dodaj trigger ograniczający ilość `Y` w preferencjach w zależności od Available_Slots
