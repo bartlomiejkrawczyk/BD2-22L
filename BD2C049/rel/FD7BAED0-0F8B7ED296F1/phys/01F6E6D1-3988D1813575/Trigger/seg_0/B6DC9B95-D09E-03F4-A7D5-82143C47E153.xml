@@ -6,15 +6,18 @@
 <actions>UPDATE</actions>
 <body><![CDATA[DECLARE
     v_registrations NUMBER;
+    PRAGMA AUTONOMOUS_TRANSACTION;
 BEGIN
     -- Count registrations overlaping with new registration
     SELECT 	COUNT(*)
     INTO	v_registrations
     FROM	registrations reg 
-    WHERE 	(:new.start_date BETWEEN reg.start_date AND reg.end_date) 
-        OR	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
-        OR	(reg.start_date BETWEEN :new.start_date AND :new.end_date);
-    
+    WHERE 	reg.registration_code != :new.registration_code AND (
+                (:new.start_date BETWEEN reg.start_date AND reg.end_date) 
+            OR	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
+            OR	(reg.start_date BETWEEN :new.start_date AND :new.end_date)
+            );
+
     -- If there are registrations overlaping an signal error
 	IF v_registrations > 0  THEN
 		raise_application_error(-20000, 'Two Registrations Overlap!');

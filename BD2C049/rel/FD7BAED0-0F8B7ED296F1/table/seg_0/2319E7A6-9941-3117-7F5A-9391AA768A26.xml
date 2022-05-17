@@ -21,7 +21,7 @@ The interval between start and end indicates when the registration is open and w
 Registration Code must be in uppercase.]]></commentInRDBMS>
 <generatorID>D3BE7EAA-F022-C4A3-C129-F402CA796ADD</generatorID>
 <ownerDesignName>BD2C049</ownerDesignName>
-<constraintName>REG_CHECK_CODE_UPPER</constraintName>
+<constraintName>REG_CHK_CODE_UPPER</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

@@ -1,5 +1,5 @@
 spool BD2C049_DML.LIS
-
+-- SAVEPOINT before_tests;
 --------------------------------------------------------------------------------
 --                          TEST INSERT ON CANDIDATES                         --
 --------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ VALUES ('TEST1'
 
 INSERT INTO courses
 VALUES ('TEST2'
-    ,   'Mechatronics of Vehicles and Construction Machinery'
+    ,   'Mechatronics of Vehicles, Construction Machinery and Computer Science'
     ,   'E'
     ,   NULL
 );
@@ -325,23 +325,32 @@ INSERT INTO offers
 VALUES (
         'TEST'
     ,   'TEST2'
-    ,   100
+    ,   1
 );
 
-INSERT INTO preferences (registration_code, course_code, candidate_id, sequential_number)
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
 VALUES ('TEST'
     ,   'TEST1'
     ,   99
     ,   1
 );
 
-ROLLBACK;
 -------------------------------------------
 -- TEST UNIQUE PREF_SEQUENTIAL_NUMBER_UK --
 -------------------------------------------
 
 -- Two preferences cannot have the same sequencial number
-INSERT INTO preferences (registration_code, course_code, candidate_id, sequential_number)
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
 VALUES ('TEST'
     ,   'TEST2'
     ,   99
@@ -354,7 +363,12 @@ VALUES ('TEST'
 
 -- Number of preference should be in range [1; 3] otherwise error 
 -- should occur
-INSERT INTO preferences (registration_code, course_code, candidate_id, sequential_number)
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
 VALUES ('TEST'
     ,   'TEST1'
     ,   98
@@ -363,15 +377,407 @@ VALUES ('TEST'
 
 -- Number of preference should be in range [1; 3] otherwise error 
 -- should occur
-INSERT INTO preferences (registration_code, course_code, candidate_id, sequential_number)
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
 VALUES ('TEST'
     ,   'TEST1'
     ,   98
     ,   -1
 );
 
+-----------------------------------------
+-- TEST TRIGGER PREF_OFR_SLOTS_INS_TRG --
+-----------------------------------------
+
+-- First candidate takes the only place
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+    ,   result
+)
+VALUES ('TEST'
+    ,   'TEST2'
+    ,   99
+    ,   2
+    ,   'Y'
+);
+
+-- Adding additional enrolled preferences should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+    ,   result
+)
+VALUES ('TEST'
+    ,   'TEST2'
+    ,   98
+    ,   2
+    ,   'Y'
+);
+
+-----------------------------------
+-- TEST TRIGGER PREF_REG_INS_TRG --
+-----------------------------------
+
+-- Trying to enroll in previous registrations should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('99S'
+    ,   'TEST1'
+    ,   99
+    ,   1
+);
+
+INSERT INTO registrations
+VALUES (
+        'TESTF'
+    ,   ADD_MONTHS(SYSDATE, 12 * 100)
+    ,   ADD_MONTHS(SYSDATE, 13 * 100)
+);
+
+INSERT INTO offers
+VALUES (
+        'TESTF'
+    ,   'TEST1'
+    ,   100
+);
+
+-- Trying to enroll in future registrations should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('TESTF'
+    ,   'TEST1'
+    ,   99
+    ,   1
+);
+
+
+--------------------------------------------------------------------------------
+--                          TEST UPDATE ON CANDIDATES                         --
+--------------------------------------------------------------------------------
+
+-------------------------------
+-- TEST UNIQUE CAND_EMAIL_UK --
+-------------------------------
+
+UPDATE  candidates
+SET     email = 'Jacob.Tested.2@example.com'
+WHERE   candidate_id = 99;
+    
+--------------------------------------------------------------------------------
+--                          TEST UPDATE ON COURSES                            --
+--------------------------------------------------------------------------------
+
+-----------------------------
+-- TEST UNIQUE CRS_NAME_UK --
+-----------------------------
+
+-- Updating names so that a name appears twice should result in an error
+UPDATE  courses
+SET     name = 'Science of Testing, Finding Buggs and Debugging'
+WHERE   course_code = 'TEST2';
+
+-------------------------------
+-- TEST CHECK CRS_CHK_DEGREE --
+-------------------------------
+
+-- Check if all possible degrees are updated correctly
+UPDATE  courses
+SET     degree = 'D'
+WHERE   course_code = '1';
+
+UPDATE  courses
+SET     degree = 'E'
+WHERE   course_code = '1';
+
+UPDATE  courses
+SET     degree = 'M'
+WHERE   course_code = '1';
+
+UPDATE  courses
+SET     degree = 'B'
+WHERE   course_code = '1';
+
+-- Degree set to values other than BDEM should result in an error
+UPDATE  courses
+SET     degree = 'b'
+WHERE   course_code = '1';
+    
+--------------------------------------------------------------------------------
+--                         TEST UPDATE ON REGISTRATIONS                       --
+--------------------------------------------------------------------------------
+
+INSERT INTO registrations
+VALUES (
+        '1901S'
+    ,   TO_DATE('1901-01-01', 'YYYY-MM-DD')
+    ,   TO_DATE('1901-03-01', 'YYYY-MM-DD')
+);
+
+-----------------------------------------
+-- TEST CHECK REG_CHK_START_BEFORE_END --
+-----------------------------------------
+
+-- When trying to update start date after the end date program should 
+-- signal an error
+UPDATE registrations
+SET start_date = TO_DATE('1901-04-01', 'YYYY-MM-DD')
+WHERE registration_code = '1901S';
+
+-- When trying to update end date before the start date program should 
+-- signal an error
+UPDATE registrations
+SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
+WHERE registration_code = '1901S';
+
+--------------------------------------
+-- TEST TRIGGER REG_INTERVAL_UP_TRG --
+--------------------------------------
+
+-- Overlaping registrations should result in an error
+-- Case : {[}]
+INSERT INTO registrations
+VALUES (
+        '1901S'
+    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
+    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
+);
+
+-- Overlaping registrations should result in an error
+-- Case : [{]}
+INSERT INTO registrations
+VALUES (
+        '1901S'
+    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
+    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
+);
+
+-- Overlaping registrations should result in an error
+-- Case : {[]}
+INSERT INTO registrations
+VALUES (
+        '1901S'
+    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
+    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
+);
+
+-- Overlaping registrations should result in an error
+-- Case : [{}]
+INSERT INTO registrations
+VALUES (
+        '1901S'
+    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
+    ,   TO_DATE('1999-02-15', 'YYYY-MM-DD')
+);
+
+--------------------------------------------------------------------------------
+--                           TEST UPDATE ON OFFERS                            --
+--------------------------------------------------------------------------------
+
+UPDATE offers
+SET available_slots = 101
+WHERE registration_code = '99S' AND course_code = 'TEST1';
+
+----------------------------------------
+-- TEST CHECK OFR_CHK_AVAILABLE_SLOTS --
+----------------------------------------
+
+-- Trying update available slots to negative value should result in an error
+UPDATE offers
+SET available_slots = -100
+WHERE registration_code = '99S' AND course_code = 'TEST1';
+
+-------------------------------
+-- TEST TRIGGER FKNTM_OFFERS --
+-------------------------------
+
+UPDATE offers
+SET  registration_code = '99S' 
+WHERE available_slots = 101 AND course_code = 'TEST1';
+
+UPDATE offers
+SET  registration_code = '99A' 
+WHERE available_slots = 101 AND course_code = 'TEST1';
+
+UPDATE offers
+SET course_code = 'TEST1'
+WHERE registration_code = '99S' AND available_slots = 101;
+
+UPDATE offers
+SET course_code = 'TEST2'
+WHERE registration_code = '99S' AND available_slots = 101;
+
+
+--------------------------------------------------------------------------------
+--                        TEST UPDATE ON PREFERENCES                          --
+--------------------------------------------------------------------------------
+
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('TEST'
+    ,   'TEST1'
+    ,   98
+    ,   1
+);
+
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('TEST'
+    ,   'TEST2'
+    ,   98
+    ,   2
+);
+
+-------------------------------------------
+-- TEST UNIQUE PREF_SEQUENTIAL_NUMBER_UK --
+-------------------------------------------
+
+-- Two preferences cannot have the same sequencial number
+UPDATE  preferences
+SET     sequential_number = 2
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98;
+
+-------------------------------------------
+-- TEST CHECK PREF_CHK_SEQUENTIAL_NUMBER --
+-------------------------------------------
+
+-- Number of preference should be in range [1; 3] otherwise error 
+-- should occur
+UPDATE  preferences
+SET     sequential_number = 4
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98;
+
+-- Number of preference should be in range [1; 3] otherwise error 
+-- should occur
+UPDATE  preferences
+SET     sequential_number = -1
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98;
+
+-----------------------------------------
+-- TEST TRIGGER PREF_OFR_SLOTS_UP_TRG --
+-----------------------------------------
+
+-- TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+
+SELECT * FROM preferences WHERE candidate_id IN (98, 99);
+SELECT * FROM offers WHERE registration_code = 'TEST' AND course_code = 'TEST2';
+
+UPDATE  offers
+SET     available_slots = 0
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST2';
+    
+    
+-- Count all preferences chosen
+SELECT 	COUNT(*)
+FROM 	preferences p 
+WHERE 	p.course_code = 'TEST2' 
+    AND p.registration_code = 'TEST'
+    AND p.result = 'Y';
+
+-- Get the available slots for course in that registration
+SELECT 	available_slots 
+FROM 	offers o 
+WHERE 	o.course_code = 'TEST2'
+    AND o.registration_code = 'TEST';
+
+-- Adding additional enrolled preferences should result in an error
+UPDATE  preferences
+SET     result = 'Y'
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST2' 
+    AND candidate_id = 98;
+
+SELECT * FROM preferences WHERE candidate_id IN (98, 99);
+
+-----------------------------------
+-- TEST TRIGGER PREF_REG_UP_TRG --
+-----------------------------------
+
+-- Trying to enroll in previous registrations should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('99S'
+    ,   'TEST1'
+    ,   99
+    ,   1
+);
+
+INSERT INTO registrations
+VALUES (
+        'TESTF'
+    ,   ADD_MONTHS(SYSDATE, 12 * 100)
+    ,   ADD_MONTHS(SYSDATE, 13 * 100)
+);
+
+INSERT INTO offers
+VALUES (
+        'TESTF'
+    ,   'TEST1'
+    ,   100
+);
+
+-- Trying to enroll in future registrations should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+)
+VALUES ('TESTF'
+    ,   'TEST1'
+    ,   99
+    ,   1
+);
+
 
 -- Clean after the tests
+-- ROLLBACK TO SAVEPOINT before_tests;
 ROLLBACK;
+
+
+
+
+
+
+
+
+
+
+
 
 spool off

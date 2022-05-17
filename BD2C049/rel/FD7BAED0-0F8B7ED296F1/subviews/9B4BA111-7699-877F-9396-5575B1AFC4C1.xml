@@ -31,9 +31,9 @@ bartlomiej.krawczyk2.stud@pw.edu.pl</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="37A756A4-888D-525F-C2B5-EA966DB94FA2" otype="Note" vid="BF10A064-EBDB-3E62-C740-DF5DA85BA5AD">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="194" y="177" width="436" height="40"/>
+<bounds x="194" y="177" width="445" height="40"/>
 <comment>REG_CHK_START_BEFORE_END	START_DATE &lt; END_DATE;
-REG_CHECK_CODE_UPPER	REGISTRATION_CODE = UPPER(REGISTRATION_CODE);</comment>
+REG_CHK_CODE_UPPER	REGISTRATION_CODE = UPPER(REGISTRATION_CODE);</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="470BC806-A6F9-6F73-49CB-BAA4D5398BA2" otype="Note" vid="061D4883-84A8-0F7D-F844-64617B960689">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>

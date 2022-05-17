@@ -25,7 +25,7 @@ BEGIN
     
     -- Make sure the list of enrolled students is smaller/(equal) than
     -- the number of available slots
-	IF v_preferences > v_slots THEN
+	IF v_preferences >= v_slots THEN
 		raise_application_error(-20001, 'Not enough slots for the offer!');
 	END IF;
 END;]]></body>
