@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="REG_INTERVAL_INS_TRG" directorySegmentName="seg_0" id="C3108969-2D6D-29C9-7E35-8A61525E1080">
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="REG_INTERVAL_UP_TRG" directorySegmentName="seg_0" id="B6DC9B95-D09E-03F4-A7D5-82143C47E153">
 <createdBy>Bartłomiej Krawczyk</createdBy>
-<createdTime>2022-05-17 08:36:12 UTC</createdTime>
+<createdTime>2022-05-17 14:45:17 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>
-<actions>INSERT</actions>
+<actions>UPDATE</actions>
 <body><![CDATA[DECLARE
     v_registrations NUMBER;
 BEGIN
     -- Count registrations overlaping with new registration
     SELECT 	COUNT(*)
-    INTO    v_registrations
-    FROM 	registrations reg 
+    INTO	v_registrations
+    FROM	registrations reg 
     WHERE 	(:new.start_date BETWEEN reg.start_date AND reg.end_date) 
-        OR 	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
-        OR  (reg.start_date BETWEEN :new.start_date AND :new.end_date);
+        OR	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
+        OR	(reg.start_date BETWEEN :new.start_date AND :new.end_date);
     
     -- If there are registrations overlaping an signal error
 	IF v_registrations > 0  THEN
@@ -21,6 +21,6 @@ BEGIN
 	END IF;
 END;]]></body>
 <triggerTime>BEFORE</triggerTime>
-<state>ENABLE</state>
+<condition><![CDATA[old.start_date != new.start_date OR old.end_date != new.end_date]]></condition>
 <table>2319E7A6-9941-3117-7F5A-9391AA768A26</table>
 </TriggerOraclev10g>

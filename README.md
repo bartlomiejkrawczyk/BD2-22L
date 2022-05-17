@@ -388,8 +388,8 @@ Już tak nie jest, nowa ustawa na to nie pozwala. Więc można przyjąć unikaln
 
 # TODO
 
-[] Dodaj ograniczenie proceduralne na dodawanie / modyfikację preferencji w zależności od otwarcia rejestracji
+[X] Dodaj ograniczenie proceduralne na dodawanie / modyfikację preferencji w zależności od otwarcia rejestracji
 
-[x] Dodaj wyzwalacz, aby różne rejestracje nie nakładały się na siebie
+[X] Dodaj wyzwalacz, aby różne rejestracje nie nakładały się na siebie
 
-[x] Dodaj trigger ograniczający ilość `Y` w preferencjach w zależności od Available_Slots
+[X] Dodaj trigger ograniczający ilość `Y` w preferencjach w zależności od Available_Slots
