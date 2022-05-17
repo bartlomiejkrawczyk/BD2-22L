@@ -150,8 +150,10 @@ class Course:
 
     def __init__(self) -> None:
         self.name = COURSES[Course.i]
-
-        self.course_code = f"'{self.name[0]}{choice(self.name)}{Course.i}'".upper(
+        letter = choice(self.name[1:])
+        while letter == ' ':
+            letter = choice(self.name[1:])
+        self.course_code = f"'{self.name[0]}{letter}{Course.i}'".upper(
         )
         Course.i += 1
 
