@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="REG_INTERVAL_INS_TRG" directorySegmentName="seg_0" id="C3108969-2D6D-29C9-7E35-8A61525E1080">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-17 08:36:12 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+	IF (	SELECT 	COUNT(*) 
+		FROM 	registrations reg 
+		WHERE 	(new.start_date BETWEEN reg.start_date AND reg.end_date) 
+			OR 	(new.end_date BETWEEN reg.start_date AND reg.end_date) 
+			OR  	(reg.start_date BETWEEN new.start_date AND new.end_date)
+		) > 0  THEN
+		raise_application_error(-20000, 'Two Registrations Overlap!');
+	END IF;
+END;
+/]]></body>
+<triggerTime>BEFORE</triggerTime>
+<state>ENABLE</state>
+<table>2319E7A6-9941-3117-7F5A-9391AA768A26</table>
+</TriggerOraclev10g>
