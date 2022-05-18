@@ -20,13 +20,17 @@ Stores personal information about candidates.]]></commentInRDBMS>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
+<defaultValue>CAND_ID_SEQ.NEXTVAL</defaultValue>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementColumn>true</autoIncrementColumn>
+<defaultOntNull>true</defaultOntNull>
 <autoIncrementStartWith>10000</autoIncrementStartWith>
+<autoIncrementMaxValue>9999999</autoIncrementMaxValue>
 <autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
 <autoIncrementOrder>false</autoIncrementOrder>
 <autoIncrementSequenceName>CAND_ID_SEQ</autoIncrementSequenceName>
-<autoIncrementTriggerName>CAND_ID_SEQ_TRG</autoIncrementTriggerName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
 </Column>
 <Column name="EMAIL" id="E04337C9-A81F-A7E1-5E50-42FD519D8BEB">
 <createdBy>Bartłomiej Krawczyk</createdBy>
