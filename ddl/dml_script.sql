@@ -1,5 +1,7 @@
 spool BD2C049_DML.LIS
--- SAVEPOINT before_tests;
+
+SAVEPOINT before_tests;
+
 --------------------------------------------------------------------------------
 --                          TEST INSERT ON CANDIDATES                         --
 --------------------------------------------------------------------------------
@@ -103,9 +105,9 @@ VALUES (96
 );
 
 
------------------------------------------------------------
--- TEST SEQUENCE CAND_ID_SEQ AND TRIGGER CAND_ID_SEQ_TRG --
------------------------------------------------------------
+-------------------------------
+-- TEST SEQUENCE CAND_ID_SEQ --
+-------------------------------
 
 DECLARE
     v_id NUMBER;
@@ -389,40 +391,6 @@ VALUES ('TEST'
     ,   -1
 );
 
------------------------------------------
--- TEST TRIGGER PREF_OFR_SLOTS_INS_TRG --
------------------------------------------
-
--- First candidate takes the only place
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-    ,   result
-)
-VALUES ('TEST'
-    ,   'TEST2'
-    ,   99
-    ,   2
-    ,   'Y'
-);
-
--- Adding additional enrolled preferences should result in an error
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-    ,   result
-)
-VALUES ('TEST'
-    ,   'TEST2'
-    ,   98
-    ,   2
-    ,   'Y'
-);
-
 -----------------------------------
 -- TEST TRIGGER PREF_REG_INS_TRG --
 -----------------------------------
@@ -479,6 +447,14 @@ VALUES ('TESTF'
 UPDATE  candidates
 SET     email = 'Jacob.Tested.2@example.com'
 WHERE   candidate_id = 99;
+
+-------------------------------
+-- TEST UNIQUE CAND_PESEL_UK --
+-------------------------------
+
+UPDATE  candidates
+SET     pesel = '42439284872'
+WHERE   candidate_id = 98;
     
 --------------------------------------------------------------------------------
 --                          TEST UPDATE ON COURSES                            --
@@ -526,7 +502,7 @@ WHERE   course_code = '1';
 INSERT INTO registrations
 VALUES (
         '1901S'
-    ,   TO_DATE('1901-01-01', 'YYYY-MM-DD')
+    ,   TO_DATE('1901-02-01', 'YYYY-MM-DD')
     ,   TO_DATE('1901-03-01', 'YYYY-MM-DD')
 );
 
@@ -546,46 +522,53 @@ UPDATE registrations
 SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
 WHERE registration_code = '1901S';
 
---------------------------------------
--- TEST TRIGGER REG_INTERVAL_UP_TRG --
---------------------------------------
-
--- Overlaping registrations should result in an error
--- Case : {[}]
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-);
-
--- Overlaping registrations should result in an error
--- Case : [{]}
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-);
-
--- Overlaping registrations should result in an error
--- Case : {[]}
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-);
-
--- Overlaping registrations should result in an error
--- Case : [{}]
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-02-15', 'YYYY-MM-DD')
-);
-
+-- --------------------------------------
+-- -- TEST TRIGGER REG_INTERVAL_UP_TRG --
+-- --------------------------------------
+-- 
+-- SELECT * FROM registrations WHERE registration_code = '99S';
+-- 
+-- INSERT INTO registrations
+-- VALUES (
+--         '99T'
+--     ,   TO_DATE('1999-12-01', 'YYYY-MM-DD')
+--     ,   TO_DATE('1999-12-02', 'YYYY-MM-DD')
+-- );
+-- 
+-- -- Overlaping registrations should result in an error
+-- -- Case : {[}]
+-- UPDATE  registrations
+-- SET     start_date = TO_DATE('1999-01-01', 'YYYY-MM-DD')
+--     ,   end_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+-- WHERE   registration_code = '99T';
+-- 
+-- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+-- 
+-- -- Overlaping registrations should result in an error
+-- -- Case : [{]}
+-- UPDATE  registrations
+-- SET     start_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+--     ,   end_date = TO_DATE('1999-04-01', 'YYYY-MM-DD')
+-- WHERE   registration_code = '99T';
+-- 
+-- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+-- 
+-- -- Overlaping registrations should result in an error
+-- -- Case : {[]}
+-- UPDATE  registrations
+-- SET     start_date = TO_DATE('1999-01-01', 'YYYY-MM-DD')
+--     ,   end_date = TO_DATE('1999-04-01', 'YYYY-MM-DD')
+-- WHERE   registration_code = '99T';
+-- 
+-- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+-- 
+-- -- Overlaping registrations should result in an error
+-- -- Case : [{}]
+-- UPDATE  registrations
+-- SET     start_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+--     ,   end_date = TO_DATE('1999-02-15', 'YYYY-MM-DD')
+-- WHERE   registration_code = '99T';
+-- 
 --------------------------------------------------------------------------------
 --                           TEST UPDATE ON OFFERS                            --
 --------------------------------------------------------------------------------
@@ -683,101 +666,71 @@ WHERE   registration_code = 'TEST'
     AND course_code = 'TEST1' 
     AND candidate_id = 98;
 
------------------------------------------
--- TEST TRIGGER PREF_OFR_SLOTS_UP_TRG --
------------------------------------------
-
--- TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
-
-SELECT * FROM preferences WHERE candidate_id IN (98, 99);
-SELECT * FROM offers WHERE registration_code = 'TEST' AND course_code = 'TEST2';
-
-UPDATE  offers
-SET     available_slots = 0
-WHERE   registration_code = 'TEST' 
-    AND course_code = 'TEST2';
-    
-    
--- Count all preferences chosen
-SELECT 	COUNT(*)
-FROM 	preferences p 
-WHERE 	p.course_code = 'TEST2' 
-    AND p.registration_code = 'TEST'
-    AND p.result = 'Y';
-
--- Get the available slots for course in that registration
-SELECT 	available_slots 
-FROM 	offers o 
-WHERE 	o.course_code = 'TEST2'
-    AND o.registration_code = 'TEST';
-
--- Adding additional enrolled preferences should result in an error
-UPDATE  preferences
-SET     result = 'Y'
-WHERE   registration_code = 'TEST' 
-    AND course_code = 'TEST2' 
-    AND candidate_id = 98;
-
-SELECT * FROM preferences WHERE candidate_id IN (98, 99);
-
 -----------------------------------
 -- TEST TRIGGER PREF_REG_UP_TRG --
 -----------------------------------
 
--- Trying to enroll in previous registrations should result in an error
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-)
-VALUES ('99S'
-    ,   'TEST1'
-    ,   99
-    ,   1
-);
+UPDATE  registrations
+SET     start_date = TO_DATE('1997-01-01', 'YYYY-MM-DD')
+    ,   end_date = TO_DATE('1997-04-01', 'YYYY-MM-DD')
+WHERE registration_code = 'TEST';
 
-INSERT INTO registrations
-VALUES (
-        'TESTF'
-    ,   ADD_MONTHS(SYSDATE, 12 * 100)
-    ,   ADD_MONTHS(SYSDATE, 13 * 100)
-);
 
-INSERT INTO offers
-VALUES (
-        'TESTF'
-    ,   'TEST1'
-    ,   100
-);
+-- Trying to change order of preferences should not be possible
+-- after the registration ends
+UPDATE  preferences
+SET     sequential_number = 3
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98;
+    
+------------------------------------
+-- TEST TRIGGER FKNTM_PREFERENCES --
+------------------------------------
 
--- Trying to enroll in future registrations should result in an error
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-)
-VALUES ('TESTF'
-    ,   'TEST1'
-    ,   99
-    ,   1
-);
+UPDATE  preferences
+SET     registration_code = 'TEST' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
 
+UPDATE  preferences
+SET     registration_code = 'TESTF' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
+
+UPDATE  preferences
+SET     course_code = 'TEST1' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
+
+UPDATE  preferences
+SET     course_code = 'TEST2' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
+
+UPDATE  preferences
+SET     candidate_id = 98
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
+
+UPDATE  preferences
+SET     candidate_id = 99
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1;
 
 -- Clean after the tests
--- ROLLBACK TO SAVEPOINT before_tests;
-ROLLBACK;
-
-
-
-
-
-
-
-
-
-
-
+ROLLBACK TO SAVEPOINT before_tests;
 
 spool off

@@ -26,26 +26,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID FIRST_NAME           SECOND_NAME          FAMILY_NAME               BIRTH_DA PESEL      
 ------------ -------------------- -------------------- ------------------------- -------- -----------
-        1108 Mariko                                    Fannin                    47/02/04 40118554171
-        1109 Stefania                                  Sor                       74/09/07            
-        1110 Reeva                                     Anthony                   43/12/14 35825262305
-        1111 Paden                                     Matte                     93/06/02            
-        1112 Judge                Mollie               Bader                     95/04/16            
-        1113 Tommy                                     Wexell                    47/01/28 29390064479
-        1114 Crystal              Carrieann            Dokuchitz                 79/06/10 45890705143
-        1115 Dayra                                     Dumes                     64/09/06            
-        1116 Crissy               Lynessa              Shappell                  83/04/20 17277274900
-        1117 Taree                Manish               Meech                     03/07/07            
-        1118 Margurite                                 Straton                   62/08/10 58168419180
-        1119 Amand                Aubrei               Bearfield                 57/08/09 78492626300
-        1120 Alexia               Usher                Hoskey                    87/02/22            
-        1121 Shalandria                                Kirk                      25/06/26 18907493966
-        1122 Taquisha                                  Hiester                   79/08/25 37218196819
-        1123 Ambera                                    Bark                      53/08/24 61384265560
-        1124 Anatasia                                  Darmody                   29/02/09 15177197235
-        1125 Kera                 Rahul                Schilder                  79/02/02 70345536907
-        1126 Timaree              Tino                 Whisenant                 98/07/12 11299007649
-        1127 Colton               Chans                Pineault                  43/11/15 41051653190
+         323 Ericberto            Briam                Hopes                     32/04/15 76440339762
+         324 Romar                Jemal                Spore                     82/04/02            
+         325 Cyrena               Emi                  Cornutt                   33/07/27            
+         326 Pearson                                   Shulick                   43/11/23 78042950870
+         327 Hanan                Keelie               Zerby                     37/12/13 90865351885
+         328 Alishia                                   Bionda                    81/05/02 42266686172
+         329 Shlomo               Luqman               Okoli                     73/10/09 70919422482
+         330 Martellis            Altagracia           Claypole                  25/07/04 11762787793
+         331 Kea                                       Balderston                40/05/24 20827482967
+         332 Cyrstal                                   Or                        00/02/07            
+         333 Carolee              Jenni                Sandles                   67/05/14 46411815022
+         334 Lachell                                   Pichon                    09/08/28 97703212412
+         335 Seng                 Anthoney             Grboyan                   78/01/14            
+         336 Paulette             Graylon              Cesena                    62/11/24            
+         337 Monifa               Tiphani              Ambers                    67/01/27 44432548685
+         338 Tilla                                     Brodzik                   20/08/21            
+         339 Deniesha                                  Schwier                   74/07/03 77403605726
+         340 Jenee                Malka                Dipippo                   89/11/04            
+         341 Kylene               Matisha              Etheredge                 62/02/22 66155077187
+         342 Iyanna               Mitul                Asby                      53/11/02 15746419584
 
 20 rows selected. 
 
@@ -60,26 +60,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID PHONE_NUMBER  EMAIL                                                                                               
 ------------ ------------- ----------------------------------------------------------------------------------------------------
-        1108               Mariko.Fannin.1653@gmail.com                                                                        
-        1109 +82952655891  Stefania.Sor.598@gmail.com                                                                          
-        1110 +39311843766  Reeva.Anthony.639@example.com                                                                       
-        1111 +51517757521  Paden.Matte.973@pw.edu.pl                                                                           
-        1112               Judge.Bader.1590@pw.edu.pl                                                                          
-        1113 +21578965958  Tommy.Wexell.1256@pw.edu.pl                                                                         
-        1114 +86807435608  Crystal.Dokuchitz.102@o2.pl                                                                         
-        1115 +96105618483  Dayra.Dumes.1723@youtube.com                                                                        
-        1116               Crissy.Shappell.248@youtube.com                                                                     
-        1117               Taree.Meech.452@youtube.com                                                                         
-        1118 +98687139455  Margurite.Straton.1359@pw.edu.pl                                                                    
-        1119               Amand.Bearfield.550@wp.pl                                                                           
-        1120               Alexia.Hoskey.1876@example.com                                                                      
-        1121               Shalandria.Kirk.264@youtube.com                                                                     
-        1122 +1888996119   Taquisha.Hiester.9@o2.pl                                                                            
-        1123 +35744617670  Ambera.Bark.1509@example.com                                                                        
-        1124 +43194778105  Anatasia.Darmody.197@wp.pl                                                                          
-        1125               Kera.Schilder.2003@youtube.com                                                                      
-        1126               Timaree.Whisenant.713@youtube.com                                                                   
-        1127 +96299256225  Colton.Pineault.739@pw.edu.pl                                                                       
+         323 +24324755718  Ericberto.Hopes.614@example.com                                                                     
+         324               Romar.Spore.1469@pw.edu.pl                                                                          
+         325               Cyrena.Cornutt.267@example.com                                                                      
+         326 +100836321153 Pearson.Shulick.569@pw.edu.pl                                                                       
+         327 +37854599551  Hanan.Zerby.405@o2.pl                                                                               
+         328               Alishia.Bionda.1727@example.com                                                                     
+         329 +3255203741   Shlomo.Okoli.343@o2.pl                                                                              
+         330 +77166427813  Martellis.Claypole.1750@example.com                                                                 
+         331 +47775178153  Kea.Balderston.1519@gmail.com                                                                       
+         332               Cyrstal.Or.277@gmail.com                                                                            
+         333 +55720208018  Carolee.Sandles.1482@pw.edu.pl                                                                      
+         334 +39389678046  Lachell.Pichon.1820@youtube.com                                                                     
+         335 +16219037384  Seng.Grboyan.1474@o2.pl                                                                             
+         336               Paulette.Cesena.1443@o2.pl                                                                          
+         337 +15527950650  Monifa.Ambers.247@youtube.com                                                                       
+         338 +45335421603  Tilla.Brodzik.1883@pw.edu.pl                                                                        
+         339 +19318050987  Deniesha.Schwier.963@pw.edu.pl                                                                      
+         340               Jenee.Dipippo.1223@pw.edu.pl                                                                        
+         341 +39899006727  Kylene.Etheredge.168@youtube.com                                                                    
+         342               Iyanna.Asby.1284@wp.pl                                                                              
 
 20 rows selected. 
 
@@ -99,26 +99,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID COUNTRY                                            VOIVODESHIP                                        CITY                                               POSTAL_COD STREET                                                                           HOME_N APART
 ------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ---------- -------------------------------------------------------------------------------- ------ -----
-        1108 Bangladesh                                                                                            Bunkie                                             78-203     P Street                                                                         945A        
-        1109 Oman                                               Mazowieckie                                        PrincetonMeadows                                   163-825    Eraser Road                                                                      78T         
-        1110 Gabon                                              Kujawsko-Pomorskie                                 Choteau                                            276-916                                                                                     971F   126P 
-        1111 Afghanistan                                        Dolnoslaskie                                       Morada                                             272-471                                                                                     258D        
-        1112 Burkina                                                                                               Chapin                                             511-509                                                                                     436G        
-        1113 Greece                                                                                                Biloxi                                             54-252                                                                                      680G        
-        1114 Nauru                                              Lodzkie                                            Sawgrass                                           2-894      Shelby Way                                                                       341R   636W 
-        1115 Kosovo                                             Malopolskie                                        Needles                                            446-581    Crabtree Way                                                                     260M        
-        1116 Vatican City                                       Podkarpackie                                       Greenacres                                         818-912    Allura Court                                                                     814I   109N 
-        1117 Grenada                                            Pomorskie                                          Olivia                                             345-39     Green Brook Drive                                                                124D        
-        1118 Namibia                                                                                               EastAlton                                          466-564                                                                                     244K   716J 
-        1119 Tajikistan                                                                                            Woonsocket                                         744-133    Stonemason Drive                                                                 442D   719C 
-        1120 Qatar                                                                                                 HelenaValleyNortheast                              333-142    Mack Avenue NE                                                                   29Q         
-        1121 Dominican Republic                                 Dolnoslaskie                                       Monon                                              764-71                                                                                      229H   459A 
-        1122 Portugal                                                                                              Louisville                                         9-213                                                                                       218J        
-        1123 Sudan                                              Podlaskie                                          Glenarden                                          182-496                                                                                     911S   374J 
-        1124 Samoa                                              Lodzkie                                            WindLake                                           374-633                                                                                     554T   755S 
-        1125 Bosnia Herzegovina                                                                                    Temperance                                         847-642                                                                                     87X    921H 
-        1126 Israel                                                                                                Booneville                                         919-264    Lynn Circle                                                                      678C   176O 
-        1127 Romania                                                                                               UniversityHeights                                  607-266                                                                                     814O        
+         323 Luxembourg                                                                                            CoralTerrace                                       32-988                                                                                      832M        
+         324 Georgia                                            Warminsko-Mazurskie                                Arbutus                                            992-372    Los Robles Avenue North                                                          69W    381B 
+         325 Egypt                                              Podlaskie                                          Heeia                                              106-855    Velvet Way                                                                       6X          
+         326 Cameroon                                                                                              RoundRock                                          357-747    Route 926                                                                        962E        
+         327 Luxembourg                                         Wielkopolskie                                      Foresthill                                         361-929                                                                                     85B    309I 
+         328 Netherlands                                        Opolskie                                           Tucumcari                                          855-722                                                                                     439X   207X 
+         329 Sierra Leone                                                                                          TintonFalls                                        96-265                                                                                      246W   38O  
+         330 Tonga                                              Wielkopolskie                                      Isanti                                             424-475                                                                                     111U        
+         331 Malawi                                             Podkarpackie                                       Carrington                                         800-986    Cherry Lane West                                                                 147C   511R 
+         332 Sierra Leone                                       Kujawsko-Pomorskie                                 Bruceton                                           881-714                                                                                     373P   654X 
+         333 Luxembourg                                         Zachodniopomorskie                                 Charlevoix                                         449-378    Keswick Grove Lane                                                               334T        
+         334 Congo                                                                                                 Albion                                             342-799    Priority Court                                                                   72V         
+         335 Ghana                                              Warminsko-Mazurskie                                Malakoff                                           543-154                                                                                     330E   863E 
+         336 Grenada                                            Mazowieckie                                        EastJordan                                         297-38     Meyer Court North                                                                447C   886O 
+         337 Hungary                                            Slaskie                                            Guthrie                                            743-602                                                                                     112T   60D  
+         338 Gabon                                                                                                 Avenel                                             322-154    64th Place NE                                                                    209P   688V 
+         339 Fiji                                               Zachodniopomorskie                                 PennEstates                                        964-57     Lindley Road                                                                     333D   477R 
+         340 Tuvalu                                             Lubuskie                                           Carbonville                                        828-836                                                                                     135N        
+         341 San Marino                                         Dolnoslaskie                                       Rosepine                                           659-384    Esmond Street                                                                    427V   397D 
+         342 Brunei                                                                                                NorthAdams                                         750-675    Halsey Place                                                                     37A    126V 
 
 20 rows selected. 
 
@@ -143,22 +143,22 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP                                        STREET                                                                           APART
 ------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
-        1114 45890705143 +86807435608  Carrieann            Lodzkie                                            Shelby Way                                                                       636W 
-        1174 73333315259 +80646464268  Natosha              Podkarpackie                                       Shire Mill Road                                                                  555Q 
-        1208 33842201307 +48428792224  Jansen               Lubuskie                                           Oak Terrace                                                                      879O 
-        1210 33673037468 +9928507686   Jamise               Kujawsko-Pomorskie                                 Harford Place                                                                    265I 
-         972 50696998928 +56560582452  Yamil                Warminsko-Mazurskie                                Pear Shape Lane                                                                  748G 
-         868 35525986819 +30666322887  Teneisha             Dolnoslaskie                                       Upper Gulph Road                                                                 875C 
-         892 86325388762 +84526260640  Omar                 Opolskie                                           Normandy Street                                                                  327U 
-         187 55450190407 +10794632786  Devonna              Zachodniopomorskie                                 Etching Overlook                                                                 170I 
-         281 44532658132 +1990827609   Sander               Swietokrzyskie                                     Ellison Avenue South                                                             779G 
-         308 49986385722 +18122576951  Reginaldo            Swietokrzyskie                                     Weightman Street                                                                 209V 
          341 66155077187 +39899006727  Matisha              Dolnoslaskie                                       Esmond Street                                                                    397D 
+         892 86325388762 +84526260640  Omar                 Opolskie                                           Normandy Street                                                                  327U 
          578 94955695851 +38318153765  Lakara               Podlaskie                                          Boggs Lane                                                                       975U 
          579 40212854252 +53852579363  Jemma                Kujawsko-Pomorskie                                 Tennessee Avenue North                                                           672M 
          595 20330291058 +48571517690  Bryden               Lodzkie                                            Mill Creek Road                                                                  38B  
          604 70743706636 +99390566632  Kami                 Opolskie                                           Dulcimer Lane                                                                    36V  
          690 64842390857 +47432540235  Kijuana              Warminsko-Mazurskie                                Syracuse Court South                                                             776H 
+         868 35525986819 +30666322887  Teneisha             Dolnoslaskie                                       Upper Gulph Road                                                                 875C 
+         187 55450190407 +10794632786  Devonna              Zachodniopomorskie                                 Etching Overlook                                                                 170I 
+         281 44532658132 +1990827609   Sander               Swietokrzyskie                                     Ellison Avenue South                                                             779G 
+         308 49986385722 +18122576951  Reginaldo            Swietokrzyskie                                     Weightman Street                                                                 209V 
+         972 50696998928 +56560582452  Yamil                Warminsko-Mazurskie                                Pear Shape Lane                                                                  748G 
+        1114 45890705143 +86807435608  Carrieann            Lodzkie                                            Shelby Way                                                                       636W 
+        1174 73333315259 +80646464268  Natosha              Podkarpackie                                       Shire Mill Road                                                                  555Q 
+        1208 33842201307 +48428792224  Jansen               Lubuskie                                           Oak Terrace                                                                      879O 
+        1210 33673037468 +9928507686   Jamise               Kujawsko-Pomorskie                                 Harford Place                                                                    265I 
 
 16 rows selected. 
 
@@ -183,12 +183,6 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP                                        STREET                                                                           APART
 ------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
-        1142                                                                                                                                                                                         
-        1157                                                                                                                                                                                         
-        1190                                                                                                                                                                                         
-        1032                                                                                                                                                                                         
-         196                                                                                                                                                                                         
-         262                                                                                                                                                                                         
          343                                                                                                                                                                                         
          349                                                                                                                                                                                         
          442                                                                                                                                                                                         
@@ -198,6 +192,12 @@ CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP         
          620                                                                                                                                                                                         
          772                                                                                                                                                                                         
          776                                                                                                                                                                                         
+         196                                                                                                                                                                                         
+         262                                                                                                                                                                                         
+        1032                                                                                                                                                                                         
+        1142                                                                                                                                                                                         
+        1157                                                                                                                                                                                         
+        1190                                                                                                                                                                                         
 
 15 rows selected. 
 
@@ -228,26 +228,26 @@ SQL> SELECT  first_name
 
 FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS PREFERENCES_IN_REGISTRATION
 -------------------- -------------------- ------------------------- ----- ---------------------------
-Serina                                    Larick                    19W                             3
-Maribel                                   Filary                    15S                             1
-Maribel                                   Filary                    14S                             3
-Raelynn              Mikenna              Nobriga                   16W                             1
+Serina                                    Larick                    16W                             1
+Maribel                                   Filary                    20W                             3
+Maribel                                   Filary                    17W                             2
+Maribel                                   Filary                    10W                             1
+Raelynn              Mikenna              Nobriga                   15S                             1
 Raelynn              Mikenna              Nobriga                   14S                             3
-Teia                 Deirdre              Brigges                   22W                             3
-Teia                 Deirdre              Brigges                   22S                             2
-Teia                 Deirdre              Brigges                   18S                             2
-Neghan               Legrande             Romas                     20W                             1
-Neghan               Legrande             Romas                     20S                             2
-Tyffani                                   Curi                      21S                             3
-Asael                                     Krzyminski                21S                             2
-Silver               Elly                 Lafleche                  21S                             1
-Silver               Elly                 Lafleche                  19S                             2
-Silver               Elly                 Lafleche                  17W                             3
-Sahira                                    Meehan                    14W                             2
-Sahira                                    Meehan                    10S                             2
-Jeana                Crystel              Larcade                   20W                             3
-Jeana                Crystel              Larcade                   13S                             3
-Risha                                     Suchocki                  17S                             1
+Teia                 Deirdre              Brigges                   16W                             1
+Teia                 Deirdre              Brigges                   14S                             3
+Neghan               Legrande             Romas                     22W                             3
+Neghan               Legrande             Romas                     22S                             2
+Neghan               Legrande             Romas                     18S                             2
+Tyffani                                   Curi                      20W                             1
+Tyffani                                   Curi                      20S                             2
+Asael                                     Krzyminski                21S                             3
+Silver               Elly                 Lafleche                  21S                             2
+Sahira                                    Meehan                    21S                             1
+Sahira                                    Meehan                    19S                             2
+Sahira                                    Meehan                    17W                             3
+Jeana                Crystel              Larcade                   14W                             2
+Jeana                Crystel              Larcade                   10S                             2
 
 20 rows selected. 
 
@@ -286,10 +286,14 @@ SQL> SELECT  cand.first_name
 
 FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS COURSE NAME                                                                                                 SEQUENTIAL_NUMBER
 -------------------- -------------------- ------------------------- ----- ------ ---------------------------------------------------------------------------------------------------- -----------------
-Maribel                                   Filary                    14S   PS107  Public Service                                                                                                       1
-Maribel                                   Filary                    14S   AP5    Applied Finance                                                                                                      2
-Maribel                                   Filary                    14S   SO120  Science in Clinical Epidemiology                                                                                     3
-Maribel                                   Filary                    15S   MO82   Mass Communication and Journalism                                                                                    1
+Maribel                                   Filary                    10W   SS130  Science in Health Informatics                                                                                        1
+Maribel                                   Filary                    17W   CM32   Computer Applications                                                                                                1
+Maribel                                   Filary                    17W   ST129  Science in Government Contracts                                                                                      2
+Maribel                                   Filary                    20W   LE77   Letters                                                                                                              1
+Maribel                                   Filary                    20W   SE75   Studies in Law                                                                                                       2
+Maribel                                   Filary                    20W   ST129  Science in Government Contracts                                                                                      3
+
+6 rows selected. 
 
 SQL> 
 SQL> --------------------------------------------------------------------------------
@@ -397,26 +401,26 @@ SQL> SELECT  course_code
 
 COURSE NAME                                                                                                 D DESCRIPTION                                                                                            
 ------ ---------------------------------------------------------------------------------------------------- - -------------------------------------------------------------------------------------------------------
-RI111  Religious Education                                                                                  E Voluptatem velit adipisci magnam. Etincidunt quisquam sit quisquam consectetur voluptatem dolore est...
-RH112  Research                                                                                             B Quaerat porro numquam porro velit tempora. Est ipsum etincidunt non. Voluptatem quaerat labore quisq...
-SS113  Sacred Music                                                                                         B                                                                                                        
-SO114  Sacred Theology                                                                                      D                                                                                                        
-SS115  Science                                                                                              E Dolor quaerat quiquia est quiquia aliquam. Ipsum numquam quaerat tempora consectetur dolorem sit. Do...
-SC116  Science in Applied Cognition and Neuroscience                                                        D                                                                                                        
-SI117  Science in Athletic Training                                                                         E Quaerat quisquam modi voluptatem. Quaerat non magnam ipsum quiquia magnam numquam. Ut sit quiquia ei...
-SO118  Science in Bioinformatics                                                                            E Ipsum consectetur non tempora eius. Dolor numquam non numquam ipsum dolor. Tempora etincidunt modi n...
-SC119  Science in Business Analytics                                                                        B Adipisci sit dolor sed. Voluptatem etincidunt sed quisquam tempora porro. Sit non aliquam aliquam do...
-SO120  Science in Clinical Epidemiology                                                                     D Quisquam eius dolore consectetur ipsum adipisci voluptatem. Magnam adipisci porro ipsum numquam numq...
-ST121  Science in Computing Research                                                                        B Sit magnam quisquam dolore adipisci quisquam. Aliquam porro tempora ipsum porro. Quaerat quisquam co...
-SI122  Science in Cyber Security                                                                            E Modi numquam modi sed quiquia aliquam. Eius modi dolorem sed etincidunt. Dolore dolor voluptatem ame...
-SE123  Science in Education                                                                                 E                                                                                                        
-SE124  Science in Engineering                                                                               E                                                                                                        
-SD125  Science in Development Administration                                                                D                                                                                                        
-SI126  Science in Finance                                                                                   B Aliquam neque sed amet dolorem consectetur porro. Labore velit est numquam amet numquam voluptatem. ...
-SN127  Science in Governance and Organizational Sciences                                                    E Amet quaerat tempora dolorem porro quisquam. Dolorem labore etincidunt quiquia modi etincidunt. Veli...
-SE128  Science in Government Contracts                                                                      E Porro ipsum voluptatem etincidunt. Neque adipisci ut est velit voluptatem. Labore etincidunt sed sed...
-SE129  Science in Health Informatics                                                                        E Quisquam aliquam quisquam quiquia aliquam consectetur. Dolorem dolore modi porro consectetur consect...
-SI130  Science in Human Resource Development                                                                B Neque consectetur tempora quiquia. Labore non neque numquam aliquam. Porro non modi labore etincidun...
+TO152  Technology                                                                                           D Ipsum porro dolor quaerat. Ipsum labore voluptatem quiquia neque adipisci sit. Sed labore ut est non...
+TE153  Theology                                                                                             M Aliquam non dolorem consectetur amet. Voluptatem quaerat sit neque modi etincidunt amet amet. Volupt...
+UN154  Urban Planning                                                                                       B Neque modi neque etincidunt dolore modi dolore. Ipsum labore dolor ipsum dolor tempora adipisci. Ut ...
+VA155  Veterinary Science                                                                                   M Velit porro sit est adipisci dolore quiquia ipsum. Velit dolore sed quaerat quiquia. Eius ut est qua...
+SQ139  Science in Quality Assurance                                                                         E Ipsum porro consectetur est ipsum dolor velit porro. Ut dolore labore dolor dolorem ipsum. Aliquam e...
+SE140  Science in Risk Management                                                                           B                                                                                                        
+SM141  Science in Supply Chain Management                                                                   D                                                                                                        
+SN142  Science in Teaching                                                                                  D                                                                                                        
+SC143  Science in Taxation                                                                                  B                                                                                                        
+SS144  Social Science                                                                                       D Quaerat consectetur quiquia ipsum eius quaerat consectetur. Aliquam est consectetur modi non dolor a...
+SO145  Social Work                                                                                          M Eius quiquia ipsum non porro porro magnam. Dolor sit quiquia neque sed est. Labore quiquia numquam e...
+SR146  Software Engineering                                                                                 M                                                                                                        
+ST147  Statistics                                                                                           B Tempora dolore sed tempora etincidunt porro sit tempora. Non etincidunt etincidunt dolorem labore qu...
+SR148  Strategic Studies                                                                                    E Consectetur velit sed neque tempora modi quaerat. Ipsum ipsum aliquam ut consectetur tempora velit. ...
+ST149  Studies                                                                                              M Eius etincidunt dolorem magnam dolore velit dolorem. Consectetur amet voluptatem etincidunt. Tempora...
+SG150  Surgery                                                                                              E                                                                                                        
+TI151  Theological Studies                                                                                  M Quaerat consectetur labore modi. Quiquia numquam numquam voluptatem sit labore eius etincidunt. Modi...
+AE1    Accounting and Information Systems                                                                   E                                                                                                        
+AA2    Advanced Study                                                                                       M Aliquam dolor ut quisquam consectetur adipisci ipsum aliquam. Porro labore voluptatem dolor adipisci...
+AO3    Agricultural Economics                                                                               B Sit sit eius sit non velit ut quiquia. Adipisci ipsum eius est. Quaerat sed magnam consectetur. Quae...
 
 20 rows selected. 
 
@@ -434,26 +438,26 @@ SQL> SELECT  course_code
 
 COURSE NAME                                                                                                 OCCURRENCES
 ------ ---------------------------------------------------------------------------------------------------- -----------
-MA81   Management of Innovation                                                                                      12
-MA84   Mathematics                                                                                                   11
-MC38   Master in Creative Technologies                                                                               14
-NC91   Network and Communications Management                                                                         10
-SC116  Science in Applied Cognition and Neuroscience                                                                 15
-SE129  Science in Health Informatics                                                                                 12
-AI16   Arts in Teaching                                                                                              11
-DV40   Development Economics                                                                                         14
-ET44   Educational Technology                                                                                        13
-FE51   Financial Engineering                                                                                         13
-IF61   International Affairs                                                                                         13
-SS113  Sacred Music                                                                                                  11
-SS115  Science                                                                                                       13
-SS147  Strategic Studies                                                                                             16
-TE152  Theology                                                                                                      16
-UA153  Urban Planning                                                                                                17
-BE25   Business Engineering                                                                                          13
-CI27   Chemistry                                                                                                     11
-MH86   Mathematics and Philosophy                                                                                     9
-MM83   Mathematical Finance                                                                                          11
+LC76   Landscape Architecture                                                                                        16
+MC90   Military Art and Science                                                                                      11
+ME80   Management                                                                                                    12
+MP86   Mathematics and Philosophy                                                                                     9
+SC131  Science in Human Resource Development                                                                         12
+SE123  Science in Cyber Security                                                                                     15
+SE140  Science in Risk Management                                                                                    13
+AN11   Arts in Archives and Records Management                                                                       13
+AT9    Architecture                                                                                                  12
+DV40   Development Economics                                                                                         10
+EN42   Economics                                                                                                     14
+ET44   Educational Technology                                                                                        17
+SI126  Science in Development Administration                                                                         12
+SN121  Science in Clinical Epidemiology                                                                              12
+SO115  Sacred Theology                                                                                               17
+SO124  Science in Education                                                                                          14
+SQ139  Science in Quality Assurance                                                                                  15
+SS130  Science in Health Informatics                                                                                 16
+PL104  Public Health                                                                                                 11
+PN105  Public Management                                                                                             14
 
 20 rows selected. 
 
@@ -480,32 +484,32 @@ SQL> SELECT  crs.course_code
 
 COURSE NAME                                                                                                 REGIS START_DA END_DATE
 ------ ---------------------------------------------------------------------------------------------------- ----- -------- --------
-VE154  Veterinary Science                                                                                   10S   10/02/01 10/02/28
+                                                                                                            10S   10/02/01 10/02/28
                                                                                                             10W   10/07/01 10/07/28
-VE154  Veterinary Science                                                                                   11S   11/02/01 11/02/28
-VE154  Veterinary Science                                                                                   11W   11/07/01 11/07/28
-VE154  Veterinary Science                                                                                   12S   12/02/01 12/02/28
-VE154  Veterinary Science                                                                                   12W   12/07/01 12/07/28
-VE154  Veterinary Science                                                                                   13S   13/02/01 13/02/28
+VA155  Veterinary Science                                                                                   11S   11/02/01 11/02/28
+                                                                                                            11W   11/07/01 11/07/28
+                                                                                                            12S   12/02/01 12/02/28
+                                                                                                            12W   12/07/01 12/07/28
+                                                                                                            13S   13/02/01 13/02/28
                                                                                                             13W   13/07/01 13/07/28
                                                                                                             14S   14/02/01 14/02/28
-VE154  Veterinary Science                                                                                   14W   14/07/01 14/07/28
-VE154  Veterinary Science                                                                                   15S   15/02/01 15/02/28
-                                                                                                            15W   15/07/01 15/07/28
-                                                                                                            16S   16/02/01 16/02/28
+VA155  Veterinary Science                                                                                   14W   14/07/01 14/07/28
+VA155  Veterinary Science                                                                                   15S   15/02/01 15/02/28
+VA155  Veterinary Science                                                                                   15W   15/07/01 15/07/28
+VA155  Veterinary Science                                                                                   16S   16/02/01 16/02/28
                                                                                                             16W   16/07/01 16/07/28
-VE154  Veterinary Science                                                                                   17S   17/02/01 17/02/28
-VE154  Veterinary Science                                                                                   17W   17/07/01 17/07/28
-                                                                                                            18S   18/02/01 18/02/28
-VE154  Veterinary Science                                                                                   18W   18/07/01 18/07/28
-VE154  Veterinary Science                                                                                   19S   19/02/01 19/02/28
-                                                                                                            19W   19/07/01 19/07/28
+VA155  Veterinary Science                                                                                   17S   17/02/01 17/02/28
+VA155  Veterinary Science                                                                                   17W   17/07/01 17/07/28
+VA155  Veterinary Science                                                                                   18S   18/02/01 18/02/28
+                                                                                                            18W   18/07/01 18/07/28
+                                                                                                            19S   19/02/01 19/02/28
+VA155  Veterinary Science                                                                                   19W   19/07/01 19/07/28
                                                                                                             20S   20/02/01 20/02/28
-                                                                                                            20W   20/07/01 20/07/28
-VE154  Veterinary Science                                                                                   21S   21/02/01 21/02/28
-                                                                                                            21W   21/07/01 21/07/28
-                                                                                                            22S   22/02/01 22/02/28
-VE154  Veterinary Science                                                                                   22W   22/07/01 22/07/28
+VA155  Veterinary Science                                                                                   20W   20/07/01 20/07/28
+                                                                                                            21S   21/02/01 21/02/28
+VA155  Veterinary Science                                                                                   21W   21/07/01 21/07/28
+VA155  Veterinary Science                                                                                   22S   22/02/01 22/02/28
+VA155  Veterinary Science                                                                                   22W   22/07/01 22/07/28
 
 26 rows selected. 
 
@@ -535,24 +539,24 @@ SQL> SELECT  first_name
 FIRST_NAME           SECOND_NAME          FAMILY_NAME               ATTENDED_REGISTRATIONS
 -------------------- -------------------- ------------------------- ----------------------
 Serina                                    Larick                                         1
-Maribel                                   Filary                                         2
+Maribel                                   Filary                                         3
 Raelynn              Mikenna              Nobriga                                        2
-Teia                 Deirdre              Brigges                                        3
-Neghan               Legrande             Romas                                          2
-Tyffani                                   Curi                                           1
+Teia                 Deirdre              Brigges                                        2
+Neghan               Legrande             Romas                                          3
+Tyffani                                   Curi                                           2
 Asael                                     Krzyminski                                     1
-Silver               Elly                 Lafleche                                       3
-Sahira                                    Meehan                                         2
+Silver               Elly                 Lafleche                                       1
+Sahira                                    Meehan                                         3
 Jeana                Crystel              Larcade                                        2
 Risha                                     Suchocki                                       2
-Ayme                                      Klukas                                         1
-Devlin                                    Mabary                                         3
+Ayme                                      Klukas                                         2
+Devlin                                    Mabary                                         1
 Nichols              Steele               Arslanian                                      3
-Glenn                                     Legaspi                                        1
-Amaryllis                                 Zubia                                          3
-Clementine           Ladana               Olesky                                         1
-Leotis                                    Colindres                                      2
-Savvas                                    Olquin                                         1
+Glenn                                     Legaspi                                        3
+Amaryllis                                 Zubia                                          1
+Clementine           Ladana               Olesky                                         3
+Leotis                                    Colindres                                      1
+Savvas                                    Olquin                                         2
 Marni                Romney               Katnik                                         1
 
 20 rows selected. 
@@ -578,26 +582,26 @@ SQL> SELECT  first_name
 
 FIRST_NAME           SECOND_NAME          FAMILY_NAME               REGIS
 -------------------- -------------------- ------------------------- -----
-Serina                                    Larick                    19W  
-Maribel                                   Filary                    14S  
-Maribel                                   Filary                    15S  
+Serina                                    Larick                    16W  
+Maribel                                   Filary                    10W  
+Maribel                                   Filary                    17W  
+Maribel                                   Filary                    20W  
 Raelynn              Mikenna              Nobriga                   14S  
-Raelynn              Mikenna              Nobriga                   16W  
-Teia                 Deirdre              Brigges                   18S  
-Teia                 Deirdre              Brigges                   22S  
-Teia                 Deirdre              Brigges                   22W  
-Neghan               Legrande             Romas                     20S  
-Neghan               Legrande             Romas                     20W  
-Tyffani                                   Curi                      21S  
+Raelynn              Mikenna              Nobriga                   15S  
+Teia                 Deirdre              Brigges                   14S  
+Teia                 Deirdre              Brigges                   16W  
+Neghan               Legrande             Romas                     18S  
+Neghan               Legrande             Romas                     22S  
+Neghan               Legrande             Romas                     22W  
+Tyffani                                   Curi                      20S  
+Tyffani                                   Curi                      20W  
 Asael                                     Krzyminski                21S  
-Silver               Elly                 Lafleche                  17W  
-Silver               Elly                 Lafleche                  19S  
 Silver               Elly                 Lafleche                  21S  
-Sahira                                    Meehan                    10S  
-Sahira                                    Meehan                    14W  
-Jeana                Crystel              Larcade                   13S  
-Jeana                Crystel              Larcade                   20W  
-Risha                                     Suchocki                  11W  
+Sahira                                    Meehan                    17W  
+Sahira                                    Meehan                    19S  
+Sahira                                    Meehan                    21S  
+Jeana                Crystel              Larcade                   10S  
+Jeana                Crystel              Larcade                   14W  
 
 20 rows selected. 
 

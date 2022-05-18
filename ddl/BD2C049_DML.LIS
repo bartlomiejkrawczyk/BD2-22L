@@ -1,4 +1,9 @@
-SQL> -- SAVEPOINT before_tests;
+SQL> 
+SQL> SAVEPOINT before_tests;
+
+Savepoint created.
+
+SQL> 
 SQL> --------------------------------------------------------------------------------
 SQL> --                          TEST INSERT ON CANDIDATES                         --
 SQL> --------------------------------------------------------------------------------
@@ -78,7 +83,7 @@ SQL> INSERT INTO candidates (
  20      ,   '29'
  21  );
 
-Error starting at line : 54 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 56 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO candidates (
         candidate_id
@@ -134,7 +139,7 @@ SQL> INSERT INTO candidates (
  22      ,   '42439284872'
  23  );
 
-Error starting at line : 81 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 83 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO candidates (
         candidate_id
@@ -164,9 +169,9 @@ ORA-00001: naruszono wi瞛y unikatowe (BD2C049.CAND_PESEL_UK)
 
 SQL> 
 SQL> 
-SQL> -----------------------------------------------------------
-SQL> -- TEST SEQUENCE CAND_ID_SEQ AND TRIGGER CAND_ID_SEQ_TRG --
-SQL> -----------------------------------------------------------
+SQL> -------------------------------
+SQL> -- TEST SEQUENCE CAND_ID_SEQ --
+SQL> -------------------------------
 SQL> 
 SQL> DECLARE
   2      v_id NUMBER;
@@ -245,7 +250,7 @@ SQL> INSERT INTO courses
   5      ,   NULL
   6  );
 
-Error starting at line : 171 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 173 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO courses
 VALUES ('TEST3'
@@ -282,7 +287,7 @@ SQL>
 SQL> -- Degree set to values other than BDEM should result in an error
 SQL> INSERT INTO courses VALUES ('5', 'Degree Error', 'R',   NULL);
 
-Error starting at line : 189 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 191 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO courses VALUES ('5', 'Degree Error', 'R',   NULL)
 Error report -
@@ -296,7 +301,7 @@ SQL>
 SQL> -- Course code not in uppercase should result in an error
 SQL> INSERT INTO courses VALUES ('TeST', 'Code Error', 'B',   NULL);
 
-Error starting at line : 196 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 198 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO courses VALUES ('TeST', 'Code Error', 'B',   NULL)
 Error report -
@@ -330,7 +335,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 215 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 217 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -340,7 +345,7 @@ VALUES (
 )
 Error report -
 ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
+ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 14
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
 
 SQL> 
@@ -356,7 +361,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1998-02-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 227 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 229 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -381,7 +386,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 240 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 242 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -391,7 +396,7 @@ VALUES (
 )
 Error report -
 ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
+ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 14
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
 
 SQL> 
@@ -404,7 +409,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 249 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 251 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -414,7 +419,7 @@ VALUES (
 )
 Error report -
 ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
+ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 14
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
 
 SQL> 
@@ -427,7 +432,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 258 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 260 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -437,7 +442,7 @@ VALUES (
 )
 Error report -
 ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
+ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 14
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
 
 SQL> 
@@ -450,7 +455,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-02-15', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 267 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 269 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -460,7 +465,7 @@ VALUES (
 )
 Error report -
 ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
+ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 14
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
 
 SQL> 
@@ -487,7 +492,7 @@ SQL> INSERT INTO offers
   5      ,   120
   6  );
 
-Error starting at line : 287 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 289 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO offers
 VALUES (
@@ -511,7 +516,7 @@ SQL> INSERT INTO offers
   5      ,   -100
   6  );
 
-Error starting at line : 299 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 301 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO offers
 VALUES (
@@ -589,7 +594,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 348 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 350 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -624,7 +629,7 @@ SQL> INSERT INTO preferences (
  10      ,   4
  11  );
 
-Error starting at line : 366 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 368 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -655,7 +660,7 @@ SQL> INSERT INTO preferences (
  10      ,   -1
  11  );
 
-Error starting at line : 380 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 382 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -670,64 +675,6 @@ VALUES ('TEST'
 )
 Error report -
 ORA-02290: naruszono wi瞛y CHECK (BD2C049.PREF_CHK_SEQUENTIAL_NUMBER)
-
-SQL> 
-SQL> -----------------------------------------
-SQL> -- TEST TRIGGER PREF_OFR_SLOTS_INS_TRG --
-SQL> -----------------------------------------
-SQL> 
-SQL> -- First candidate takes the only place
-SQL> INSERT INTO preferences (
-  2          registration_code
-  3      ,   course_code
-  4      ,   candidate_id
-  5      ,   sequential_number
-  6      ,   result
-  7  )
-  8  VALUES ('TEST'
-  9      ,   'TEST2'
- 10      ,   99
- 11      ,   2
- 12      ,   'Y'
- 13  );
-
-1 row inserted.
-
-SQL> 
-SQL> -- Adding additional enrolled preferences should result in an error
-SQL> INSERT INTO preferences (
-  2          registration_code
-  3      ,   course_code
-  4      ,   candidate_id
-  5      ,   sequential_number
-  6      ,   result
-  7  )
-  8  VALUES ('TEST'
-  9      ,   'TEST2'
- 10      ,   98
- 11      ,   2
- 12      ,   'Y'
- 13  );
-
-Error starting at line : 412 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-    ,   result
-)
-VALUES ('TEST'
-    ,   'TEST2'
-    ,   98
-    ,   2
-    ,   'Y'
-)
-Error report -
-ORA-20001: Not enough slots for the offer!
-ORA-06512: przy "BD2C049.PREF_OFR_SLOTS_INS_TRG", linia 23
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_OFR_SLOTS_INS_TRG'
 
 SQL> 
 SQL> -----------------------------------
@@ -747,7 +694,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 431 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 399 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -799,7 +746,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 458 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 426 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -831,13 +778,30 @@ SQL> UPDATE  candidates
   2  SET     email = 'Jacob.Tested.2@example.com'
   3  WHERE   candidate_id = 99;
 
-Error starting at line : 479 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 447 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  candidates
 SET     email = 'Jacob.Tested.2@example.com'
 WHERE   candidate_id = 99
 Error report -
 ORA-00001: naruszono wi瞛y unikatowe (BD2C049.CAND_EMAIL_UK)
+
+SQL> 
+SQL> -------------------------------
+SQL> -- TEST UNIQUE CAND_PESEL_UK --
+SQL> -------------------------------
+SQL> 
+SQL> UPDATE  candidates
+  2  SET     pesel = '42439284872'
+  3  WHERE   candidate_id = 98;
+
+Error starting at line : 455 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+In command -
+UPDATE  candidates
+SET     pesel = '42439284872'
+WHERE   candidate_id = 98
+Error report -
+ORA-00001: naruszono wi瞛y unikatowe (BD2C049.CAND_PESEL_UK)
 
 SQL> 
 SQL> --------------------------------------------------------------------------------
@@ -853,7 +817,7 @@ SQL> UPDATE  courses
   2  SET     name = 'Science of Testing, Finding Buggs and Debugging'
   3  WHERE   course_code = 'TEST2';
 
-Error starting at line : 492 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 468 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  courses
 SET     name = 'Science of Testing, Finding Buggs and Debugging'
@@ -900,7 +864,7 @@ SQL> UPDATE  courses
   2  SET     degree = 'b'
   3  WHERE   course_code = '1';
 
-Error starting at line : 518 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 494 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  courses
 SET     degree = 'b'
@@ -916,7 +880,7 @@ SQL>
 SQL> INSERT INTO registrations
   2  VALUES (
   3          '1901S'
-  4      ,   TO_DATE('1901-01-01', 'YYYY-MM-DD')
+  4      ,   TO_DATE('1901-02-01', 'YYYY-MM-DD')
   5      ,   TO_DATE('1901-03-01', 'YYYY-MM-DD')
   6  );
 
@@ -933,7 +897,7 @@ SQL> UPDATE registrations
   2  SET start_date = TO_DATE('1901-04-01', 'YYYY-MM-DD')
   3  WHERE registration_code = '1901S';
 
-Error starting at line : 539 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 515 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE registrations
 SET start_date = TO_DATE('1901-04-01', 'YYYY-MM-DD')
@@ -948,7 +912,7 @@ SQL> UPDATE registrations
   2  SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
   3  WHERE registration_code = '1901S';
 
-Error starting at line : 545 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 521 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE registrations
 SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
@@ -957,102 +921,53 @@ Error report -
 ORA-02290: naruszono wi瞛y CHECK (BD2C049.REG_CHK_START_BEFORE_END)
 
 SQL> 
-SQL> --------------------------------------
-SQL> -- TEST TRIGGER REG_INTERVAL_UP_TRG --
-SQL> --------------------------------------
-SQL> 
-SQL> -- Overlaping registrations should result in an error
-SQL> -- Case : {[}]
-SQL> INSERT INTO registrations
-  2  VALUES (
-  3          '1901S'
-  4      ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-  5      ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-  6  );
-
-Error starting at line : 555 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-)
-Error report -
-ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
-
-SQL> 
-SQL> -- Overlaping registrations should result in an error
-SQL> -- Case : [{]}
-SQL> INSERT INTO registrations
-  2  VALUES (
-  3          '1901S'
-  4      ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-  5      ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-  6  );
-
-Error starting at line : 564 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-)
-Error report -
-ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
-
-SQL> 
-SQL> -- Overlaping registrations should result in an error
-SQL> -- Case : {[]}
-SQL> INSERT INTO registrations
-  2  VALUES (
-  3          '1901S'
-  4      ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-  5      ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-  6  );
-
-Error starting at line : 573 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-04-01', 'YYYY-MM-DD')
-)
-Error report -
-ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
-
-SQL> 
-SQL> -- Overlaping registrations should result in an error
-SQL> -- Case : [{}]
-SQL> INSERT INTO registrations
-  2  VALUES (
-  3          '1901S'
-  4      ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-  5      ,   TO_DATE('1999-02-15', 'YYYY-MM-DD')
-  6  );
-
-Error starting at line : 582 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO registrations
-VALUES (
-        '1901S'
-    ,   TO_DATE('1999-02-10', 'YYYY-MM-DD')
-    ,   TO_DATE('1999-02-15', 'YYYY-MM-DD')
-)
-Error report -
-ORA-20000: Two Registrations Overlap!
-ORA-06512: przy "BD2C049.REG_INTERVAL_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.REG_INTERVAL_INS_TRG'
-
-SQL> 
+SQL> -- --------------------------------------
+SQL> -- -- TEST TRIGGER REG_INTERVAL_UP_TRG --
+SQL> -- --------------------------------------
+SQL> -- 
+SQL> -- SELECT * FROM registrations WHERE registration_code = '99S';
+SQL> -- 
+SQL> -- INSERT INTO registrations
+SQL> -- VALUES (
+SQL> --         '99T'
+SQL> --     ,   TO_DATE('1999-12-01', 'YYYY-MM-DD')
+SQL> --     ,   TO_DATE('1999-12-02', 'YYYY-MM-DD')
+SQL> -- );
+SQL> -- 
+SQL> -- -- Overlaping registrations should result in an error
+SQL> -- -- Case : {[}]
+SQL> -- UPDATE  registrations
+SQL> -- SET     start_date = TO_DATE('1999-01-01', 'YYYY-MM-DD')
+SQL> --     ,   end_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+SQL> -- WHERE   registration_code = '99T';
+SQL> -- 
+SQL> -- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+SQL> -- 
+SQL> -- -- Overlaping registrations should result in an error
+SQL> -- -- Case : [{]}
+SQL> -- UPDATE  registrations
+SQL> -- SET     start_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+SQL> --     ,   end_date = TO_DATE('1999-04-01', 'YYYY-MM-DD')
+SQL> -- WHERE   registration_code = '99T';
+SQL> -- 
+SQL> -- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+SQL> -- 
+SQL> -- -- Overlaping registrations should result in an error
+SQL> -- -- Case : {[]}
+SQL> -- UPDATE  registrations
+SQL> -- SET     start_date = TO_DATE('1999-01-01', 'YYYY-MM-DD')
+SQL> --     ,   end_date = TO_DATE('1999-04-01', 'YYYY-MM-DD')
+SQL> -- WHERE   registration_code = '99T';
+SQL> -- 
+SQL> -- SELECT * FROM registrations WHERE registration_code IN ('99S', '99T');
+SQL> -- 
+SQL> -- -- Overlaping registrations should result in an error
+SQL> -- -- Case : [{}]
+SQL> -- UPDATE  registrations
+SQL> -- SET     start_date = TO_DATE('1999-02-10', 'YYYY-MM-DD')
+SQL> --     ,   end_date = TO_DATE('1999-02-15', 'YYYY-MM-DD')
+SQL> -- WHERE   registration_code = '99T';
+SQL> -- 
 SQL> --------------------------------------------------------------------------------
 SQL> --                           TEST UPDATE ON OFFERS                            --
 SQL> --------------------------------------------------------------------------------
@@ -1073,7 +988,7 @@ SQL> UPDATE offers
   2  SET available_slots = -100
   3  WHERE registration_code = '99S' AND course_code = 'TEST1';
 
-Error starting at line : 602 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 585 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE offers
 SET available_slots = -100
@@ -1097,7 +1012,7 @@ SQL> UPDATE offers
   2  SET  registration_code = '99A' 
   3  WHERE available_slots = 101 AND course_code = 'TEST1';
 
-Error starting at line : 614 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 597 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE offers
 SET  registration_code = '99A' 
@@ -1119,7 +1034,7 @@ SQL> UPDATE offers
   2  SET course_code = 'TEST2'
   3  WHERE registration_code = '99S' AND available_slots = 101;
 
-Error starting at line : 622 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 605 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE offers
 SET course_code = 'TEST2'
@@ -1176,7 +1091,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 660 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 643 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = 2
@@ -1199,7 +1114,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 672 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 655 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = 4
@@ -1218,7 +1133,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 680 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 663 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = -1
@@ -1229,213 +1144,141 @@ Error report -
 ORA-02290: naruszono wi瞛y CHECK (BD2C049.PREF_CHK_SEQUENTIAL_NUMBER)
 
 SQL> 
-SQL> -----------------------------------------
-SQL> -- TEST TRIGGER PREF_OFR_SLOTS_UP_TRG --
-SQL> -----------------------------------------
+SQL> -----------------------------------
+SQL> -- TEST TRIGGER PREF_REG_UP_TRG --
+SQL> -----------------------------------
 SQL> 
-SQL> -- TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
-SQL> 
-SQL> SELECT * FROM preferences WHERE candidate_id IN (98, 99);
-
-REGIS COURSE CANDIDATE_ID SEQUENTIAL_NUMBER R     POINTS
------ ------ ------------ ----------------- - ----------
-TEST  TEST1            98                 1             
-TEST  TEST2            98                 2             
-TEST  TEST1            99                 1             
-TEST  TEST2            99                 2 Y           
-
-SQL> SELECT * FROM offers WHERE registration_code = 'TEST' AND course_code = 'TEST2';
-
-REGIS COURSE AVAILABLE_SLOTS
------ ------ ---------------
-TEST  TEST2                1
-
-SQL> 
-SQL> UPDATE  offers
-  2  SET     available_slots = 0
-  3  WHERE   registration_code = 'TEST' 
-  4      AND course_code = 'TEST2';
+SQL> UPDATE  registrations
+  2  SET     start_date = TO_DATE('1997-01-01', 'YYYY-MM-DD')
+  3      ,   end_date = TO_DATE('1997-04-01', 'YYYY-MM-DD')
+  4  WHERE registration_code = 'TEST';
 
 1 row updated.
 
 SQL> 
 SQL> 
-SQL> -- Count all preferences chosen
-SQL> SELECT 	COUNT(*)
-  2  FROM 	preferences p 
-  3  WHERE 	p.course_code = 'TEST2' 
-  4      AND p.registration_code = 'TEST'
-  5      AND p.result = 'Y';
-
-  COUNT(*)
-----------
-         1
-
-SQL> 
-SQL> -- Get the available slots for course in that registration
-SQL> SELECT 	available_slots 
-  2  FROM 	offers o 
-  3  WHERE 	o.course_code = 'TEST2'
-  4      AND o.registration_code = 'TEST';
-
-AVAILABLE_SLOTS
----------------
-              0
-
-SQL> 
-SQL> -- Adding additional enrolled preferences should result in an error
+SQL> -- Trying to change order of preferences should not be possible
+SQL> -- after the registration ends
 SQL> UPDATE  preferences
-  2  SET     result = 'Y'
+  2  SET     sequential_number = 3
   3  WHERE   registration_code = 'TEST' 
-  4      AND course_code = 'TEST2' 
+  4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 715 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 681 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
 UPDATE  preferences
-SET     result = 'Y'
+SET     sequential_number = 3
 WHERE   registration_code = 'TEST' 
-    AND course_code = 'TEST2' 
+    AND course_code = 'TEST1' 
     AND candidate_id = 98
 Error report -
-ORA-01403: nie znaleziono danych
-ORA-06512: przy "BD2C049.PREF_OFR_SLOTS_UP_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_OFR_SLOTS_UP_TRG'
+ORA-20002: Cannot modify preference for closed (or not open yet) registration
+ORA-06512: przy "BD2C049.PREF_REG_UP_TRG", linia 15
+ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_REG_UP_TRG'
 
 SQL> 
-SQL> SELECT * FROM preferences WHERE candidate_id IN (98, 99);
+SQL> ------------------------------------
+SQL> -- TEST TRIGGER FKNTM_PREFERENCES --
+SQL> ------------------------------------
+SQL> 
+SQL> UPDATE  preferences
+  2  SET     registration_code = 'TEST' 
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
 
-REGIS COURSE CANDIDATE_ID SEQUENTIAL_NUMBER R     POINTS
------ ------ ------------ ----------------- - ----------
-TEST  TEST1            98                 1             
-TEST  TEST2            98                 2             
-TEST  TEST1            99                 1             
-TEST  TEST2            99                 2 Y           
+1 row updated.
 
 SQL> 
-SQL> -----------------------------------
-SQL> -- TEST TRIGGER PREF_REG_UP_TRG --
-SQL> -----------------------------------
-SQL> 
-SQL> -- Trying to enroll in previous registrations should result in an error
-SQL> INSERT INTO preferences (
-  2          registration_code
-  3      ,   course_code
-  4      ,   candidate_id
-  5      ,   sequential_number
-  6  )
-  7  VALUES ('99S'
-  8      ,   'TEST1'
-  9      ,   99
- 10      ,   1
- 11  );
+SQL> UPDATE  preferences
+  2  SET     registration_code = 'TESTF' 
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
 
-Error starting at line : 728 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 698 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-)
-VALUES ('99S'
-    ,   'TEST1'
-    ,   99
-    ,   1
-)
+UPDATE  preferences
+SET     registration_code = 'TESTF' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1
 Error report -
-ORA-20002: Cannot insert preference for closed (or not open yet) registration
-ORA-06512: przy "BD2C049.PREF_REG_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_REG_INS_TRG'
+ORA-20225: Non Transferable FK constraint  on table PREFERENCES is violated
+ORA-06512: przy "BD2C049.FKNTM_PREFERENCES", linia 2
+ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.FKNTM_PREFERENCES'
 
 SQL> 
-SQL> INSERT INTO registrations
-  2  VALUES (
-  3          'TESTF'
-  4      ,   ADD_MONTHS(SYSDATE, 12 * 100)
-  5      ,   ADD_MONTHS(SYSDATE, 13 * 100)
-  6  );
+SQL> UPDATE  preferences
+  2  SET     course_code = 'TEST1' 
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
 
-Error starting at line : 740 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+1 row updated.
+
+SQL> 
+SQL> UPDATE  preferences
+  2  SET     course_code = 'TEST2' 
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
+
+Error starting at line : 712 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
-INSERT INTO registrations
-VALUES (
-        'TESTF'
-    ,   ADD_MONTHS(SYSDATE, 12 * 100)
-    ,   ADD_MONTHS(SYSDATE, 13 * 100)
-)
+UPDATE  preferences
+SET     course_code = 'TEST2' 
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1
 Error report -
-ORA-00001: naruszono wi瞛y unikatowe (BD2C049.REG_PK)
+ORA-20225: Non Transferable FK constraint  on table PREFERENCES is violated
+ORA-06512: przy "BD2C049.FKNTM_PREFERENCES", linia 2
+ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.FKNTM_PREFERENCES'
 
 SQL> 
-SQL> INSERT INTO offers
-  2  VALUES (
-  3          'TESTF'
-  4      ,   'TEST1'
-  5      ,   100
-  6  );
+SQL> UPDATE  preferences
+  2  SET     candidate_id = 98
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
 
-Error starting at line : 747 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+1 row updated.
+
+SQL> 
+SQL> UPDATE  preferences
+  2  SET     candidate_id = 99
+  3  WHERE   registration_code = 'TEST' 
+  4      AND course_code = 'TEST1' 
+  5      AND candidate_id = 98
+  6      AND sequential_number = 1;
+
+Error starting at line : 726 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
 In command -
-INSERT INTO offers
-VALUES (
-        'TESTF'
-    ,   'TEST1'
-    ,   100
-)
+UPDATE  preferences
+SET     candidate_id = 99
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    AND sequential_number = 1
 Error report -
-ORA-00001: naruszono wi瞛y unikatowe (BD2C049.OFR_PK)
+ORA-20225: Non Transferable FK constraint  on table PREFERENCES is violated
+ORA-06512: przy "BD2C049.FKNTM_PREFERENCES", linia 2
+ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.FKNTM_PREFERENCES'
 
-SQL> 
-SQL> -- Trying to enroll in future registrations should result in an error
-SQL> INSERT INTO preferences (
-  2          registration_code
-  3      ,   course_code
-  4      ,   candidate_id
-  5      ,   sequential_number
-  6  )
-  7  VALUES ('TESTF'
-  8      ,   'TEST1'
-  9      ,   99
- 10      ,   1
- 11  );
-
-Error starting at line : 755 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
-In command -
-INSERT INTO preferences (
-        registration_code
-    ,   course_code
-    ,   candidate_id
-    ,   sequential_number
-)
-VALUES ('TESTF'
-    ,   'TEST1'
-    ,   99
-    ,   1
-)
-Error report -
-ORA-20002: Cannot insert preference for closed (or not open yet) registration
-ORA-06512: przy "BD2C049.PREF_REG_INS_TRG", linia 16
-ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_REG_INS_TRG'
-
-SQL> 
 SQL> 
 SQL> -- Clean after the tests
-SQL> -- ROLLBACK TO SAVEPOINT before_tests;
-SQL> ROLLBACK;
+SQL> ROLLBACK TO SAVEPOINT before_tests;
 
 Rollback complete.
 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
 SQL> 
 SQL> spool off
