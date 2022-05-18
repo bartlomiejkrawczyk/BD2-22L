@@ -48,13 +48,13 @@ CRS_CHK_CODE_UPPER	COURSE_CODE = UPPER(COURSE_CODE);</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.TVNote" oid="60E80A3C-6FB0-3270-FEBA-4DD44674DAF4" otype="Note" vid="DE02B962-0720-DABC-F20B-2E478D35227A">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="107" y="938" width="462" height="36"/>
+<bounds x="109" y="989" width="462" height="36"/>
 <comment>PREF_CHK_SEQUENTIAL_NUMBER	SEQUENTIAL_NUMBER BETWEEN 1 AND 3;
 PREF_CHK_RESULT	RESULT IN (&apos;Y&apos;, &apos;N&apos;, &apos;R&apos;) OR RESULT IS NULL;</comment>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="64116F9A-D9BA-B4DD-769D-EBACFDB2975A" otype="Table" vid="8EE3F486-5D1C-4DB2-24ED-92DAAF0C2D13">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
-<bounds x="105" y="731" width="518" height="185"/>
+<bounds x="107" y="782" width="518" height="185"/>
 </OView>
 <OView class="oracle.dbtools.crest.swingui.relational.TVTable" oid="9ED40965-CA3E-47D8-B466-9AB66D8932DE" otype="Table" vid="E8567F05-0B34-18D7-A21C-7434070C98DB">
 <hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
@@ -80,8 +80,8 @@ PREF_CHK_RESULT	RESULT IN (&apos;Y&apos;, &apos;N&apos;, &apos;R&apos;) OR RESUL
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="206" y="613"/>
-<point x="206" y="731"/>
+<point x="207" y="613"/>
+<point x="207" y="782"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="96EAAFD7-54D6-DEA8-0695-C5C52D9B04DB" otype="FKIndexAssociation" vid_source="666D1A4A-BDC6-5327-9A68-8C91DBC641C5" vid_target="8EE3F486-5D1C-4DB2-24ED-92DAAF0C2D13">
@@ -89,8 +89,8 @@ PREF_CHK_RESULT	RESULT IN (&apos;Y&apos;, &apos;N&apos;, &apos;R&apos;) OR RESUL
 <backgroundColor>-16777216</backgroundColor>
 <lineWidth>1</lineWidth>
 <points>
-<point x="520" y="646"/>
-<point x="520" y="731"/>
+<point x="521" y="646"/>
+<point x="521" y="782"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.relational.TVFKRelation" oid="FDA502C8-B6A2-835F-F184-AD6A8A5B6F62" otype="FKIndexAssociation" vid_source="F3AA2A78-77E1-0165-36D7-E810256BE318" vid_target="666D1A4A-BDC6-5327-9A68-8C91DBC641C5">

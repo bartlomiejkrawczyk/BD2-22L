@@ -14,8 +14,8 @@ BEGIN
     FROM	registrations reg 
     WHERE 	reg.registration_code != :new.registration_code AND (
                 (:new.start_date BETWEEN reg.start_date AND reg.end_date) 
-            OR	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
-            OR	(reg.start_date BETWEEN :new.start_date AND :new.end_date)
+            	OR	(:new.end_date BETWEEN reg.start_date AND reg.end_date) 
+            	OR	(reg.start_date BETWEEN :new.start_date AND :new.end_date)
             );
 
     -- If there are registrations overlaping an signal error
