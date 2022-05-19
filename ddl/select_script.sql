@@ -171,10 +171,13 @@ SELECT  course_code
     ,   name
     ,   degree
     ,   CAST(
-            CASE WHEN description IS NOT NULL THEN
-                SUBSTR(description, 0, 100) || '...'
-            ELSE 
-                NULL
+            CASE 
+                WHEN description IS NOT NULL AND LENGTH(description) > 103 THEN
+                    SUBSTR(description, 0, 100) || '...'
+                WHEN description IS NOT NULL THEN
+                    SUBSTR(description, 0, 103)
+                ELSE 
+                    NULL
             END 
             AS VARCHAR2(103)
         ) DESCRIPTION

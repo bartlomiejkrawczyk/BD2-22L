@@ -26,26 +26,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID FIRST_NAME           SECOND_NAME          FAMILY_NAME               BIRTH_DA PESEL      
 ------------ -------------------- -------------------- ------------------------- -------- -----------
-         323 Ericberto            Briam                Hopes                     32/04/15 76440339762
-         324 Romar                Jemal                Spore                     82/04/02            
-         325 Cyrena               Emi                  Cornutt                   33/07/27            
-         326 Pearson                                   Shulick                   43/11/23 78042950870
-         327 Hanan                Keelie               Zerby                     37/12/13 90865351885
-         328 Alishia                                   Bionda                    81/05/02 42266686172
-         329 Shlomo               Luqman               Okoli                     73/10/09 70919422482
-         330 Martellis            Altagracia           Claypole                  25/07/04 11762787793
-         331 Kea                                       Balderston                40/05/24 20827482967
-         332 Cyrstal                                   Or                        00/02/07            
-         333 Carolee              Jenni                Sandles                   67/05/14 46411815022
-         334 Lachell                                   Pichon                    09/08/28 97703212412
-         335 Seng                 Anthoney             Grboyan                   78/01/14            
-         336 Paulette             Graylon              Cesena                    62/11/24            
-         337 Monifa               Tiphani              Ambers                    67/01/27 44432548685
-         338 Tilla                                     Brodzik                   20/08/21            
-         339 Deniesha                                  Schwier                   74/07/03 77403605726
-         340 Jenee                Malka                Dipippo                   89/11/04            
-         341 Kylene               Matisha              Etheredge                 62/02/22 66155077187
-         342 Iyanna               Mitul                Asby                      53/11/02 15746419584
+         100 Serina                                    Larick                    77/08/21 13294916953
+         101 Maribel                                   Filary                    68/11/07 42439284874
+         102 Raelynn              Mikenna              Nobriga                   57/02/24            
+         103 Teia                 Deirdre              Brigges                   06/12/12 76015892184
+         104 Neghan               Legrande             Romas                     45/09/28 93958004840
+         105 Tyffani                                   Curi                      45/09/14 93572104131
+         106 Asael                                     Krzyminski                29/02/28            
+         107 Silver               Elly                 Lafleche                  04/05/21 10490445119
+         108 Sahira                                    Meehan                    70/03/02 72348320167
+         109 Jeana                Crystel              Larcade                   59/05/24            
+         110 Risha                                     Suchocki                  33/11/13 52518794421
+         111 Ayme                                      Klukas                    06/02/27 42351928838
+         112 Devlin                                    Mabary                    62/10/17            
+         113 Nichols              Steele               Arslanian                 95/07/03 52480525648
+         114 Glenn                                     Legaspi                   25/04/08            
+         115 Amaryllis                                 Zubia                     60/01/01 62885138616
+         116 Clementine           Ladana               Olesky                    53/03/18 73364883808
+         117 Leotis                                    Colindres                 89/10/19 44670382753
+         118 Savvas                                    Olquin                    32/09/25            
+         119 Marni                Romney               Katnik                    24/06/27            
 
 20 rows selected. 
 
@@ -60,26 +60,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID PHONE_NUMBER  EMAIL                                                                                               
 ------------ ------------- ----------------------------------------------------------------------------------------------------
-         323 +24324755718  Ericberto.Hopes.614@example.com                                                                     
-         324               Romar.Spore.1469@pw.edu.pl                                                                          
-         325               Cyrena.Cornutt.267@example.com                                                                      
-         326 +100836321153 Pearson.Shulick.569@pw.edu.pl                                                                       
-         327 +37854599551  Hanan.Zerby.405@o2.pl                                                                               
-         328               Alishia.Bionda.1727@example.com                                                                     
-         329 +3255203741   Shlomo.Okoli.343@o2.pl                                                                              
-         330 +77166427813  Martellis.Claypole.1750@example.com                                                                 
-         331 +47775178153  Kea.Balderston.1519@gmail.com                                                                       
-         332               Cyrstal.Or.277@gmail.com                                                                            
-         333 +55720208018  Carolee.Sandles.1482@pw.edu.pl                                                                      
-         334 +39389678046  Lachell.Pichon.1820@youtube.com                                                                     
-         335 +16219037384  Seng.Grboyan.1474@o2.pl                                                                             
-         336               Paulette.Cesena.1443@o2.pl                                                                          
-         337 +15527950650  Monifa.Ambers.247@youtube.com                                                                       
-         338 +45335421603  Tilla.Brodzik.1883@pw.edu.pl                                                                        
-         339 +19318050987  Deniesha.Schwier.963@pw.edu.pl                                                                      
-         340               Jenee.Dipippo.1223@pw.edu.pl                                                                        
-         341 +39899006727  Kylene.Etheredge.168@youtube.com                                                                    
-         342               Iyanna.Asby.1284@wp.pl                                                                              
+         100 +35874747711  Serina.Larick.242@o2.pl                                                                             
+         101 +30826760591  Maribel.Filary.1109@gmail.com                                                                       
+         102 +37730909864  Raelynn.Nobriga.1289@youtube.com                                                                    
+         103               Teia.Brigges.1124@youtube.com                                                                       
+         104               Neghan.Romas.2012@gmail.com                                                                         
+         105               Tyffani.Curi.1168@example.com                                                                       
+         106 +15956081167  Asael.Krzyminski.67@youtube.com                                                                     
+         107 +50468661171  Silver.Lafleche.1081@wp.pl                                                                          
+         108               Sahira.Meehan.462@gmail.com                                                                         
+         109               Jeana.Larcade.145@gmail.com                                                                         
+         110               Risha.Suchocki.398@o2.pl                                                                            
+         111               Ayme.Klukas.437@pw.edu.pl                                                                           
+         112 +18722724150  Devlin.Mabary.437@pw.edu.pl                                                                         
+         113               Nichols.Arslanian.235@example.com                                                                   
+         114               Glenn.Legaspi.847@gmail.com                                                                         
+         115               Amaryllis.Zubia.426@youtube.com                                                                     
+         116               Clementine.Olesky.1356@pw.edu.pl                                                                    
+         117               Leotis.Colindres.685@gmail.com                                                                      
+         118               Savvas.Olquin.1767@wp.pl                                                                            
+         119               Marni.Katnik.1865@youtube.com                                                                       
 
 20 rows selected. 
 
@@ -99,26 +99,26 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID COUNTRY                                            VOIVODESHIP                                        CITY                                               POSTAL_COD STREET                                                                           HOME_N APART
 ------------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ---------- -------------------------------------------------------------------------------- ------ -----
-         323 Luxembourg                                                                                            CoralTerrace                                       32-988                                                                                      832M        
-         324 Georgia                                            Warminsko-Mazurskie                                Arbutus                                            992-372    Los Robles Avenue North                                                          69W    381B 
-         325 Egypt                                              Podlaskie                                          Heeia                                              106-855    Velvet Way                                                                       6X          
-         326 Cameroon                                                                                              RoundRock                                          357-747    Route 926                                                                        962E        
-         327 Luxembourg                                         Wielkopolskie                                      Foresthill                                         361-929                                                                                     85B    309I 
-         328 Netherlands                                        Opolskie                                           Tucumcari                                          855-722                                                                                     439X   207X 
-         329 Sierra Leone                                                                                          TintonFalls                                        96-265                                                                                      246W   38O  
-         330 Tonga                                              Wielkopolskie                                      Isanti                                             424-475                                                                                     111U        
-         331 Malawi                                             Podkarpackie                                       Carrington                                         800-986    Cherry Lane West                                                                 147C   511R 
-         332 Sierra Leone                                       Kujawsko-Pomorskie                                 Bruceton                                           881-714                                                                                     373P   654X 
-         333 Luxembourg                                         Zachodniopomorskie                                 Charlevoix                                         449-378    Keswick Grove Lane                                                               334T        
-         334 Congo                                                                                                 Albion                                             342-799    Priority Court                                                                   72V         
-         335 Ghana                                              Warminsko-Mazurskie                                Malakoff                                           543-154                                                                                     330E   863E 
-         336 Grenada                                            Mazowieckie                                        EastJordan                                         297-38     Meyer Court North                                                                447C   886O 
-         337 Hungary                                            Slaskie                                            Guthrie                                            743-602                                                                                     112T   60D  
-         338 Gabon                                                                                                 Avenel                                             322-154    64th Place NE                                                                    209P   688V 
-         339 Fiji                                               Zachodniopomorskie                                 PennEstates                                        964-57     Lindley Road                                                                     333D   477R 
-         340 Tuvalu                                             Lubuskie                                           Carbonville                                        828-836                                                                                     135N        
-         341 San Marino                                         Dolnoslaskie                                       Rosepine                                           659-384    Esmond Street                                                                    427V   397D 
-         342 Brunei                                                                                                NorthAdams                                         750-675    Halsey Place                                                                     37A    126V 
+         100 Lesotho                                                                                               Capitola                                           97-500     Lemon Street East                                                                30M         
+         101 Mali                                               Podlaskie                                          UnionCity                                          541-228                                                                                     783O   858R 
+         102 Jordan                                             Kujawsko-Pomorskie                                 Aitkin                                             959-991    Troon Terrace                                                                    433Q   425V 
+         103 Botswana                                           Podkarpackie                                       ByrnesMill                                         680-521                                                                                     111F        
+         104 Portugal                                                                                              Tecumseh                                           415-527                                                                                     353S   973B 
+         105 Nepal                                                                                                 Cornelia                                           425-355                                                                                     2R          
+         106 Angola                                             Podlaskie                                          Van                                                15-773                                                                                      774I        
+         107 Uganda                                             Lodzkie                                            Poland                                             466-720    Bolton Place                                                                     330P        
+         108 United Arab Emirates                               Pomorskie                                          Elfers                                             457-722    Sugar Maple Lane                                                                 519V   129G 
+         109 Costa Rica                                                                                            Corydon                                            579-259    Windsong Road                                                                    134A   102G 
+         110 India                                                                                                 Gassville                                          512-18     Gooseneck Road                                                                   334T        
+         111 Lesotho                                                                                               HarwichCenter                                      353-937                                                                                     904V        
+         112 Greece                                             Kujawsko-Pomorskie                                 Algonac                                            347-349    Hillsdale Road                                                                   117J   887E 
+         113 St Lucia                                                                                              FrenchLick                                         230-580                                                                                     84I    13T  
+         114 Sao Tome and Principe                              Podkarpackie                                       Lucerne                                            166-119    Halifax Street North                                                             462F   729P 
+         115 Algeria                                            Warminsko-Mazurskie                                RaleighHills                                       744-611                                                                                     328O   221T 
+         116 Equatorial Guinea                                  Podlaskie                                          Nephi                                              204-253                                                                                     370C   192K 
+         117 Senegal                                                                                               Hazelwood                                          251-226                                                                                     21H    769L 
+         118 Jamaica                                            Podlaskie                                          Banning                                            522-973                                                                                     682F   130G 
+         119 Solomon Islands                                                                                       Lovettsville                                       861-967                                                                                     765W        
 
 20 rows selected. 
 
@@ -144,21 +144,21 @@ SQL> SELECT  candidate_id
 CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP                                        STREET                                                                           APART
 ------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
          341 66155077187 +39899006727  Matisha              Dolnoslaskie                                       Esmond Street                                                                    397D 
-         892 86325388762 +84526260640  Omar                 Opolskie                                           Normandy Street                                                                  327U 
+         187 55450190407 +10794632786  Devonna              Zachodniopomorskie                                 Etching Overlook                                                                 170I 
+         281 44532658132 +1990827609   Sander               Swietokrzyskie                                     Ellison Avenue South                                                             779G 
+         308 49986385722 +18122576951  Reginaldo            Swietokrzyskie                                     Weightman Street                                                                 209V 
          578 94955695851 +38318153765  Lakara               Podlaskie                                          Boggs Lane                                                                       975U 
          579 40212854252 +53852579363  Jemma                Kujawsko-Pomorskie                                 Tennessee Avenue North                                                           672M 
          595 20330291058 +48571517690  Bryden               Lodzkie                                            Mill Creek Road                                                                  38B  
          604 70743706636 +99390566632  Kami                 Opolskie                                           Dulcimer Lane                                                                    36V  
          690 64842390857 +47432540235  Kijuana              Warminsko-Mazurskie                                Syracuse Court South                                                             776H 
-         868 35525986819 +30666322887  Teneisha             Dolnoslaskie                                       Upper Gulph Road                                                                 875C 
-         187 55450190407 +10794632786  Devonna              Zachodniopomorskie                                 Etching Overlook                                                                 170I 
-         281 44532658132 +1990827609   Sander               Swietokrzyskie                                     Ellison Avenue South                                                             779G 
-         308 49986385722 +18122576951  Reginaldo            Swietokrzyskie                                     Weightman Street                                                                 209V 
-         972 50696998928 +56560582452  Yamil                Warminsko-Mazurskie                                Pear Shape Lane                                                                  748G 
         1114 45890705143 +86807435608  Carrieann            Lodzkie                                            Shelby Way                                                                       636W 
         1174 73333315259 +80646464268  Natosha              Podkarpackie                                       Shire Mill Road                                                                  555Q 
         1208 33842201307 +48428792224  Jansen               Lubuskie                                           Oak Terrace                                                                      879O 
         1210 33673037468 +9928507686   Jamise               Kujawsko-Pomorskie                                 Harford Place                                                                    265I 
+         868 35525986819 +30666322887  Teneisha             Dolnoslaskie                                       Upper Gulph Road                                                                 875C 
+         892 86325388762 +84526260640  Omar                 Opolskie                                           Normandy Street                                                                  327U 
+         972 50696998928 +56560582452  Yamil                Warminsko-Mazurskie                                Pear Shape Lane                                                                  748G 
 
 16 rows selected. 
 
@@ -185,15 +185,15 @@ CANDIDATE_ID PESEL       PHONE_NUMBER  SECOND_NAME          VOIVODESHIP         
 ------------ ----------- ------------- -------------------- -------------------------------------------------- -------------------------------------------------------------------------------- -----
          343                                                                                                                                                                                         
          349                                                                                                                                                                                         
-         442                                                                                                                                                                                         
-         443                                                                                                                                                                                         
+         196                                                                                                                                                                                         
+         262                                                                                                                                                                                         
          568                                                                                                                                                                                         
          584                                                                                                                                                                                         
          620                                                                                                                                                                                         
          772                                                                                                                                                                                         
          776                                                                                                                                                                                         
-         196                                                                                                                                                                                         
-         262                                                                                                                                                                                         
+         442                                                                                                                                                                                         
+         443                                                                                                                                                                                         
         1032                                                                                                                                                                                         
         1142                                                                                                                                                                                         
         1157                                                                                                                                                                                         
@@ -389,38 +389,41 @@ SQL> SELECT  course_code
   2      ,   name
   3      ,   degree
   4      ,   CAST(
-  5              CASE WHEN description IS NOT NULL THEN
-  6                  SUBSTR(description, 0, 100) || '...'
-  7              ELSE 
-  8                  NULL
-  9              END 
- 10              AS VARCHAR2(103)
- 11          ) DESCRIPTION
- 12  FROM courses
- 13  FETCH FIRST 20 ROWS ONLY;
+  5              CASE 
+  6                  WHEN description IS NOT NULL AND LENGTH(description) > 103 THEN
+  7                      SUBSTR(description, 0, 100) || '...'
+  8                  WHEN description IS NOT NULL THEN
+  9                      SUBSTR(description, 0, 103)
+ 10                  ELSE 
+ 11                      NULL
+ 12              END 
+ 13              AS VARCHAR2(103)
+ 14          ) DESCRIPTION
+ 15  FROM courses
+ 16  FETCH FIRST 20 ROWS ONLY;
 
 COURSE NAME                                                                                                 D DESCRIPTION                                                                                            
 ------ ---------------------------------------------------------------------------------------------------- - -------------------------------------------------------------------------------------------------------
-TO152  Technology                                                                                           D Ipsum porro dolor quaerat. Ipsum labore voluptatem quiquia neque adipisci sit. Sed labore ut est non...
-TE153  Theology                                                                                             M Aliquam non dolorem consectetur amet. Voluptatem quaerat sit neque modi etincidunt amet amet. Volupt...
-UN154  Urban Planning                                                                                       B Neque modi neque etincidunt dolore modi dolore. Ipsum labore dolor ipsum dolor tempora adipisci. Ut ...
-VA155  Veterinary Science                                                                                   M Velit porro sit est adipisci dolore quiquia ipsum. Velit dolore sed quaerat quiquia. Eius ut est qua...
-SQ139  Science in Quality Assurance                                                                         E Ipsum porro consectetur est ipsum dolor velit porro. Ut dolore labore dolor dolorem ipsum. Aliquam e...
-SE140  Science in Risk Management                                                                           B                                                                                                        
-SM141  Science in Supply Chain Management                                                                   D                                                                                                        
-SN142  Science in Teaching                                                                                  D                                                                                                        
-SC143  Science in Taxation                                                                                  B                                                                                                        
-SS144  Social Science                                                                                       D Quaerat consectetur quiquia ipsum eius quaerat consectetur. Aliquam est consectetur modi non dolor a...
-SO145  Social Work                                                                                          M Eius quiquia ipsum non porro porro magnam. Dolor sit quiquia neque sed est. Labore quiquia numquam e...
-SR146  Software Engineering                                                                                 M                                                                                                        
-ST147  Statistics                                                                                           B Tempora dolore sed tempora etincidunt porro sit tempora. Non etincidunt etincidunt dolorem labore qu...
-SR148  Strategic Studies                                                                                    E Consectetur velit sed neque tempora modi quaerat. Ipsum ipsum aliquam ut consectetur tempora velit. ...
-ST149  Studies                                                                                              M Eius etincidunt dolorem magnam dolore velit dolorem. Consectetur amet voluptatem etincidunt. Tempora...
-SG150  Surgery                                                                                              E                                                                                                        
-TI151  Theological Studies                                                                                  M Quaerat consectetur labore modi. Quiquia numquam numquam voluptatem sit labore eius etincidunt. Modi...
+AC0    Accountancy                                                                                          D Etincidunt dolor adipisci dolore non ut etincidunt sit. Tempora aliquam amet aliquam magnam. Neque t...
 AE1    Accounting and Information Systems                                                                   E                                                                                                        
 AA2    Advanced Study                                                                                       M Aliquam dolor ut quisquam consectetur adipisci ipsum aliquam. Porro labore voluptatem dolor adipisci...
 AO3    Agricultural Economics                                                                               B Sit sit eius sit non velit ut quiquia. Adipisci ipsum eius est. Quaerat sed magnam consectetur. Quae...
+AM4    Applied Economics                                                                                    M Velit etincidunt adipisci est dolorem. Voluptatem quisquam magnam sed porro adipisci. Consectetur ma...
+AP5    Applied Finance                                                                                      E Porro labore sed est sit. Velit modi tempora dolorem quisquam. Eius est consectetur non dolore. Ut d...
+AL6    Applied Mathematical Sciences                                                                        M                                                                                                        
+AY7    Applied Psychology                                                                                   E                                                                                                        
+AI8    Applied Science                                                                                      M                                                                                                        
+AT9    Architecture                                                                                         E                                                                                                        
+AS10   Arts                                                                                                 D                                                                                                        
+AN11   Arts in Archives and Records Management                                                              D Tempora aliquam dolore voluptatem. Dolor tempora dolorem tempora quaerat tempora. Labore porro quiqu...
+AH12   Arts in Bioethics                                                                                    E Porro velit non dolorem neque ipsum adipisci neque. Ut velit modi adipisci. Sit modi etincidunt ipsu...
+AB13   Arts in Liberal Studies                                                                              B                                                                                                        
+AE14   Arts in Museum Studies                                                                               D Porro etincidunt voluptatem dolor. Amet voluptatem est sed amet voluptatem. Dolor ut velit modi volu...
+AI15   Arts in Strategic Communication Management                                                           D Velit ipsum porro neque. Neque ipsum dolor est quiquia quaerat aliquam porro. Labore dolor dolore la...
+AS16   Arts in Teaching                                                                                     B                                                                                                        
+AT17   Athletic Training                                                                                    B                                                                                                        
+BT18   Bioethics                                                                                            E                                                                                                        
+BI19   Bioinformatics                                                                                       D Eius quaerat sed neque. Modi quisquam amet adipisci ipsum tempora dolore. Velit eius magnam dolor do...
 
 20 rows selected. 
 
@@ -438,26 +441,26 @@ SQL> SELECT  course_code
 
 COURSE NAME                                                                                                 OCCURRENCES
 ------ ---------------------------------------------------------------------------------------------------- -----------
+AN11   Arts in Archives and Records Management                                                                       13
+AT9    Architecture                                                                                                  12
+BE25   Business Engineering                                                                                          14
+BT18   Bioethics                                                                                                     12
+CI27   Chemistry                                                                                                     15
+DV40   Development Economics                                                                                         10
+EN42   Economics                                                                                                     14
+ET44   Educational Technology                                                                                        17
 LC76   Landscape Architecture                                                                                        16
 MC90   Military Art and Science                                                                                      11
 ME80   Management                                                                                                    12
 MP86   Mathematics and Philosophy                                                                                     9
+PL104  Public Health                                                                                                 11
+PN105  Public Management                                                                                             14
+PY94   Pharmacy                                                                                                      12
 SC131  Science in Human Resource Development                                                                         12
 SE123  Science in Cyber Security                                                                                     15
 SE140  Science in Risk Management                                                                                    13
-AN11   Arts in Archives and Records Management                                                                       13
-AT9    Architecture                                                                                                  12
-DV40   Development Economics                                                                                         10
-EN42   Economics                                                                                                     14
-ET44   Educational Technology                                                                                        17
 SI126  Science in Development Administration                                                                         12
 SN121  Science in Clinical Epidemiology                                                                              12
-SO115  Sacred Theology                                                                                               17
-SO124  Science in Education                                                                                          14
-SQ139  Science in Quality Assurance                                                                                  15
-SS130  Science in Health Informatics                                                                                 16
-PL104  Public Health                                                                                                 11
-PN105  Public Management                                                                                             14
 
 20 rows selected. 
 
