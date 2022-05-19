@@ -19,16 +19,16 @@ BEGIN
 	-- Allow modifying preferences only when the specific registration is open
 
 	-- To check if registration is now open, 
-    	-- Count registrations open now with given registration_code
-    	SELECT  COUNT(*) 
-    	INTO    v_registrations
-    	FROM    registrations r 
-    	WHERE   r.registration_code = NVL(:new.registration_code, :old.registration_code) 
-        AND (SYSDATE BETWEEN r.start_date AND r.end_date);
+	-- Count registrations open now with given registration_code
+	SELECT  COUNT(*) 
+	INTO    v_registrations
+	FROM    registrations r 
+	WHERE   r.registration_code = NVL(:new.registration_code, :old.registration_code) 
+	AND (SYSDATE BETWEEN r.start_date AND r.end_date);
 	
 	-- If registrations count is equal to 0 this means that the choosen 
-    	-- registration is closed (or not open yet)
-    	IF v_registrations = 0 THEN
+	-- registration is closed (or not open yet)
+	IF v_registrations = 0 THEN
 		CASE
 			WHEN INSERTING THEN
 				raise_application_error(-20002, 'Cannot insert preference for closed (or not open yet) registration');
