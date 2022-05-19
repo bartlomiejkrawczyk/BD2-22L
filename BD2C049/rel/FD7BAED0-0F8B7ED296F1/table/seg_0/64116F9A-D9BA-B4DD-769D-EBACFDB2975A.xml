@@ -85,12 +85,6 @@ Sequential number must be an integer from range [1;3].]]></commentInRDBMS>
 </checkConstraint>
 <ownDataTypeParameters>,1,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<listOfRanges>
-<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
-<beginValue>1</beginValue>
-<endValue>3</endValue>
-</rangeDef>
-</listOfRanges>
 </Column>
 <Column name="RESULT" id="1DFFDDCD-F214-3550-E30D-35F36566A39C">
 <createdBy>Bartłomiej Krawczyk</createdBy>
