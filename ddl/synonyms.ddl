@@ -9,6 +9,8 @@
 
 -- predefined type, no DDL - XMLTYPE
 
+CREATE OR REPLACE SYNONYM cand_id_seq FOR bd2c049.cand_id_seq;
+
 CREATE OR REPLACE SYNONYM candidates FOR bd2c049.candidates;
 
 CREATE OR REPLACE SYNONYM courses FOR bd2c049.courses;
@@ -48,7 +50,7 @@ CREATE OR REPLACE SYNONYM registrations FOR bd2c049.registrations;
 -- CREATE SEQUENCE                          0
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE MATERIALIZED VIEW LOG             0
--- CREATE SYNONYM                           5
+-- CREATE SYNONYM                           6
 -- CREATE TABLESPACE                        0
 -- CREATE USER                              0
 -- 
