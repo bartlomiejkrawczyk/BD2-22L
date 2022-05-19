@@ -738,9 +738,9 @@ VALUES  (97
 DELETE FROM candidates 
 WHERE   candidate_id = 97;
 
--------------------------------
--- TEST TRIGGER PREF_REG_TRG --
--------------------------------
+-----------------------------------------------------
+-- TEST TRIGGER PREF_REG_TRG AND ON DELETE CASCADE --
+-----------------------------------------------------
 
 -- Cannot delete candidate that has placed his preferences for offers 
 -- in registrations that are closed
@@ -756,6 +756,101 @@ WHERE   registration_code = 'TEST';
 -- is allowed
 DELETE FROM candidates 
 WHERE   candidate_id = 99;
+
+--------------------------------------------------------------------------------
+--                         TEST DELETE ON PREFERENCES                         --
+--------------------------------------------------------------------------------
+
+SELECT  candidate_id
+    ,   first_name
+    ,   family_name
+    ,   registration_code
+    ,   course_code
+    ,   sequential_number
+    ,   start_date
+    ,   end_date
+FROM    candidates
+JOIN    preferences
+    USING(candidate_id)
+JOIN    registrations
+    USING(registration_code)
+WHERE   candidate_id < 100;
+
+-------------------------------
+-- TEST TRIGGER PREF_REG_TRG --
+-------------------------------
+
+-- Deletion of preference from open registration should be possible
+DELETE FROM preferences
+WHERE   candidate_id = 98
+    AND course_code = 'TEST1';
+
+UPDATE  registrations
+SET     start_date = TO_DATE('1997-01-01', 'YYYY-MM-DD')
+    ,   end_date = TO_DATE('1997-04-01', 'YYYY-MM-DD')
+WHERE registration_code = 'TEST';
+
+-- Cannot delete preference from closed registration
+DELETE FROM preferences
+WHERE   candidate_id = 98
+    AND course_code = 'TEST2';
+
+--------------------------------------------------------------------------------
+--                            TEST DELETE ON OFFERS                           --
+--------------------------------------------------------------------------------
+
+SELECT *
+FROM offers
+LEFT JOIN preferences
+    USING(course_code, registration_code)
+WHERE course_code IN ('TEST1', 'TEST2');
+
+DELETE FROM offers 
+WHERE   registration_code = '99S'
+    AND course_code = 'TEST1';
+
+-- Deletion of offer with submitted preferences should not be possible
+DELETE FROM offers 
+WHERE   registration_code = 'TEST'
+    AND course_code = 'TEST2';
+
+--------------------------------------------------------------------------------
+--                            TEST DELETE ON COURSES                          --
+--------------------------------------------------------------------------------
+
+SELECT course_code
+    ,   name
+    ,   registration_code
+    ,   available_slots
+FROM courses
+LEFT JOIN offers
+    USING(course_code)
+WHERE course_code IN ('TEST1', 'TEST2', '1', '2', '3', '4');
+
+DELETE FROM courses
+WHERE   course_code = '4';
+
+-- Deletion of course with submitted offers should not be possible
+DELETE FROM courses
+WHERE   course_code = 'TEST1';
+
+--------------------------------------------------------------------------------
+--                        TEST DELETE ON REGISTRATIONS                        --
+--------------------------------------------------------------------------------
+
+SELECT *
+FROM registrations
+LEFT JOIN offers
+    USING(registration_code)
+WHERE registration_code IN ('TEST', 'TESTF', '99S');
+
+DELETE FROM registrations
+WHERE   registration_code = '99S';
+
+
+-- Deletion of registration with submitted offers should not be possible
+DELETE FROM registrations
+WHERE   registration_code = 'TEST';
 
 -- Clean after the tests
 ROLLBACK TO SAVEPOINT before_tests;

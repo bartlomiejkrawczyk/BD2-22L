@@ -1265,9 +1265,9 @@ SQL> DELETE FROM candidates
 1 row deleted.
 
 SQL> 
-SQL> -------------------------------
-SQL> -- TEST TRIGGER PREF_REG_TRG --
-SQL> -------------------------------
+SQL> -----------------------------------------------------
+SQL> -- TEST TRIGGER PREF_REG_TRG AND ON DELETE CASCADE --
+SQL> -----------------------------------------------------
 SQL> 
 SQL> -- Cannot delete candidate that has placed his preferences for offers 
 SQL> -- in registrations that are closed
@@ -1298,6 +1298,187 @@ SQL> DELETE FROM candidates
   2  WHERE   candidate_id = 99;
 
 1 row deleted.
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> --                         TEST DELETE ON PREFERENCES                         --
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   first_name
+  3      ,   family_name
+  4      ,   registration_code
+  5      ,   course_code
+  6      ,   sequential_number
+  7      ,   start_date
+  8      ,   end_date
+  9  FROM    candidates
+ 10  JOIN    preferences
+ 11      USING(candidate_id)
+ 12  JOIN    registrations
+ 13      USING(registration_code)
+ 14  WHERE   candidate_id < 100;
+
+CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
+------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
+          98 Jacob                Tested                    TEST  TEST1                  1 22/04/19 22/06/19
+          98 Jacob                Tested                    TEST  TEST2                  2 22/04/19 22/06/19
+
+SQL> 
+SQL> -------------------------------
+SQL> -- TEST TRIGGER PREF_REG_TRG --
+SQL> -------------------------------
+SQL> 
+SQL> -- Deletion of preference from open registration should be possible
+SQL> DELETE FROM preferences
+  2  WHERE   candidate_id = 98
+  3      AND course_code = 'TEST1';
+
+1 row deleted.
+
+SQL> 
+SQL> UPDATE  registrations
+  2  SET     start_date = TO_DATE('1997-01-01', 'YYYY-MM-DD')
+  3      ,   end_date = TO_DATE('1997-04-01', 'YYYY-MM-DD')
+  4  WHERE registration_code = 'TEST';
+
+1 row updated.
+
+SQL> 
+SQL> -- Cannot delete preference from closed registration
+SQL> DELETE FROM preferences
+  2  WHERE   candidate_id = 98
+  3      AND course_code = 'TEST2';
+
+Error starting at line : 794 File @ C:\Users\Bart³omiej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+In command -
+DELETE FROM preferences
+WHERE   candidate_id = 98
+    AND course_code = 'TEST2'
+Error report -
+ORA-20002: Cannot delete preference from closed (or not open yet) registration
+ORA-06512: przy "BD2C049.PREF_REG_TRG", linia 21
+ORA-04088: b³¹d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_REG_TRG'
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> --                            TEST DELETE ON OFFERS                           --
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> SELECT *
+  2  FROM offers
+  3  LEFT JOIN preferences
+  4      USING(course_code, registration_code)
+  5  WHERE course_code IN ('TEST1', 'TEST2');
+
+COURSE REGIS AVAILABLE_SLOTS CANDIDATE_ID SEQUENTIAL_NUMBER R     POINTS
+------ ----- --------------- ------------ ----------------- - ----------
+TEST1  99S               101                                            
+TEST1  TEST              100                                            
+TEST1  TESTF             100                                            
+TEST2  TEST                1           98                 2             
+
+SQL> 
+SQL> DELETE FROM offers 
+  2  WHERE   registration_code = '99S'
+  3      AND course_code = 'TEST1';
+
+1 row deleted.
+
+SQL> 
+SQL> -- Deletion of offer with submitted preferences should not be possible
+SQL> DELETE FROM offers 
+  2  WHERE   registration_code = 'TEST'
+  3      AND course_code = 'TEST2';
+
+Error starting at line : 813 File @ C:\Users\Bart³omiej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+In command -
+DELETE FROM offers 
+WHERE   registration_code = 'TEST'
+    AND course_code = 'TEST2'
+Error report -
+ORA-02292: naruszono wiêzy spójnoœci (BD2C049.PREF_OFR_FK) - znaleziono rekord podrzêdny
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> --                            TEST DELETE ON COURSES                          --
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> SELECT course_code
+  2      ,   name
+  3      ,   registration_code
+  4      ,   available_slots
+  5  FROM courses
+  6  LEFT JOIN offers
+  7      USING(course_code)
+  8  WHERE course_code IN ('TEST1', 'TEST2', '1', '2', '3', '4');
+
+COURSE NAME                                                                                                 REGIS AVAILABLE_SLOTS
+------ ---------------------------------------------------------------------------------------------------- ----- ---------------
+1      Bachelor                                                                                                                  
+2      Doctorate                                                                                                                 
+3      Engineer                                                                                                                  
+4      Master                                                                                                                    
+TEST1  Science of Testing, Finding Buggs and Debugging                                                      TEST              100
+TEST1  Science of Testing, Finding Buggs and Debugging                                                      TESTF             100
+TEST2  Mechatronics of Vehicles, Construction Machinery and Computer Science                                TEST                1
+
+7 rows selected. 
+
+SQL> 
+SQL> DELETE FROM courses
+  2  WHERE   course_code = '4';
+
+1 row deleted.
+
+SQL> 
+SQL> -- Deletion of course with submitted offers should not be possible
+SQL> DELETE FROM courses
+  2  WHERE   course_code = 'TEST1';
+
+Error starting at line : 834 File @ C:\Users\Bart³omiej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+In command -
+DELETE FROM courses
+WHERE   course_code = 'TEST1'
+Error report -
+ORA-02292: naruszono wiêzy spójnoœci (BD2C049.OFR_CRS_FK) - znaleziono rekord podrzêdny
+
+SQL> 
+SQL> --------------------------------------------------------------------------------
+SQL> --                        TEST DELETE ON REGISTRATIONS                        --
+SQL> --------------------------------------------------------------------------------
+SQL> 
+SQL> SELECT *
+  2  FROM registrations
+  3  LEFT JOIN offers
+  4      USING(registration_code)
+  5  WHERE registration_code IN ('TEST', 'TESTF', '99S');
+
+REGIS START_DA END_DATE COURSE AVAILABLE_SLOTS
+----- -------- -------- ------ ---------------
+TEST  97/01/01 97/04/01 TEST1              100
+TEST  97/01/01 97/04/01 TEST2                1
+TESTF 22/05/19 30/09/19 TEST1              100
+99S   99/02/01 99/03/01                       
+
+SQL> 
+SQL> DELETE FROM registrations
+  2  WHERE   registration_code = '99S';
+
+1 row deleted.
+
+SQL> 
+SQL> 
+SQL> -- Deletion of registration with submitted offers should not be possible
+SQL> DELETE FROM registrations
+  2  WHERE   registration_code = 'TEST';
+
+Error starting at line : 852 File @ C:\Users\Bart³omiej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+In command -
+DELETE FROM registrations
+WHERE   registration_code = 'TEST'
+Error report -
+ORA-02292: naruszono wiêzy spójnoœci (BD2C049.OFR_REG_FK) - znaleziono rekord podrzêdny
 
 SQL> 
 SQL> -- Clean after the tests
