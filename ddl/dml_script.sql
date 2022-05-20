@@ -399,6 +399,24 @@ VALUES ('TESTF'
     ,   1
 );
 
+----------------------------------
+-- TEST TRIGGER PREF_RESULT_TRG --
+----------------------------------
+
+-- Trying to insert preference with a result should result in an error
+INSERT INTO preferences (
+        registration_code
+    ,   course_code
+    ,   candidate_id
+    ,   sequential_number
+    ,   result
+)
+VALUES ('TEST'
+    ,   'TEST1'
+    ,   98
+    ,   1
+    ,   'Y'
+);
 
 --------------------------------------------------------------------------------
 --                          TEST UPDATE ON CANDIDATES                         --
@@ -608,6 +626,20 @@ SET     sequential_number = -1
 WHERE   registration_code = 'TEST' 
     AND course_code = 'TEST1' 
     AND candidate_id = 98;
+
+
+----------------------------------
+-- TEST TRIGGER PREF_RESULT_TRG --
+----------------------------------
+
+-- Trying to update preference's result when registration is still open 
+-- should result in an error
+UPDATE  preferences
+SET     result = 'Y'
+WHERE   registration_code = 'TEST' 
+    AND course_code = 'TEST1' 
+    AND candidate_id = 98
+    ;
 
 --------------------------------
 -- TEST TRIGGER PREF_REG_TRG --
