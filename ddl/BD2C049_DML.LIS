@@ -1321,8 +1321,8 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
 ------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
-          98 Jacob                Tested                    TEST  TEST1                  1 22/04/19 22/06/19
-          98 Jacob                Tested                    TEST  TEST2                  2 22/04/19 22/06/19
+          98 Jacob                Tested                    TEST  TEST1                  1 22/04/20 22/06/20
+          98 Jacob                Tested                    TEST  TEST2                  2 22/04/20 22/06/20
 
 SQL> 
 SQL> -------------------------------
@@ -1373,10 +1373,10 @@ SQL> SELECT *
 
 COURSE REGIS AVAILABLE_SLOTS CANDIDATE_ID SEQUENTIAL_NUMBER R     POINTS
 ------ ----- --------------- ------------ ----------------- - ----------
+TEST2  TEST                1           98                 2             
+TEST1  TESTF             100                                            
 TEST1  99S               101                                            
 TEST1  TEST              100                                            
-TEST1  TESTF             100                                            
-TEST2  TEST                1           98                 2             
 
 SQL> 
 SQL> DELETE FROM offers 
@@ -1458,7 +1458,7 @@ REGIS START_DA END_DATE COURSE AVAILABLE_SLOTS
 ----- -------- -------- ------ ---------------
 TEST  97/01/01 97/04/01 TEST1              100
 TEST  97/01/01 97/04/01 TEST2                1
-TESTF 22/05/19 30/09/19 TEST1              100
+TESTF 22/05/20 30/09/20 TEST1              100
 99S   99/02/01 99/03/01                       
 
 SQL> 

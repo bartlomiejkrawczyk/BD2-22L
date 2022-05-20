@@ -238,11 +238,13 @@ FUNCTIONS: List[Callable[[], List[str]]] = [
 def main():
     lines: List[str] = []
     lines.append('ALTER TRIGGER PREF_REG_TRG DISABLE;\n')
+    lines.append('ALTER TRIGGER PREF_RESULT_TRG DISABLE;\n')
     for func in FUNCTIONS:
         lines += func()
         lines.append("COMMIT;\n")
         lines.append('\n')
     lines.append('ALTER TRIGGER PREF_REG_TRG ENABLE;\n')
+    lines.append('ALTER TRIGGER PREF_RESULT_TRG ENABLE;\n')
 
     write_lines(lines)
 
