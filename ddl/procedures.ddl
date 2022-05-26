@@ -17,7 +17,6 @@ CREATE OR REPLACE PROCEDURE BD2C049.PREF_SEQUENCE_SWAP(
     ,   p_second_course_code VARCHAR2
     ,   p_second_new_number NUMBER
 ) AS
-    v_preference preferences%ROWTYPE;
 BEGIN
     EXECUTE IMMEDIATE 'SET CONSTRAINT pref_sequential_number_uk DEFERRED';
 

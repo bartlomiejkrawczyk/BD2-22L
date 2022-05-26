@@ -9,5 +9,9 @@
    <object objectID="6D2657B1-5881-6815-C553-D54293F0335A" markedGenerate="false"/>
    <object objectID="FDA502C8-B6A2-835F-F184-AD6A8A5B6F62" markedGenerate="false"/>
    <object objectID="01F9452F-CE7E-C678-3C5D-A8F052DF6726" markedGenerate="false"/>
+   <object objectID="DADEA4F8-1AED-60DF-693C-84DF0AF37337" markedGenerate="false"/>
+   <object objectID="582D96DA-91EE-3DB6-8F38-AA468B5611C6" markedGenerate="false"/>
+   <object objectID="4092A109-4780-1E72-D05B-D0A2F598BD4A" markedGenerate="false"/>
+   <object objectID="96EAAFD7-54D6-DEA8-0695-C5C52D9B04DB" markedGenerate="false"/>
    <object objectID="CCF0386A-E43C-54FD-53A9-43CAF187EDF4" markedGenerate="false"/>
 </oracle.dbtools.crest.model.design.relational.RelationalDesign>

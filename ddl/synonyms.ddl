@@ -51,7 +51,7 @@ CREATE OR REPLACE SYNONYM pref_sequence_swap FOR bd2c049.pref_sequence_swap;
 -- CREATE SEQUENCE                          0
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE MATERIALIZED VIEW LOG             0
--- CREATE SYNONYM                           6
+-- CREATE SYNONYM                           7
 -- CREATE TABLESPACE                        0
 -- CREATE USER                              0
 -- 

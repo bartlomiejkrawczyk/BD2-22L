@@ -12,7 +12,6 @@
     ,   p_second_course_code VARCHAR2
     ,   p_second_new_number NUMBER
 ) AS
-    v_preference preferences%ROWTYPE;
 BEGIN
     EXECUTE IMMEDIATE &apos;SET CONSTRAINT pref_sequential_number_uk DEFERRED&apos;;
 
@@ -32,4 +31,14 @@ BEGIN
 
     EXECUTE IMMEDIATE &apos;SET CONSTRAINT pref_sequential_number_uk IMMEDIATE&apos;;
 END;</source>
+<synonyms>
+<Synonym class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SynonymOraclev10g" name="PREF_SEQUENCE_SWAP" id="A9AAD6F9-A7B6-623E-31D3-49892CA558C5">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-26 11:41:11 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<objectName>PREF_SEQUENCE_SWAP</objectName>
+<user>096D171F-D336-CCC4-E6D3-6314CECDC4EF</user>
+<referredObjectID>CB333166-7FC0-D10C-C5E4-4C84800ECBE3</referredObjectID>
+</Synonym>
+</synonyms>
 </StoredProcedureOraclev10g>
