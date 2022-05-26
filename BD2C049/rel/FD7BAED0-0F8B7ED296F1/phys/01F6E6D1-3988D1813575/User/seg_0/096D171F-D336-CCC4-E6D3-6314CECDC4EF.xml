@@ -40,5 +40,12 @@
 <privileges>DELETE, INSERT, SELECT, UPDATE</privileges>
 <table>2319E7A6-9941-3117-7F5A-9391AA768A26</table>
 </Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions8" id="93920328-2AAE-DA7D-C45B-D593560D0F26">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-25 18:01:03 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<privileges>EXECUTE</privileges>
+<proc>CB333166-7FC0-D10C-C5E4-4C84800ECBE3</proc>
+</Permission>
 </permissions>
 </UserOraclev10g>

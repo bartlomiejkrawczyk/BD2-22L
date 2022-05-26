@@ -441,15 +441,14 @@ SQL> SELECT  course_code
 
 COURSE NAME                                                                                                 OCCURRENCES
 ------ ---------------------------------------------------------------------------------------------------- -----------
+DV40   Development Economics                                                                                         10
+EN42   Economics                                                                                                     14
+ET44   Educational Technology                                                                                        17
 AN11   Arts in Archives and Records Management                                                                       13
 AT9    Architecture                                                                                                  12
 BE25   Business Engineering                                                                                          14
 BT18   Bioethics                                                                                                     12
 CI27   Chemistry                                                                                                     15
-DV40   Development Economics                                                                                         10
-EN42   Economics                                                                                                     14
-ET44   Educational Technology                                                                                        17
-LC76   Landscape Architecture                                                                                        16
 MC90   Military Art and Science                                                                                      11
 ME80   Management                                                                                                    12
 MP86   Mathematics and Philosophy                                                                                     9
@@ -457,10 +456,11 @@ PL104  Public Health                                                            
 PN105  Public Management                                                                                             14
 PY94   Pharmacy                                                                                                      12
 SC131  Science in Human Resource Development                                                                         12
+SO115  Sacred Theology                                                                                               17
+SO124  Science in Education                                                                                          14
+SQ139  Science in Quality Assurance                                                                                  15
+SS130  Science in Health Informatics                                                                                 16
 SE123  Science in Cyber Security                                                                                     15
-SE140  Science in Risk Management                                                                                    13
-SI126  Science in Development Administration                                                                         12
-SN121  Science in Clinical Epidemiology                                                                              12
 
 20 rows selected. 
 

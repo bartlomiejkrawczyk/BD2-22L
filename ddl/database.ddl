@@ -172,7 +172,9 @@ ALTER TABLE preferences
 ALTER TABLE preferences
     ADD CONSTRAINT pref_sequential_number_uk UNIQUE ( candidate_id,
                                                       registration_code,
-                                                      sequential_number );
+                                                      sequential_number ) 
+                                                      DEFERRABLE
+                                                      INITIALLY IMMEDIATE;
 
 CREATE TABLE registrations (
     registration_code VARCHAR2(5 BYTE) NOT NULL,

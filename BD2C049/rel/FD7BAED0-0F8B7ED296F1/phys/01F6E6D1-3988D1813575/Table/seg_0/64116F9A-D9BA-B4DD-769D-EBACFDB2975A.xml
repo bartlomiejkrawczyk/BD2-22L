@@ -79,6 +79,7 @@
 <createdBy>Bartłomiej Krawczyk</createdBy>
 <createdTime>2022-05-14 16:23:49 UTC</createdTime>
 <ownerDesignName>BD2C049</ownerDesignName>
+<deferrable>YES</deferrable>
 <indexSort>SORTED</indexSort>
 </UniqueKey>
 </uniqueKeys>

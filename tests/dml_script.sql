@@ -593,8 +593,14 @@ INSERT INTO preferences (
 VALUES ('TEST'
     ,   'TEST2'
     ,   98
-    ,   2
+    ,   3
 );
+
+UPDATE  preferences
+SET     sequential_number = 2
+WHERE   registration_code = 'TEST'
+    AND course_code = 'TEST2'
+    AND candidate_id = 98;
 
 -------------------------------------------
 -- TEST UNIQUE PREF_SEQUENTIAL_NUMBER_UK --
@@ -640,6 +646,42 @@ WHERE   registration_code = 'TEST'
     AND course_code = 'TEST1' 
     AND candidate_id = 98
     ;
+
+---------------------------------------
+-- TEST PROCEDURE PREF_SEQUENCE_SWAP --
+---------------------------------------
+
+SELECT  candidate_id
+    ,   first_name
+    ,   family_name
+    ,   registration_code
+    ,   course_code
+    ,   sequential_number
+    ,   start_date
+    ,   end_date
+FROM    candidates
+JOIN    preferences
+    USING(candidate_id)
+JOIN    registrations
+    USING(registration_code)
+WHERE   candidate_id = 98;
+
+CALL PREF_SEQUENCE_SWAP(98, 'TEST', 'TEST1', 2, 'TEST2', 1);
+
+SELECT  candidate_id
+    ,   first_name
+    ,   family_name
+    ,   registration_code
+    ,   course_code
+    ,   sequential_number
+    ,   start_date
+    ,   end_date
+FROM    candidates
+JOIN    preferences
+    USING(candidate_id)
+JOIN    registrations
+    USING(registration_code)
+WHERE   candidate_id = 98;
 
 --------------------------------
 -- TEST TRIGGER PREF_REG_TRG --

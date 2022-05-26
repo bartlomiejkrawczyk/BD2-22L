@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="PREF_SEQUENCE_SWAP" directorySegmentName="seg_0" id="CB333166-7FC0-D10C-C5E4-4C84800ECBE3">
+<createdBy>Bartłomiej Krawczyk</createdBy>
+<createdTime>2022-05-25 18:00:10 UTC</createdTime>
+<ownerDesignName>BD2C049</ownerDesignName>
+<owner><![CDATA[11F7A75B-0C8A-B8B2-3621-4AE9904A07AF]]></owner>
+<source>CREATE OR REPLACE PROCEDURE BD2C049.PREF_SEQUENCE_SWAP(
+        p_candidate_id NUMBER
+    ,   p_registration_code VARCHAR2
+    ,   p_first_course_code VARCHAR2
+    ,   p_first_new_number NUMBER
+    ,   p_second_course_code VARCHAR2
+    ,   p_second_new_number NUMBER
+) AS
+    v_preference preferences%ROWTYPE;
+BEGIN
+    EXECUTE IMMEDIATE &apos;SET CONSTRAINT pref_sequential_number_uk DEFERRED&apos;;
+
+    UPDATE  preferences
+    SET     sequential_number = p_first_new_number
+    WHERE   candidate_id = p_candidate_id
+        AND registration_code = p_registration_code
+        AND course_code = p_first_course_code
+        AND sequential_number = p_second_new_number;
+    
+    UPDATE  preferences
+    SET     sequential_number = p_second_new_number
+    WHERE   candidate_id = p_candidate_id
+        AND registration_code = p_registration_code
+        AND course_code = p_second_course_code
+        AND sequential_number = p_first_new_number;
+
+    EXECUTE IMMEDIATE &apos;SET CONSTRAINT pref_sequential_number_uk IMMEDIATE&apos;;
+END;</source>
+</StoredProcedureOraclev10g>

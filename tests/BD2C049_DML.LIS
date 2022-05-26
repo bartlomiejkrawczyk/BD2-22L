@@ -83,7 +83,7 @@ SQL> INSERT INTO candidates (
  20      ,   '29'
  21  );
 
-Error starting at line : 59 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 59 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO candidates (
         candidate_id
@@ -139,7 +139,7 @@ SQL> INSERT INTO candidates (
  22      ,   '42439284872'
  23  );
 
-Error starting at line : 86 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 86 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO candidates (
         candidate_id
@@ -250,7 +250,7 @@ SQL> INSERT INTO courses
   5      ,   NULL
   6  );
 
-Error starting at line : 176 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 176 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO courses
 VALUES ('TEST3'
@@ -287,7 +287,7 @@ SQL>
 SQL> -- Degree set to values other than BDEM should result in an error
 SQL> INSERT INTO courses VALUES ('5', 'Degree Error', 'R',   NULL);
 
-Error starting at line : 194 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 194 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO courses VALUES ('5', 'Degree Error', 'R',   NULL)
 Error report -
@@ -295,7 +295,7 @@ ORA-02290: naruszono wi瞛y CHECK (BD2C049.CRS_CHK_DEGREE)
 
 SQL> INSERT INTO courses VALUES ('5', 'Degree Error', 'b',   NULL);
 
-Error starting at line : 195 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 195 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO courses VALUES ('5', 'Degree Error', 'b',   NULL)
 Error report -
@@ -309,7 +309,7 @@ SQL>
 SQL> -- Course code not in uppercase should result in an error
 SQL> INSERT INTO courses VALUES ('TeST', 'Code Error', 'B',   NULL);
 
-Error starting at line : 202 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 202 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO courses VALUES ('TeST', 'Code Error', 'B',   NULL)
 Error report -
@@ -343,7 +343,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1999-01-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 221 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 221 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -367,7 +367,7 @@ SQL> INSERT INTO registrations
   5      ,   TO_DATE('1998-02-01', 'YYYY-MM-DD')
   6  );
 
-Error starting at line : 233 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 233 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO registrations
 VALUES (
@@ -402,7 +402,7 @@ SQL> INSERT INTO offers
   5      ,   120
   6  );
 
-Error starting at line : 253 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 253 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO offers
 VALUES (
@@ -426,7 +426,7 @@ SQL> INSERT INTO offers
   5      ,   -100
   6  );
 
-Error starting at line : 265 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 265 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO offers
 VALUES (
@@ -504,7 +504,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 314 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 314 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -539,7 +539,7 @@ SQL> INSERT INTO preferences (
  10      ,   4
  11  );
 
-Error starting at line : 332 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 332 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -570,7 +570,7 @@ SQL> INSERT INTO preferences (
  10      ,   -1
  11  );
 
-Error starting at line : 346 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 346 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -604,7 +604,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 363 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 363 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -656,7 +656,7 @@ SQL> INSERT INTO preferences (
  10      ,   1
  11  );
 
-Error starting at line : 390 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 390 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -694,7 +694,7 @@ SQL> INSERT INTO preferences (
  12      ,   'Y'
  13  );
 
-Error starting at line : 407 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 407 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 INSERT INTO preferences (
         registration_code
@@ -740,7 +740,7 @@ SQL> UPDATE  candidates
   2  SET     email = 'Jacob.Tested.2@example.com'
   3  WHERE   candidate_id = 99;
 
-Error starting at line : 436 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 436 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  candidates
 SET     email = 'Jacob.Tested.2@example.com'
@@ -757,7 +757,7 @@ SQL> UPDATE  candidates
   2  SET     pesel = '42439284872'
   3  WHERE   candidate_id = 98;
 
-Error starting at line : 444 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 444 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  candidates
 SET     pesel = '42439284872'
@@ -790,7 +790,7 @@ SQL> UPDATE  courses
   2  SET     name = 'Science of Testing, Finding Buggs and Debugging'
   3  WHERE   course_code = 'TEST2';
 
-Error starting at line : 462 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 462 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  courses
 SET     name = 'Science of Testing, Finding Buggs and Debugging'
@@ -837,7 +837,7 @@ SQL> UPDATE  courses
   2  SET     degree = 'b'
   3  WHERE   course_code = '1';
 
-Error starting at line : 488 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 488 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  courses
 SET     degree = 'b'
@@ -870,7 +870,7 @@ SQL> UPDATE registrations
   2  SET start_date = TO_DATE('1901-04-01', 'YYYY-MM-DD')
   3  WHERE registration_code = '1901S';
 
-Error starting at line : 509 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 509 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE registrations
 SET start_date = TO_DATE('1901-04-01', 'YYYY-MM-DD')
@@ -885,7 +885,7 @@ SQL> UPDATE registrations
   2  SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
   3  WHERE registration_code = '1901S';
 
-Error starting at line : 515 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 515 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE registrations
 SET end_date = TO_DATE('1900-12-01', 'YYYY-MM-DD')
@@ -926,7 +926,7 @@ SQL> UPDATE  offers
   3  WHERE   registration_code = '99S'
   4      AND course_code = 'TEST1';
 
-Error starting at line : 538 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 538 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  offers
 SET     available_slots = -100
@@ -956,7 +956,7 @@ SQL> UPDATE  offers
   3  WHERE   registration_code = '99S'
   4      AND course_code = 'TEST1';
 
-Error starting at line : 555 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 555 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  offers
 SET     registration_code = '99A' 
@@ -981,7 +981,7 @@ SQL> UPDATE  offers
   3  WHERE   registration_code = '99S'
   4      AND course_code = 'TEST1';
 
-Error starting at line : 565 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 565 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  offers
 SET     course_code = 'TEST2'
@@ -1022,10 +1022,19 @@ SQL> INSERT INTO preferences (
   7  VALUES ('TEST'
   8      ,   'TEST2'
   9      ,   98
- 10      ,   2
+ 10      ,   3
  11  );
 
 1 row inserted.
+
+SQL> 
+SQL> UPDATE  preferences
+  2  SET     sequential_number = 2
+  3  WHERE   registration_code = 'TEST'
+  4      AND course_code = 'TEST2'
+  5      AND candidate_id = 98;
+
+1 row updated.
 
 SQL> 
 SQL> -------------------------------------------
@@ -1039,7 +1048,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 604 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 610 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = 2
@@ -1062,7 +1071,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 616 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 622 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = 4
@@ -1081,7 +1090,7 @@ SQL> UPDATE  preferences
   4      AND course_code = 'TEST1' 
   5      AND candidate_id = 98;
 
-Error starting at line : 624 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 630 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = -1
@@ -1106,7 +1115,7 @@ SQL> UPDATE  preferences
   5      AND candidate_id = 98
   6  ;
 
-Error starting at line : 637 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 643 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     result = 'Y'
@@ -1117,6 +1126,57 @@ Error report -
 ORA-20003: Cannot add results when the registration has not finished yet!
 ORA-06512: przy "BD2C049.PREF_RESULT_TRG", linia 18
 ORA-04088: b章d w trakcie wykonywania wyzwalacza 'BD2C049.PREF_RESULT_TRG'
+
+SQL> 
+SQL> ---------------------------------------
+SQL> -- TEST PROCEDURE PREF_SEQUENCE_SWAP --
+SQL> ---------------------------------------
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   first_name
+  3      ,   family_name
+  4      ,   registration_code
+  5      ,   course_code
+  6      ,   sequential_number
+  7      ,   start_date
+  8      ,   end_date
+  9  FROM    candidates
+ 10  JOIN    preferences
+ 11      USING(candidate_id)
+ 12  JOIN    registrations
+ 13      USING(registration_code)
+ 14  WHERE   candidate_id = 98;
+
+CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
+------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
+          98 Jacob                Tested                    TEST  TEST1                  1 22/04/26 22/06/26
+          98 Jacob                Tested                    TEST  TEST2                  2 22/04/26 22/06/26
+
+SQL> 
+SQL> CALL PREF_SEQUENCE_SWAP(98, 'TEST', 'TEST1', 2, 'TEST2', 1);
+
+Call completed.
+
+SQL> 
+SQL> SELECT  candidate_id
+  2      ,   first_name
+  3      ,   family_name
+  4      ,   registration_code
+  5      ,   course_code
+  6      ,   sequential_number
+  7      ,   start_date
+  8      ,   end_date
+  9  FROM    candidates
+ 10  JOIN    preferences
+ 11      USING(candidate_id)
+ 12  JOIN    registrations
+ 13      USING(registration_code)
+ 14  WHERE   candidate_id = 98;
+
+CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
+------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
+          98 Jacob                Tested                    TEST  TEST2                  1 22/04/26 22/06/26
+          98 Jacob                Tested                    TEST  TEST1                  2 22/04/26 22/06/26
 
 SQL> 
 SQL> --------------------------------
@@ -1141,7 +1201,7 @@ SQL> UPDATE  preferences
   5      AND candidate_id = 98
   6  ;
 
-Error starting at line : 656 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 698 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     sequential_number = 3
@@ -1201,7 +1261,7 @@ SQL> UPDATE  preferences
   5      AND candidate_id = 98
   6  ;
 
-Error starting at line : 694 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 736 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     registration_code = 'TESTF' 
@@ -1231,7 +1291,7 @@ SQL> UPDATE  preferences
   5      AND candidate_id = 98
   6  ;
 
-Error starting at line : 708 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 750 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     course_code = 'TEST2' 
@@ -1261,7 +1321,7 @@ SQL> UPDATE  preferences
   5      AND candidate_id = 98
   6  ;
 
-Error starting at line : 722 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 764 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 UPDATE  preferences
 SET     candidate_id = 99
@@ -1295,8 +1355,8 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
 ------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
-          98 Jacob                Tested                    TEST  TEST1                  1 97/01/01 97/04/01
-          98 Jacob                Tested                    TEST  TEST2                  2 97/01/01 97/04/01
+          98 Jacob                Tested                    TEST  TEST2                  1 97/01/01 97/04/01
+          98 Jacob                Tested                    TEST  TEST1                  2 97/01/01 97/04/01
           99 Johny                Test                      TEST  TEST1                  1 97/01/01 97/04/01
 
 SQL> 
@@ -1340,7 +1400,7 @@ SQL> -- in registrations that are closed
 SQL> DELETE FROM candidates 
   2  WHERE   candidate_id = 99;
 
-Error starting at line : 779 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 821 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 DELETE FROM candidates 
 WHERE   candidate_id = 99
@@ -1387,8 +1447,8 @@ SQL> SELECT  candidate_id
 
 CANDIDATE_ID FIRST_NAME           FAMILY_NAME               REGIS COURSE SEQUENTIAL_NUMBER START_DA END_DATE
 ------------ -------------------- ------------------------- ----- ------ ----------------- -------- --------
-          98 Jacob                Tested                    TEST  TEST1                  1 22/04/20 22/06/20
-          98 Jacob                Tested                    TEST  TEST2                  2 22/04/20 22/06/20
+          98 Jacob                Tested                    TEST  TEST2                  1 22/04/26 22/06/26
+          98 Jacob                Tested                    TEST  TEST1                  2 22/04/26 22/06/26
 
 SQL> 
 SQL> -------------------------------
@@ -1416,7 +1476,7 @@ SQL> DELETE FROM preferences
   2  WHERE   candidate_id = 98
   3      AND course_code = 'TEST2';
 
-Error starting at line : 826 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 868 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 DELETE FROM preferences
 WHERE   candidate_id = 98
@@ -1439,7 +1499,7 @@ SQL> SELECT *
 
 COURSE REGIS AVAILABLE_SLOTS CANDIDATE_ID SEQUENTIAL_NUMBER R     POINTS
 ------ ----- --------------- ------------ ----------------- - ----------
-TEST2  TEST                1           98                 2             
+TEST2  TEST                1           98                 1             
 TEST1  TESTF             100                                            
 TEST1  99S               101                                            
 TEST1  TEST              100                                            
@@ -1457,7 +1517,7 @@ SQL> DELETE FROM offers
   2  WHERE   registration_code = 'TEST'
   3      AND course_code = 'TEST2';
 
-Error starting at line : 845 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 887 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 DELETE FROM offers 
 WHERE   registration_code = 'TEST'
@@ -1502,7 +1562,7 @@ SQL> -- Deletion of course with submitted offers should not be possible
 SQL> DELETE FROM courses
   2  WHERE   course_code = 'TEST1';
 
-Error starting at line : 866 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 908 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 DELETE FROM courses
 WHERE   course_code = 'TEST1'
@@ -1524,7 +1584,7 @@ REGIS START_DA END_DATE COURSE AVAILABLE_SLOTS
 ----- -------- -------- ------ ---------------
 TEST  97/01/01 97/04/01 TEST1              100
 TEST  97/01/01 97/04/01 TEST2                1
-TESTF 22/05/20 30/09/20 TEST1              100
+TESTF 22/05/26 30/09/26 TEST1              100
 99S   99/02/01 99/03/01                       
 
 SQL> 
@@ -1539,7 +1599,7 @@ SQL> -- Deletion of registration with submitted offers should not be possible
 SQL> DELETE FROM registrations
   2  WHERE   registration_code = 'TEST';
 
-Error starting at line : 884 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\ddl\dml_script.sql
+Error starting at line : 926 File @ C:\Users\Bart這miej Krawczyk\Documents\Studia\BD2\projekt\tests\dml_script.sql
 In command -
 DELETE FROM registrations
 WHERE   registration_code = 'TEST'
