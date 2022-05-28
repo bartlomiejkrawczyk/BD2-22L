@@ -18,15 +18,22 @@ CREATE OR REPLACE PROCEDURE BD2C049.PREF_SEQUENCE_SWAP(
     ,   p_second_new_number NUMBER
 ) AS
 BEGIN
+    -- Change candidate's order of preferences
+    
+    -- Make sure unique constraint is only checked after the operation
     EXECUTE IMMEDIATE 'SET CONSTRAINT pref_sequential_number_uk DEFERRED';
 
+    -- Change sequential_number of the first preference
+    -- (Unique constraint broken)
     UPDATE  preferences
     SET     sequential_number = p_first_new_number
     WHERE   candidate_id = p_candidate_id
         AND registration_code = p_registration_code
         AND course_code = p_first_course_code
         AND sequential_number = p_second_new_number;
-    
+
+    -- Change sequential_number of the second preference
+    -- (This should fix broken unique constraint)
     UPDATE  preferences
     SET     sequential_number = p_second_new_number
     WHERE   candidate_id = p_candidate_id
@@ -34,6 +41,7 @@ BEGIN
         AND course_code = p_second_course_code
         AND sequential_number = p_first_new_number;
 
+    -- Check the constraint
     EXECUTE IMMEDIATE 'SET CONSTRAINT pref_sequential_number_uk IMMEDIATE';
 END;
 /
