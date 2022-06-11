@@ -35,5 +35,4 @@
 **/*.rvi
 **/.#*
 **/CVS/**
-output/
 .vscode/
