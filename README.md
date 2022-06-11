@@ -386,10 +386,36 @@ Już tak nie jest, nowa ustawa na to nie pozwala. Więc można przyjąć unikaln
 - Trzeba dodać potrzebne indeksy na FK
 - Należy dodać/zweryfikować ON DELETE CASCADE
 
-# TODO
+# Model relacyjny
 
-[X] Dodaj ograniczenie proceduralne na dodawanie / modyfikację preferencji w zależności od otwarcia rejestracji
+![](./models/Relational.png)
 
-[X] Dodaj wyzwalacz, aby różne rejestracje nie nakładały się na siebie
 
-[X] Dodaj trigger ograniczający ilość `Y` w preferencjach w zależności od Available_Slots
+# Konwersacja po ocenie etapu III
+
+> dostałem -1 pkt za dodanie synonimu na sekwencję.
+
+> Sekwencję dodałem, aby na użytkowniku BD2C049_APP przechodził test wykorzystujący:
+```sql
+SELECT CAND_ID_SEQ.CURRVAL INTO v_seq FROM DUAL;
+```
+> Zastanawiam się, czemu takie rozwiązanie jest błędne?
+
+> Wydaje mi się, że wyszukiwanie na sekwencji może być przydatne np.:
+> - jak chcemy zarezerwować pewne id do przydzielenia później
+> - jak chcemy sprawdzić jakie id zostało przydzielone w ostatnim insercie
+
+Wartości z sekwencji ma podstawiać wyzwalacz lub inna konstrukcja zdefiniowana przez właściciela sekwencji, a nie inny użytkownik, więc synonim jest zbędny.
+
+Dodatkowo, instrukcja jasno wskazuje na stworzenie synonimów jedynie dla tabel i widoków.
+
+\>" może być przydatne"
+
+Generalnie rzecz ujmując dążymy do sytuacji w której użytkownik ma absolutne minimum uprawnień i możliwości dostęp do struktur, jedynie gdy jest taka faktyczne potrzeba.
+Oczywiście "wygodniej i przydatniej" z punktu widzenie użytkownika by było mieć absolutnie wszystkie możliwe uprawnienia i dostępy do wszystkiego, nie jest to jednak bezpieczne z inżynierskiego punktu widzenia.
+
+# Wniosek
+
+Jeśli 3 etap jest oceniany przez młodszych prowadzących lepiej nie dodawać konstrukcji zalecanych, chyba że są naprawdę na bardzo wysokim poziomie.
+
+Dodane testy są jedynie za 2pkt - nie trzeba się wysilać tak bardzo jak ja xD
